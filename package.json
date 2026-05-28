@@ -1,0 +1,30 @@
+{
+  "name": "darktrans",
+  "version": "1.0.0",
+  "description": "Chrome extension to localize darkanddarkertracker.com/maps into Chinese",
+  "private": true,
+  "scripts": {
+    "icons": "node scripts/generate-icons.js",
+    "extract-strings": "node scripts/extract-ui-strings.js",
+    "merge-transition": "node scripts/merge-transition.js",
+    "extract-item-names": "node scripts/build-manual-zh.js && node scripts/extract-item-names.js && node scripts/merge-zh-CN.js",
+    "build:dev": "node scripts/build.js --mode=dev",
+    "build:prod": "node scripts/build.js --mode=prod",
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/package.js",
+    "package": "node scripts/package.js",
+    "postinstall": "node scripts/generate-icons.js"
+  },
+  "devDependencies": {
+    "chokidar": "^4.0.3",
+    "ws": "^8.18.3"
+  },
+  "keywords": [
+    "chrome-extension",
+    "dark-and-darker",
+    "localization",
+    "translation"
+  ],
+  "author": "",
+  "license": "ISC"
+}

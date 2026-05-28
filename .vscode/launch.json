@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome + Extension (Dev)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://darkanddarkertracker.com/maps",
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": [
+        "--load-extension=${workspaceFolder}/dist/dev",
+        "--disable-extensions-except=${workspaceFolder}/dist/dev"
+      ]
+    }
+  ]
+}

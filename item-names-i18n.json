@@ -1,0 +1,2067 @@
+{
+  "meta": {
+    "source": "data.json",
+    "total": 514,
+    "translated": 514,
+    "missing": 0,
+    "generatedAt": "2026-05-28T03:19:09.461Z"
+  },
+  "items": [
+    {
+      "en": "Adventurer Boots",
+      "zh": "冒险者长靴"
+    },
+    {
+      "en": "Adventurer Cloak",
+      "zh": "冒险者披风"
+    },
+    {
+      "en": "Adventurer Tunic",
+      "zh": "冒险者外衣"
+    },
+    {
+      "en": "Ale",
+      "zh": "麦酒"
+    },
+    {
+      "en": "Anchor",
+      "zh": "锚"
+    },
+    {
+      "en": "Ancient Stingray Egg",
+      "zh": "远古魟鱼卵"
+    },
+    {
+      "en": "Antiquated Coin",
+      "zh": "古旧钱币"
+    },
+    {
+      "en": "Aquaglow Lantern",
+      "zh": "水光提灯"
+    },
+    {
+      "en": "Arcane Essence",
+      "zh": "奥术精华"
+    },
+    {
+      "en": "Arcane Garb",
+      "zh": "奥术装束"
+    },
+    {
+      "en": "Arcane Gloves",
+      "zh": "奥术手套"
+    },
+    {
+      "en": "Arcane Hood",
+      "zh": "奥术兜帽"
+    },
+    {
+      "en": "Armet",
+      "zh": "活动式全盔"
+    },
+    {
+      "en": "Armillary Sphere",
+      "zh": "浑天仪"
+    },
+    {
+      "en": "Arming Sword",
+      "zh": "武装剑"
+    },
+    {
+      "en": "Armor Scrap",
+      "zh": "盔甲废料"
+    },
+    {
+      "en": "Arrow",
+      "zh": "弩矢"
+    },
+    {
+      "en": "Awl",
+      "zh": "锥子"
+    },
+    {
+      "en": "Badger Pendant",
+      "zh": "獾吊坠"
+    },
+    {
+      "en": "Ball",
+      "zh": "球"
+    },
+    {
+      "en": "Bandage",
+      "zh": "绷带"
+    },
+    {
+      "en": "Banshee Sonnet",
+      "zh": "十四行诗"
+    },
+    {
+      "en": "Barbuta Helm",
+      "zh": "尖顶盔"
+    },
+    {
+      "en": "Bardic Pants",
+      "zh": "诗人长裤"
+    },
+    {
+      "en": "Bardiche",
+      "zh": "月刃斧"
+    },
+    {
+      "en": "Barrel Hoop",
+      "zh": "桶箍"
+    },
+    {
+      "en": "Bat Claw",
+      "zh": "蝙蝠爪子"
+    },
+    {
+      "en": "Bat Wing",
+      "zh": "蝙蝠翅膀"
+    },
+    {
+      "en": "Battle Axe",
+      "zh": "战斗斧"
+    },
+    {
+      "en": "Battle Worn Armor Fragment",
+      "zh": "战损盔甲碎片"
+    },
+    {
+      "en": "Bavin",
+      "zh": "木柱"
+    },
+    {
+      "en": "Bear Pendant",
+      "zh": "熊吊坠"
+    },
+    {
+      "en": "Beetle Wings",
+      "zh": "死亡甲虫翅膀"
+    },
+    {
+      "en": "Bellows",
+      "zh": "风箱"
+    },
+    {
+      "en": "Billet",
+      "zh": "坯料"
+    },
+    {
+      "en": "Birdcage",
+      "zh": "鸟笼"
+    },
+    {
+      "en": "Black Rose",
+      "zh": "黑玫瑰"
+    },
+    {
+      "en": "Black Thread Spool",
+      "zh": "黑线轴"
+    },
+    {
+      "en": "Blacksmith Tongs",
+      "zh": "铁匠钳"
+    },
+    {
+      "en": "Blazing Tail",
+      "zh": "烈焰尾"
+    },
+    {
+      "en": "Blemished Pearl",
+      "zh": "瑕疵珍珠"
+    },
+    {
+      "en": "Bloodsap Blade",
+      "zh": "血汁之刃"
+    },
+    {
+      "en": "Bloodwoven Gloves",
+      "zh": "血织手套"
+    },
+    {
+      "en": "Bloodwoven Robe",
+      "zh": "血织长袍"
+    },
+    {
+      "en": "Blue Eyeballs",
+      "zh": "蓝眼球"
+    },
+    {
+      "en": "Blue Sapphire",
+      "zh": "蓝宝石"
+    },
+    {
+      "en": "Blue Thread Spool",
+      "zh": "蓝线轴"
+    },
+    {
+      "en": "Bolas",
+      "zh": "投索"
+    },
+    {
+      "en": "Bolt",
+      "zh": "箭"
+    },
+    {
+      "en": "Bone",
+      "zh": "骨头棒"
+    },
+    {
+      "en": "Bone Helm",
+      "zh": "骨盔"
+    },
+    {
+      "en": "Bone Powder",
+      "zh": "骨粉"
+    },
+    {
+      "en": "Bowstring",
+      "zh": "弓弦"
+    },
+    {
+      "en": "Brandofthe Subservient",
+      "zh": "臣服者烙印"
+    },
+    {
+      "en": "Brimstone",
+      "zh": "硫磺"
+    },
+    {
+      "en": "Broken Bone Spike",
+      "zh": "断骨刺"
+    },
+    {
+      "en": "Broken Frame",
+      "zh": "破碎框架"
+    },
+    {
+      "en": "Broken Glasses",
+      "zh": "碎裂眼镜"
+    },
+    {
+      "en": "Broken Jar Shard",
+      "zh": "碎罐片"
+    },
+    {
+      "en": "Broken Pickaxe",
+      "zh": "破损镐"
+    },
+    {
+      "en": "Broken Skull",
+      "zh": "破碎的头骨"
+    },
+    {
+      "en": "Broken Telescope Head",
+      "zh": "破损望远镜镜筒"
+    },
+    {
+      "en": "Broken Wheel",
+      "zh": "破损车轮"
+    },
+    {
+      "en": "Broken Wooden Barrel Fragment",
+      "zh": "破损木桶碎片"
+    },
+    {
+      "en": "Bronze Ladle",
+      "zh": "青铜勺"
+    },
+    {
+      "en": "Bronze Scale",
+      "zh": "青铜鳞"
+    },
+    {
+      "en": "Buckled Boots",
+      "zh": "扣带长靴"
+    },
+    {
+      "en": "Buckler",
+      "zh": "小圆盾"
+    },
+    {
+      "en": "Bug Shell",
+      "zh": "虫子外壳"
+    },
+    {
+      "en": "Buttoned Boots",
+      "zh": "扣襻靴"
+    },
+    {
+      "en": "Buttoned Leggings",
+      "zh": "扣襻护腿"
+    },
+    {
+      "en": "Bycocket",
+      "zh": "羽帽"
+    },
+    {
+      "en": "Campfire Kit",
+      "zh": "营火工具"
+    },
+    {
+      "en": "Captains Corroded Key",
+      "zh": "船长锈蚀钥匙"
+    },
+    {
+      "en": "Captured Energy Flakes",
+      "zh": "捕获的能量碎片"
+    },
+    {
+      "en": "Captured Mana Flakes",
+      "zh": "捕获的魔力碎片"
+    },
+    {
+      "en": "Castillon Dagger",
+      "zh": "卡斯蒂永匕首"
+    },
+    {
+      "en": "Cave Trolls Precious Rock",
+      "zh": "洞穴巨魔奇石"
+    },
+    {
+      "en": "Centaur Hoof",
+      "zh": "半人马蹄子"
+    },
+    {
+      "en": "Ceremonial Dagger",
+      "zh": "仪式匕首"
+    },
+    {
+      "en": "Ceremonial Headdress",
+      "zh": "仪式头饰"
+    },
+    {
+      "en": "Ceremonial Staff",
+      "zh": "仪式法杖"
+    },
+    {
+      "en": "Champion Armor",
+      "zh": "冠军铠甲"
+    },
+    {
+      "en": "Chapel De Fer",
+      "zh": "锅盔"
+    },
+    {
+      "en": "Chaperon",
+      "zh": "头巾帽"
+    },
+    {
+      "en": "Charcoal",
+      "zh": "木炭"
+    },
+    {
+      "en": "Chocolate Chip Muffin",
+      "zh": "巧克力豆马芬"
+    },
+    {
+      "en": "Chroniclesofthe Cursed Crown",
+      "zh": "诅咒王冠编年史"
+    },
+    {
+      "en": "Clarity Potion",
+      "zh": "清晰药水"
+    },
+    {
+      "en": "Cloth Pants",
+      "zh": "布裤"
+    },
+    {
+      "en": "Club",
+      "zh": "棍棒"
+    },
+    {
+      "en": "Cobalt Ores",
+      "zh": "钴矿"
+    },
+    {
+      "en": "Cockatrice Egg",
+      "zh": "鸡蛇兽卵"
+    },
+    {
+      "en": "Cockatrices Lucky Feather",
+      "zh": "鸡蛇兽的幸运羽毛"
+    },
+    {
+      "en": "Coif",
+      "zh": "头巾甲帽"
+    },
+    {
+      "en": "Conch Shell",
+      "zh": "海螺壳"
+    },
+    {
+      "en": "Copper Ores",
+      "zh": "铜矿"
+    },
+    {
+      "en": "Coral Fragment",
+      "zh": "珊瑚碎片"
+    },
+    {
+      "en": "Coreof Cinder",
+      "zh": "灰烬核心"
+    },
+    {
+      "en": "Corrupted Heart",
+      "zh": "腐化之心"
+    },
+    {
+      "en": "Courtly Dress",
+      "zh": "宫廷礼服"
+    },
+    {
+      "en": "Cracked Log",
+      "zh": "开裂原木"
+    },
+    {
+      "en": "Cracked Tusk",
+      "zh": "开裂长牙"
+    },
+    {
+      "en": "Crimson Thread Spool",
+      "zh": "深红线轴"
+    },
+    {
+      "en": "Crocodilian Eyeball",
+      "zh": "鳄鱼眼"
+    },
+    {
+      "en": "Crossbow",
+      "zh": "十字弩"
+    },
+    {
+      "en": "Crownofthe Midnight Stag",
+      "zh": "午夜雄鹿之冠"
+    },
+    {
+      "en": "Crusader Armor",
+      "zh": "十字军铠甲"
+    },
+    {
+      "en": "Crusader Helm",
+      "zh": "十字军巨盔"
+    },
+    {
+      "en": "Crystal Ball",
+      "zh": "水晶球"
+    },
+    {
+      "en": "Crystal Sword",
+      "zh": "水晶剑"
+    },
+    {
+      "en": "Cuffed Boots",
+      "zh": "翻边靴"
+    },
+    {
+      "en": "Cursed Crown",
+      "zh": "诅咒之冠"
+    },
+    {
+      "en": "Cutlass",
+      "zh": "短弯刀"
+    },
+    {
+      "en": "Cuttlefish Ink Sac",
+      "zh": "墨鱼骨囊"
+    },
+    {
+      "en": "Cyclops Eye",
+      "zh": "独眼巨人的眼球"
+    },
+    {
+      "en": "Cyclops Precious Mirror",
+      "zh": "独眼巨人宝镜"
+    },
+    {
+      "en": "Cyclops Rags",
+      "zh": "独眼巨人的破布"
+    },
+    {
+      "en": "Dark Cassock",
+      "zh": "暗色长袍"
+    },
+    {
+      "en": "Dark Cuirass",
+      "zh": "黑暗胸甲"
+    },
+    {
+      "en": "Dark Leather Leggings",
+      "zh": "黑暗皮护腿"
+    },
+    {
+      "en": "Dark Matter",
+      "zh": "黑暗物质"
+    },
+    {
+      "en": "Dark Padded Hose",
+      "zh": "深色衬垫裤"
+    },
+    {
+      "en": "Dark Plate Armor",
+      "zh": "黑暗板甲"
+    },
+    {
+      "en": "Darkgrove Hood",
+      "zh": "暗林兜帽"
+    },
+    {
+      "en": "Darkgrove Robe",
+      "zh": "暗林长袍"
+    },
+    {
+      "en": "Darkleaf Boots",
+      "zh": "暗叶靴子"
+    },
+    {
+      "en": "Dashing Boots",
+      "zh": "华丽长靴"
+    },
+    {
+      "en": "Demon Blood",
+      "zh": "恶魔之血"
+    },
+    {
+      "en": "Demon Dog Thorns",
+      "zh": "魔犬之刺"
+    },
+    {
+      "en": "Demon Wing Membrane",
+      "zh": "恶魔翼膜"
+    },
+    {
+      "en": "Diamond",
+      "zh": "钻石"
+    },
+    {
+      "en": "Diaryofthe Toz",
+      "zh": "托兹日记"
+    },
+    {
+      "en": "Doctors Bag",
+      "zh": "医者行囊"
+    },
+    {
+      "en": "Dog Collar",
+      "zh": "狗项圈"
+    },
+    {
+      "en": "Double Axe",
+      "zh": "双刃斧"
+    },
+    {
+      "en": "Doublet",
+      "zh": "紧身衣"
+    },
+    {
+      "en": "Drum",
+      "zh": "鼓"
+    },
+    {
+      "en": "Dryad Mask",
+      "zh": "树妖面具"
+    },
+    {
+      "en": "Ectoplasm",
+      "zh": "灵质"
+    },
+    {
+      "en": "Elkwood Crown",
+      "zh": "鹿角木头冠"
+    },
+    {
+      "en": "Elkwood Gloves",
+      "zh": "鹿角木手套"
+    },
+    {
+      "en": "Emerald",
+      "zh": "翡翠"
+    },
+    {
+      "en": "Enchanted Dark Fabric",
+      "zh": "附魔的黑暗织物"
+    },
+    {
+      "en": "Enchanted Eye",
+      "zh": "魔法之眼"
+    },
+    {
+      "en": "Etched Wand Fragment",
+      "zh": "刻纹魔杖碎片"
+    },
+    {
+      "en": "Explosive Bottle",
+      "zh": "炸药瓶"
+    },
+    {
+      "en": "Extra Thick Pelts",
+      "zh": "加厚毛皮"
+    },
+    {
+      "en": "Eyepatch",
+      "zh": "眼罩"
+    },
+    {
+      "en": "Fabric Shears",
+      "zh": "布剪"
+    },
+    {
+      "en": "Falchion",
+      "zh": "弯刃刀"
+    },
+    {
+      "en": "Feathered Hat",
+      "zh": "羽毛帽"
+    },
+    {
+      "en": "Felling Axe",
+      "zh": "伐木斧"
+    },
+    {
+      "en": "Fine Cuirass",
+      "zh": "精美胸甲"
+    },
+    {
+      "en": "Firefly Abdomen",
+      "zh": "萤火虫腹部"
+    },
+    {
+      "en": "Flame Gas Bag",
+      "zh": "火焰气囊"
+    },
+    {
+      "en": "Flanged Mace",
+      "zh": "法兰锤"
+    },
+    {
+      "en": "Flickering Ember",
+      "zh": "闪烁余烬"
+    },
+    {
+      "en": "Flute",
+      "zh": "长笛"
+    },
+    {
+      "en": "Forest Boots",
+      "zh": "林地靴子"
+    },
+    {
+      "en": "Forest Hood",
+      "zh": "林地兜帽"
+    },
+    {
+      "en": "Fox Pendant",
+      "zh": "狐狸吊坠"
+    },
+    {
+      "en": "Francisca Axe",
+      "zh": "飞斧"
+    },
+    {
+      "en": "Frock",
+      "zh": "修士袍"
+    },
+    {
+      "en": "Frost Amulet",
+      "zh": "冰霜护符"
+    },
+    {
+      "en": "Frost Stone Ores",
+      "zh": "霜石矿"
+    },
+    {
+      "en": "Frost Wyvern Claws",
+      "zh": "霜龙之爪"
+    },
+    {
+      "en": "Frost Wyvern Egg",
+      "zh": "冰霜飞龙蛋"
+    },
+    {
+      "en": "Frost Wyverns Hide",
+      "zh": "冰霜飞龙皮"
+    },
+    {
+      "en": "Frosted Feather",
+      "zh": "霜羽"
+    },
+    {
+      "en": "Frozen Claw",
+      "zh": "冰冻利爪"
+    },
+    {
+      "en": "Frozen Heart",
+      "zh": "冰霜心脏"
+    },
+    {
+      "en": "Frozen Iron Key",
+      "zh": "寒铁钥匙"
+    },
+    {
+      "en": "Gallant Outfit",
+      "zh": "侠义装束"
+    },
+    {
+      "en": "Gem Necklace",
+      "zh": "宝石项链"
+    },
+    {
+      "en": "Gem Ring",
+      "zh": "宝石戒指"
+    },
+    {
+      "en": "Ghostdust Pouch",
+      "zh": "幽灵尘袋"
+    },
+    {
+      "en": "Ghostly Essence",
+      "zh": "幽界精华"
+    },
+    {
+      "en": "Giant Bat Ear",
+      "zh": "巨型蝙蝠耳朵"
+    },
+    {
+      "en": "Giant Bat Hide",
+      "zh": "巨型蝙蝠毛皮"
+    },
+    {
+      "en": "Giant Horn",
+      "zh": "巨角"
+    },
+    {
+      "en": "Giant Toe",
+      "zh": "巨人脚趾"
+    },
+    {
+      "en": "Gjermundbu",
+      "zh": "北境战盔"
+    },
+    {
+      "en": "Gloves Of Utility",
+      "zh": "实用手套"
+    },
+    {
+      "en": "Glowing Blue Ice Eyes",
+      "zh": "发光的蓝眼睛"
+    },
+    {
+      "en": "Glowing Orange Eye",
+      "zh": "发光橙眼"
+    },
+    {
+      "en": "Goat Hide Rug",
+      "zh": "山羊皮毯"
+    },
+    {
+      "en": "Goblin Ears",
+      "zh": "哥布林耳朵"
+    },
+    {
+      "en": "Gold Band",
+      "zh": "金环"
+    },
+    {
+      "en": "Gold Bangle1 B",
+      "zh": "金手镯1-B"
+    },
+    {
+      "en": "Gold Bangle1 C",
+      "zh": "金手镯1-C"
+    },
+    {
+      "en": "Gold Bangle1 D",
+      "zh": "金手镯1-D"
+    },
+    {
+      "en": "Gold Bangle1 E",
+      "zh": "金手镯1-E"
+    },
+    {
+      "en": "Gold Bangle1 H",
+      "zh": "金手镯1-H"
+    },
+    {
+      "en": "Gold Bangle1 I",
+      "zh": "金手镯1-I"
+    },
+    {
+      "en": "Gold Bangle1 J",
+      "zh": "金手镯1-J"
+    },
+    {
+      "en": "Gold Bangle2 D",
+      "zh": "金手镯2-D"
+    },
+    {
+      "en": "Gold Bangle2 G",
+      "zh": "金手镯2-G"
+    },
+    {
+      "en": "Gold Bangle2 H",
+      "zh": "金手镯2-H"
+    },
+    {
+      "en": "Gold Bowl",
+      "zh": "金碗"
+    },
+    {
+      "en": "Gold Candelabra",
+      "zh": "金烛架"
+    },
+    {
+      "en": "Gold Candle Holder",
+      "zh": "金烛台"
+    },
+    {
+      "en": "Gold Candle Platter",
+      "zh": "金烛托盘"
+    },
+    {
+      "en": "Gold Chalice A",
+      "zh": "金圣杯A"
+    },
+    {
+      "en": "Gold Chalice B",
+      "zh": "金圣杯B"
+    },
+    {
+      "en": "Gold Coin Bag",
+      "zh": "金币袋子"
+    },
+    {
+      "en": "Gold Coins",
+      "zh": "金币"
+    },
+    {
+      "en": "Gold Crown",
+      "zh": "金王冠"
+    },
+    {
+      "en": "Gold Ores",
+      "zh": "金矿"
+    },
+    {
+      "en": "Gold Waterpot",
+      "zh": "金水壶"
+    },
+    {
+      "en": "Golden Key",
+      "zh": "黄金钥匙"
+    },
+    {
+      "en": "Golden Teeth",
+      "zh": "金牙"
+    },
+    {
+      "en": "Grand Brigandine",
+      "zh": "华丽镶嵌甲"
+    },
+    {
+      "en": "Grave Essence",
+      "zh": "坟墓精华"
+    },
+    {
+      "en": "Great Helm",
+      "zh": "巨盔"
+    },
+    {
+      "en": "Green Thread Spool",
+      "zh": "绿线轴"
+    },
+    {
+      "en": "Halberd",
+      "zh": "长戟"
+    },
+    {
+      "en": "Hand Cannon",
+      "zh": "手炮"
+    },
+    {
+      "en": "Hand Crossbow",
+      "zh": "手弩"
+    },
+    {
+      "en": "Hard Crab Shell",
+      "zh": "硬蟹壳"
+    },
+    {
+      "en": "Hardened Shell Fragment",
+      "zh": "硬化壳碎片"
+    },
+    {
+      "en": "Hatchet",
+      "zh": "短柄斧"
+    },
+    {
+      "en": "Haze Blade",
+      "zh": "雾霾刀片-命名武器"
+    },
+    {
+      "en": "Healing Potion",
+      "zh": "治疗药水"
+    },
+    {
+      "en": "Heater Shield",
+      "zh": "斗盾"
+    },
+    {
+      "en": "Heavy Boots",
+      "zh": "重型长靴"
+    },
+    {
+      "en": "Heavy Gambeson",
+      "zh": "重型棉甲"
+    },
+    {
+      "en": "Heavy Gauntlet",
+      "zh": "重型板甲护手"
+    },
+    {
+      "en": "Heavy Leather Leggings",
+      "zh": "重皮护腿"
+    },
+    {
+      "en": "Hell Hunters Curved Blade",
+      "zh": "地狱猎手弯刀"
+    },
+    {
+      "en": "Herb Pouch",
+      "zh": "草药袋"
+    },
+    {
+      "en": "Holy Robe",
+      "zh": "神圣长袍"
+    },
+    {
+      "en": "Honeybliss Pear",
+      "zh": "蜜悦梨"
+    },
+    {
+      "en": "Horsemans Axe",
+      "zh": "骑士斧"
+    },
+    {
+      "en": "Horseshoe",
+      "zh": "马蹄铁"
+    },
+    {
+      "en": "Hounskull",
+      "zh": "狗面盔"
+    },
+    {
+      "en": "Hourglass",
+      "zh": "沙漏"
+    },
+    {
+      "en": "Human Remains",
+      "zh": "人类遗骸"
+    },
+    {
+      "en": "Hunting Trap",
+      "zh": "捕兽夹"
+    },
+    {
+      "en": "Infected Flesh",
+      "zh": "有毒的肉"
+    },
+    {
+      "en": "Intact Skull",
+      "zh": "完整头骨"
+    },
+    {
+      "en": "Invisibility Potion",
+      "zh": "隐身药水"
+    },
+    {
+      "en": "Iron Chain",
+      "zh": "铁链"
+    },
+    {
+      "en": "Iron Ores",
+      "zh": "铁矿"
+    },
+    {
+      "en": "Jellyfish Glow Essence",
+      "zh": "水母发光精华"
+    },
+    {
+      "en": "Jester Cap",
+      "zh": "小丑帽"
+    },
+    {
+      "en": "Jester Outfit",
+      "zh": "小丑装束"
+    },
+    {
+      "en": "Jester Pants",
+      "zh": "小丑裤"
+    },
+    {
+      "en": "Jester Poulaines",
+      "zh": "小丑尖头鞋"
+    },
+    {
+      "en": "Kettle Hat",
+      "zh": "壶盔"
+    },
+    {
+      "en": "Knead Blood Bag",
+      "zh": "揉血袋"
+    },
+    {
+      "en": "Kobold Ear",
+      "zh": "狗头人耳朵"
+    },
+    {
+      "en": "Kris Dagger",
+      "zh": "波形匕首"
+    },
+    {
+      "en": "Laced Turnshoe",
+      "zh": "系带翻面鞋"
+    },
+    {
+      "en": "Lantern",
+      "zh": "灯笼"
+    },
+    {
+      "en": "Lantern Shield",
+      "zh": "机关盾"
+    },
+    {
+      "en": "Large Scroll",
+      "zh": "大型卷轴"
+    },
+    {
+      "en": "Lava Golem Shoulder Fragment",
+      "zh": "熔岩魔像肩部碎片"
+    },
+    {
+      "en": "Lava Mushroom",
+      "zh": "熔岩蘑菇"
+    },
+    {
+      "en": "Lavish Shirt",
+      "zh": "华丽衬衫"
+    },
+    {
+      "en": "Leather Bonnet",
+      "zh": "无檐羽毛帽"
+    },
+    {
+      "en": "Leather Boot",
+      "zh": "皮靴"
+    },
+    {
+      "en": "Leather Cap",
+      "zh": "皮帽"
+    },
+    {
+      "en": "Leather Chausses",
+      "zh": "皮革马裤"
+    },
+    {
+      "en": "Leather Gloves",
+      "zh": "皮革手套"
+    },
+    {
+      "en": "Leather Lamellar",
+      "zh": "皮札甲"
+    },
+    {
+      "en": "Leather Leggings",
+      "zh": "皮革护腿"
+    },
+    {
+      "en": "Lifeleaf",
+      "zh": "生命之叶"
+    },
+    {
+      "en": "Light Aketon",
+      "zh": "轻型布面甲"
+    },
+    {
+      "en": "Light Cassock",
+      "zh": "轻型长袍"
+    },
+    {
+      "en": "Light Gauntlets",
+      "zh": "轻型板甲护手"
+    },
+    {
+      "en": "Lightfoot Boots",
+      "zh": "轻便长靴"
+    },
+    {
+      "en": "Lock",
+      "zh": "锁"
+    },
+    {
+      "en": "Lockpick",
+      "zh": "开锁器"
+    },
+    {
+      "en": "Long Pipe",
+      "zh": "长烟斗"
+    },
+    {
+      "en": "Longbow",
+      "zh": "长弓"
+    },
+    {
+      "en": "Longsword",
+      "zh": "长剑"
+    },
+    {
+      "en": "Loose Trousers",
+      "zh": "宽松长裤"
+    },
+    {
+      "en": "Low Boots",
+      "zh": "短靴"
+    },
+    {
+      "en": "Lukewarm Stew",
+      "zh": "温炖肉"
+    },
+    {
+      "en": "Lute",
+      "zh": "鲁特琴"
+    },
+    {
+      "en": "Luxury Boot Rack",
+      "zh": "豪华靴架"
+    },
+    {
+      "en": "Lyre",
+      "zh": "里拉琴"
+    },
+    {
+      "en": "Maggots",
+      "zh": "蛆虫"
+    },
+    {
+      "en": "Magic Protection Potion",
+      "zh": "魔法保护药水"
+    },
+    {
+      "en": "Magma Essence",
+      "zh": "岩浆精华"
+    },
+    {
+      "en": "Manuscriptsofthe Warlord",
+      "zh": "督军手稿"
+    },
+    {
+      "en": "Marauder Outfit",
+      "zh": "强盗外套"
+    },
+    {
+      "en": "Melted Pickaxe Head",
+      "zh": "熔化的镐头"
+    },
+    {
+      "en": "Mercurial Cloak",
+      "zh": "水银披风"
+    },
+    {
+      "en": "Mermaid Scale",
+      "zh": "美人鱼鳞片"
+    },
+    {
+      "en": "Mermaids Tear",
+      "zh": "美人鱼之泪"
+    },
+    {
+      "en": "Metal Cup",
+      "zh": "金属杯"
+    },
+    {
+      "en": "Midnight Stag Display",
+      "zh": "午夜雄鹿陈列品"
+    },
+    {
+      "en": "Mimic Tooth",
+      "zh": "拟态獠牙"
+    },
+    {
+      "en": "Misshapen Blade Shard",
+      "zh": "畸形刀刃碎片"
+    },
+    {
+      "en": "Mitre",
+      "zh": "主教冠"
+    },
+    {
+      "en": "Moldy Bread",
+      "zh": "发霉的面包"
+    },
+    {
+      "en": "Monkey Pendant",
+      "zh": "猴子吊坠"
+    },
+    {
+      "en": "Morning Star",
+      "zh": "晨星"
+    },
+    {
+      "en": "Mystic Gloves",
+      "zh": "秘法手套"
+    },
+    {
+      "en": "Mystic Vestments",
+      "zh": "神秘法衣"
+    },
+    {
+      "en": "Mystical Gem",
+      "zh": "神秘宝石"
+    },
+    {
+      "en": "Navigational Compass",
+      "zh": "航海罗盘"
+    },
+    {
+      "en": "Necklace Of Peace",
+      "zh": "和平项链"
+    },
+    {
+      "en": "Norman Nasal Helm",
+      "zh": "北境护鼻盔"
+    },
+    {
+      "en": "Northern Full Tunic",
+      "zh": "三层皮革北境战袍"
+    },
+    {
+      "en": "Northern Half Tunic",
+      "zh": "北方半袍"
+    },
+    {
+      "en": "Nothing",
+      "zh": "无"
+    },
+    {
+      "en": "Obsidian Ores",
+      "zh": "黑曜石矿"
+    },
+    {
+      "en": "Occultist Boots",
+      "zh": "术士长靴"
+    },
+    {
+      "en": "Occultist Hood",
+      "zh": "术士兜帽"
+    },
+    {
+      "en": "Occultist Pants",
+      "zh": "术士长裤"
+    },
+    {
+      "en": "Occultist Robe",
+      "zh": "术士长袍"
+    },
+    {
+      "en": "Occultist Tunic",
+      "zh": "术士法衣"
+    },
+    {
+      "en": "Oil Lantern",
+      "zh": "油灯笼"
+    },
+    {
+      "en": "Old Bloody Bandage",
+      "zh": "古老的血腥绷带"
+    },
+    {
+      "en": "Old Cloth",
+      "zh": "旧布"
+    },
+    {
+      "en": "Old Nautical Chart Fragment",
+      "zh": "旧海图碎片"
+    },
+    {
+      "en": "Old Rope",
+      "zh": "旧绳索"
+    },
+    {
+      "en": "Old Rusty Key",
+      "zh": "生锈的旧钥匙"
+    },
+    {
+      "en": "Old Shoes",
+      "zh": "旧鞋"
+    },
+    {
+      "en": "Onyx Gloves",
+      "zh": "缟玛瑙手套"
+    },
+    {
+      "en": "Open Sallet",
+      "zh": "开放式轻盔"
+    },
+    {
+      "en": "Oracle Robe",
+      "zh": "神谕长袍"
+    },
+    {
+      "en": "Ornate Jazerant",
+      "zh": "豪华布面锁子甲"
+    },
+    {
+      "en": "Owl Pendant",
+      "zh": "猫头鹰吊坠"
+    },
+    {
+      "en": "Ox Pendant",
+      "zh": "公牛吊坠"
+    },
+    {
+      "en": "Padded Leggings",
+      "zh": "衬垫护腿"
+    },
+    {
+      "en": "Padded Tunic",
+      "zh": "衬垫外套"
+    },
+    {
+      "en": "Paperweight",
+      "zh": "镇纸"
+    },
+    {
+      "en": "Pastoral Tunic",
+      "zh": "牧歌外衣"
+    },
+    {
+      "en": "Pavise",
+      "zh": "巨盾"
+    },
+    {
+      "en": "Pearl Necklace",
+      "zh": "珍珠项链"
+    },
+    {
+      "en": "Phantom Flower",
+      "zh": "幻影花"
+    },
+    {
+      "en": "Phoenix Choker",
+      "zh": "凤凰项圈"
+    },
+    {
+      "en": "Pickaxe",
+      "zh": "十字镐"
+    },
+    {
+      "en": "Pigache",
+      "zh": "尖头鞋"
+    },
+    {
+      "en": "Pincushion",
+      "zh": "针插"
+    },
+    {
+      "en": "Plate Boots",
+      "zh": "板甲靴"
+    },
+    {
+      "en": "Plate Pants",
+      "zh": "板甲裤"
+    },
+    {
+      "en": "Plunderhosen",
+      "zh": "掠夺裤"
+    },
+    {
+      "en": "Pocket Watch",
+      "zh": "怀表"
+    },
+    {
+      "en": "Poison Vial",
+      "zh": "毒药瓶"
+    },
+    {
+      "en": "Potionof Water Breathing",
+      "zh": "水下呼吸药水"
+    },
+    {
+      "en": "Poupoint",
+      "zh": "尖领短袄"
+    },
+    {
+      "en": "Primitive Bracelet",
+      "zh": "原始项链"
+    },
+    {
+      "en": "Protection Potion",
+      "zh": "保护药水"
+    },
+    {
+      "en": "Prowler Gloves",
+      "zh": "潜行者手套"
+    },
+    {
+      "en": "Quarterstaff",
+      "zh": "铁头棒"
+    },
+    {
+      "en": "Quiver",
+      "zh": "箭袋"
+    },
+    {
+      "en": "Radiant Cloak",
+      "zh": "光辉披风"
+    },
+    {
+      "en": "Ranger Hood",
+      "zh": "游侠兜帽"
+    },
+    {
+      "en": "Rapier",
+      "zh": "西洋剑"
+    },
+    {
+      "en": "Rat Pendant",
+      "zh": "老鼠吊坠"
+    },
+    {
+      "en": "Rawhide Gloves",
+      "zh": "生皮手套"
+    },
+    {
+      "en": "Recurve Bow",
+      "zh": "反曲弓"
+    },
+    {
+      "en": "Red Apple",
+      "zh": "红苹果"
+    },
+    {
+      "en": "Regal Gambeson",
+      "zh": "豪华棉甲"
+    },
+    {
+      "en": "Regal Mitre",
+      "zh": "华贵主教冠"
+    },
+    {
+      "en": "Reinforced Gloves",
+      "zh": "加固手套"
+    },
+    {
+      "en": "Reins",
+      "zh": "缰绳"
+    },
+    {
+      "en": "Ring Of Courage",
+      "zh": "勇气之戒"
+    },
+    {
+      "en": "Ring Of Finesse",
+      "zh": "技巧之戒"
+    },
+    {
+      "en": "Ring Of Quickness",
+      "zh": "速度之戒"
+    },
+    {
+      "en": "Ring Of Resolve",
+      "zh": "决心之戒"
+    },
+    {
+      "en": "Ring Of Survival",
+      "zh": "生存之戒"
+    },
+    {
+      "en": "Ring Of Vitality",
+      "zh": "活力之戒"
+    },
+    {
+      "en": "Ring Of Wisdom",
+      "zh": "智慧之戒"
+    },
+    {
+      "en": "Ritual Robe",
+      "zh": "仪式长袍"
+    },
+    {
+      "en": "Riveted Gloves",
+      "zh": "铆接手套"
+    },
+    {
+      "en": "Rogue Cowl",
+      "zh": "盗贼风帽"
+    },
+    {
+      "en": "Rondel Dagger",
+      "zh": "朗德尔匕首"
+    },
+    {
+      "en": "Rotten Fluids",
+      "zh": "腐烂粘液"
+    },
+    {
+      "en": "Rotten Lump",
+      "zh": "腐烂团块"
+    },
+    {
+      "en": "Round Shield",
+      "zh": "圆盾"
+    },
+    {
+      "en": "Ruby",
+      "zh": "红宝石"
+    },
+    {
+      "en": "Rubysilver Ores",
+      "zh": "红宝石银矿"
+    },
+    {
+      "en": "Rugged Boots",
+      "zh": "加固长靴"
+    },
+    {
+      "en": "Runestone Gloves",
+      "zh": "符石手套"
+    },
+    {
+      "en": "Rustic Tunic",
+      "zh": "粗朴外衣"
+    },
+    {
+      "en": "Rusty Broken Sword",
+      "zh": "生锈的断剑"
+    },
+    {
+      "en": "Saddle",
+      "zh": "马鞍"
+    },
+    {
+      "en": "Sailors Journal",
+      "zh": "水手日志"
+    },
+    {
+      "en": "Sallet",
+      "zh": "轻盔"
+    },
+    {
+      "en": "Saltvine",
+      "zh": "盐藤"
+    },
+    {
+      "en": "Scabbard",
+      "zh": "剑鞘"
+    },
+    {
+      "en": "Scaled Armor",
+      "zh": "鳞甲"
+    },
+    {
+      "en": "Sealed Letter",
+      "zh": "密封信件"
+    },
+    {
+      "en": "Seared Hide",
+      "zh": "灼焦兽皮"
+    },
+    {
+      "en": "Seashell",
+      "zh": "海贝"
+    },
+    {
+      "en": "Seaweed Necklace",
+      "zh": "海藻项链"
+    },
+    {
+      "en": "Shackles",
+      "zh": "镣铐"
+    },
+    {
+      "en": "Shadow Hood",
+      "zh": "暗影兜帽"
+    },
+    {
+      "en": "Shadow Mask",
+      "zh": "暗影面罩"
+    },
+    {
+      "en": "Sharp Sea Urchin Spine",
+      "zh": "锋利海胆刺"
+    },
+    {
+      "en": "Shining Pearl",
+      "zh": "闪亮珍珠"
+    },
+    {
+      "en": "Ships Wheel",
+      "zh": "船舵"
+    },
+    {
+      "en": "Short Sword",
+      "zh": "短剑"
+    },
+    {
+      "en": "Silver Chalice",
+      "zh": "银圣杯"
+    },
+    {
+      "en": "Silver Coin",
+      "zh": "银币"
+    },
+    {
+      "en": "Skinny Finger",
+      "zh": "瘦长手指"
+    },
+    {
+      "en": "Skull Key",
+      "zh": "骷髅钥匙"
+    },
+    {
+      "en": "Sleek Hide Pants",
+      "zh": "光滑兽皮裤"
+    },
+    {
+      "en": "Sling",
+      "zh": "投石索"
+    },
+    {
+      "en": "Sling Stone",
+      "zh": "投石"
+    },
+    {
+      "en": "Small Fiendling Horn",
+      "zh": "小恶魔角"
+    },
+    {
+      "en": "Smelly Vomit",
+      "zh": "恶臭呕吐物"
+    },
+    {
+      "en": "Smoky Poison Powder",
+      "zh": "烟熏毒粉"
+    },
+    {
+      "en": "Soap",
+      "zh": "肥皂"
+    },
+    {
+      "en": "Sooty Beard Hair",
+      "zh": "烟熏胡须毛"
+    },
+    {
+      "en": "Soul Torq",
+      "zh": "灵魂项圈"
+    },
+    {
+      "en": "Spangenhelm",
+      "zh": "镶钉护鼻盔"
+    },
+    {
+      "en": "Spear",
+      "zh": "长矛"
+    },
+    {
+      "en": "Spectral Fabric",
+      "zh": "幽魂织物"
+    },
+    {
+      "en": "Spectral Hilt",
+      "zh": "幽魂剑柄"
+    },
+    {
+      "en": "Spellbook",
+      "zh": "魔法书"
+    },
+    {
+      "en": "Spellplunder Rod",
+      "zh": "法术破坏杖-命名武器"
+    },
+    {
+      "en": "Spent Candle",
+      "zh": "燃尽的蜡烛"
+    },
+    {
+      "en": "Spider Silk",
+      "zh": "蜘蛛丝"
+    },
+    {
+      "en": "Splendid Cloak",
+      "zh": "华丽披风"
+    },
+    {
+      "en": "Square Cushion",
+      "zh": "方形软垫"
+    },
+    {
+      "en": "Starfish",
+      "zh": "海星"
+    },
+    {
+      "en": "Stefan Beret",
+      "zh": "斯特凡贝雷帽"
+    },
+    {
+      "en": "Sticky Tongue",
+      "zh": "黏舌"
+    },
+    {
+      "en": "Stiletto Dagger",
+      "zh": "细剑匕首"
+    },
+    {
+      "en": "Stillmend Boots",
+      "zh": "斯蒂尔曼德靴子-命名装备"
+    },
+    {
+      "en": "Stitched Turnshoe",
+      "zh": "系带翻面鞋"
+    },
+    {
+      "en": "Stone Fragment",
+      "zh": "石块碎片"
+    },
+    {
+      "en": "Stone Mortar",
+      "zh": "石臼"
+    },
+    {
+      "en": "Straw Hat",
+      "zh": "草帽"
+    },
+    {
+      "en": "Studded Leather",
+      "zh": "镶钉皮甲"
+    },
+    {
+      "en": "Sturdy Boots",
+      "zh": "结实靴子"
+    },
+    {
+      "en": "Sturdy Cloth",
+      "zh": "结实布料"
+    },
+    {
+      "en": "Sturdy Rope",
+      "zh": "结实绳索"
+    },
+    {
+      "en": "Surgical Kit",
+      "zh": "手术包"
+    },
+    {
+      "en": "Survival Bow",
+      "zh": "精灵真理弓-命名武器"
+    },
+    {
+      "en": "Tail Of Centaur",
+      "zh": "半人马之尾"
+    },
+    {
+      "en": "Tanglethread Trousers",
+      "zh": "缠线长裤-命名装备"
+    },
+    {
+      "en": "Tar",
+      "zh": "焦油"
+    },
+    {
+      "en": "Tattered Cloak",
+      "zh": "破旧披风"
+    },
+    {
+      "en": "Telescope",
+      "zh": "望远镜"
+    },
+    {
+      "en": "Templar Armor",
+      "zh": "圣殿铠甲"
+    },
+    {
+      "en": "Thick Forefoot",
+      "zh": "粗壮前掌"
+    },
+    {
+      "en": "Thorn Shield",
+      "zh": "荆棘之盾-命名武器"
+    },
+    {
+      "en": "Throwing Knife",
+      "zh": "飞刀"
+    },
+    {
+      "en": "Tidestone Ores",
+      "zh": "潮汐石矿"
+    },
+    {
+      "en": "Tidewalker Fin",
+      "zh": "潮汐行者鳍"
+    },
+    {
+      "en": "Timeworn Robe",
+      "zh": "岁月长袍"
+    },
+    {
+      "en": "Token Of Honor",
+      "zh": "荣耀徽章"
+    },
+    {
+      "en": "Tongue Of Mimic",
+      "zh": "宝箱怪舌头"
+    },
+    {
+      "en": "Topfhelm",
+      "zh": "圣殿巨盔"
+    },
+    {
+      "en": "Torch",
+      "zh": "火把"
+    },
+    {
+      "en": "Torn Bat Wing",
+      "zh": "被扯下的蝙蝠翅膀"
+    },
+    {
+      "en": "Torn Sail",
+      "zh": "破帆"
+    },
+    {
+      "en": "Torn Wing Fragment",
+      "zh": "破损翅膀碎片"
+    },
+    {
+      "en": "Tracing Wheel",
+      "zh": "描线轮"
+    },
+    {
+      "en": "Trap Disarming Kit",
+      "zh": "陷阱解除工具"
+    },
+    {
+      "en": "Trapper Hat",
+      "zh": "陷阱师帽"
+    },
+    {
+      "en": "Tripod",
+      "zh": "三脚架"
+    },
+    {
+      "en": "Troll Blood",
+      "zh": "巨魔之血"
+    },
+    {
+      "en": "Troll Pelt",
+      "zh": "巨魔之皮"
+    },
+    {
+      "en": "Trolls Club",
+      "zh": "巨魔之棒"
+    },
+    {
+      "en": "Troubadour Outfit",
+      "zh": "诗人外套"
+    },
+    {
+      "en": "Trunk Hose",
+      "zh": "灯笼裤"
+    },
+    {
+      "en": "Turnshoe",
+      "zh": "翻面鞋"
+    },
+    {
+      "en": "Twisted Abyss Horn",
+      "zh": "扭曲深渊之角"
+    },
+    {
+      "en": "Valiant Attire",
+      "zh": "勇武装束"
+    },
+    {
+      "en": "Vigilant Cloak",
+      "zh": "警惕披风"
+    },
+    {
+      "en": "Viking Helm",
+      "zh": "维京战盔"
+    },
+    {
+      "en": "Viking Sword",
+      "zh": "维京剑"
+    },
+    {
+      "en": "Visored Barbuta Helm",
+      "zh": "覆面尖顶盔"
+    },
+    {
+      "en": "Visored Sallet",
+      "zh": "半遮面轻盔"
+    },
+    {
+      "en": "Volcanic Ash",
+      "zh": "火山灰"
+    },
+    {
+      "en": "Walking Cane",
+      "zh": "手杖"
+    },
+    {
+      "en": "Wanderer Attire",
+      "zh": "流浪者外衣"
+    },
+    {
+      "en": "Wanderlight Lantern",
+      "zh": "流浪灯-命名物品"
+    },
+    {
+      "en": "War Hammer",
+      "zh": "战锤"
+    },
+    {
+      "en": "War Horn",
+      "zh": "战争号角"
+    },
+    {
+      "en": "War Maul",
+      "zh": "战锤"
+    },
+    {
+      "en": "Warden Outfit",
+      "zh": "典狱长外套"
+    },
+    {
+      "en": "Wardweed",
+      "zh": "护符草"
+    },
+    {
+      "en": "Warlords Armor Shard",
+      "zh": "督军的铠甲残片"
+    },
+    {
+      "en": "Warlords Broken Sword Blade",
+      "zh": "督军的断剑"
+    },
+    {
+      "en": "Warped Adamantine Shackles",
+      "zh": "扭曲精金镣铐"
+    },
+    {
+      "en": "Watchman Cloak",
+      "zh": "守望者披风"
+    },
+    {
+      "en": "Wendigo Hoof",
+      "zh": "温迪戈蹄"
+    },
+    {
+      "en": "Wendigo Sharp Claws",
+      "zh": "温迪戈利爪"
+    },
+    {
+      "en": "Wendigos Antler Fragment",
+      "zh": "温迪戈的犄角残片"
+    },
+    {
+      "en": "Wendigos Entrails",
+      "zh": "温迪戈的大肠"
+    },
+    {
+      "en": "White Shark Fin",
+      "zh": "白鲨鳍"
+    },
+    {
+      "en": "White Shark Hide",
+      "zh": "白鲨皮"
+    },
+    {
+      "en": "White Shark Tooth",
+      "zh": "白鲨牙"
+    },
+    {
+      "en": "White Thread Spool",
+      "zh": "白线轴"
+    },
+    {
+      "en": "Wind Locket",
+      "zh": "风之吊坠"
+    },
+    {
+      "en": "Windlass Crossbow",
+      "zh": "绞盘弩"
+    },
+    {
+      "en": "Wizard Hat",
+      "zh": "巫师帽"
+    },
+    {
+      "en": "Wizard Shoes",
+      "zh": "巫师鞋"
+    },
+    {
+      "en": "Wizard Staff",
+      "zh": "魔法杖"
+    },
+    {
+      "en": "Wolf Claw",
+      "zh": "狼爪"
+    },
+    {
+      "en": "Wolf Fang",
+      "zh": "狼牙"
+    },
+    {
+      "en": "Wolf Pelt",
+      "zh": "狼皮"
+    },
+    {
+      "en": "Wooden Dice",
+      "zh": "木制骰子"
+    },
+    {
+      "en": "Wooden Figurine",
+      "zh": "木制小雕像"
+    },
+    {
+      "en": "Wooden Mask",
+      "zh": "木制面具"
+    },
+    {
+      "en": "Wooden Plank",
+      "zh": "木板"
+    },
+    {
+      "en": "Wooden Stake",
+      "zh": "木桩"
+    },
+    {
+      "en": "Wooden Stick",
+      "zh": "木棍"
+    },
+    {
+      "en": "Woodsman Axe",
+      "zh": "林工斧"
+    },
+    {
+      "en": "Woolen Cap",
+      "zh": "羊毛帽"
+    },
+    {
+      "en": "Woven Rattan Bottle",
+      "zh": "编织藤瓶"
+    },
+    {
+      "en": "Yellow Thread Spool",
+      "zh": "黄线轴"
+    },
+    {
+      "en": "Yetis Teeth",
+      "zh": "雪怪的牙齿"
+    },
+    {
+      "en": "Zweihander",
+      "zh": "双手剑"
+    }
+  ]
+}

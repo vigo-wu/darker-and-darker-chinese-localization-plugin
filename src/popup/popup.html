@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DarkTrans 汉化</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1 class="popup__title">DarkTrans</h1>
+        <p class="popup__subtitle">Dark and Darker Tracker 汉化</p>
+      </header>
+
+      <section class="popup__section">
+        <label class="toggle">
+          <input id="enabledToggle" type="checkbox" />
+          <span class="toggle__slider"></span>
+          <span class="toggle__label">启用汉化</span>
+        </label>
+        <p id="statusText" class="popup__status">正在读取设置…</p>
+      </section>
+
+      <section class="popup__section popup__section--muted">
+        <p class="popup__hint">适用于：</p>
+        <p class="popup__url">darkanddarkertracker.com/maps</p>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
