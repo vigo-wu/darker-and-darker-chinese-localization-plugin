@@ -38,6 +38,7 @@
     window.DARKTRANS_CATEGORY_MONSTERS || {},
     window.DARKTRANS_CATEGORY_HERBS || {},
     window.DARKTRANS_CATEGORY_TRAPS || {},
+    window.DARKTRANS_CATEGORY_QUESTS || {},
     ui
   );
 })();

@@ -34,6 +34,7 @@
         "src/locales/category/traps.js",
         "src/locales/category/loot.js",
         "src/locales/category/items.js",
+        "src/locales/category/quests.js",
         "src/locales/zh-CN.js",
         "src/content/translator.js",
         "src/content/index.js"
