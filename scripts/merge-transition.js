@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const TRANSITION_PATH = path.join(__dirname, "..", "transition.json");
+const TRANSITION_PATH = path.join(__dirname, "..", "metaData", "transition.json");
 const CATEGORY_DIR = path.join(__dirname, "..", "src", "locales", "category");
 
 const CATEGORIES = [

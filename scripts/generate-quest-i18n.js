@@ -4,8 +4,8 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const STRINGS_PATH = path.join(ROOT, "temp-quest-strings.txt");
 const UI_PATH = path.join(ROOT, "temp-quest-ui-strings.txt");
-const MANUAL_PATH = path.join(ROOT, "quest-manual-zh.json");
-const OUTPUT_PATH = path.join(ROOT, "quest-i18n.json");
+const MANUAL_PATH = path.join(ROOT, "metaData", "quest-manual-zh.json");
+const OUTPUT_PATH = path.join(ROOT, "metaData", "quest-i18n.json");
 const QUESTS_RAW_PATH = path.join(ROOT, "temp-quests-raw.json");
 
 const RARITY_ZH = {
@@ -87,19 +87,19 @@ function loadExistingDictionary() {
   };
 
   const transition = JSON.parse(
-    fs.readFileSync(path.join(ROOT, "transition.json"), "utf8")
+    fs.readFileSync(path.join(ROOT, "metaData", "transition.json"), "utf8")
   );
   for (const section of Object.values(transition)) add(section);
 
   const items = JSON.parse(
-    fs.readFileSync(path.join(ROOT, "item-names-i18n.json"), "utf8")
+    fs.readFileSync(path.join(ROOT, "metaData", "item-names-i18n.json"), "utf8")
   ).items;
   for (const { en, zh } of items) {
     if (en && zh) dict[en] = zh;
   }
 
   add(
-    JSON.parse(fs.readFileSync(path.join(ROOT, "item-names-manual-zh.json"), "utf8"))
+    JSON.parse(fs.readFileSync(path.join(ROOT, "metaData", "item-names-manual-zh.json"), "utf8"))
   );
 
   const ui = {

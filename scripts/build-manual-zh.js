@@ -240,6 +240,6 @@ const MANUAL_ZH = {
   "Yellow Thread Spool": "黄线轴",
 };
 
-const outPath = path.join(__dirname, "..", "item-names-manual-zh.json");
+const outPath = path.join(__dirname, "..", "metaData", "item-names-manual-zh.json");
 fs.writeFileSync(outPath, JSON.stringify(MANUAL_ZH, null, 2), "utf8");
 console.log(`已写入 ${outPath}（${Object.keys(MANUAL_ZH).length} 条）`);

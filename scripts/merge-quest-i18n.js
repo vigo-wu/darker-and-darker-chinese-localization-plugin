@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const QUEST_I18N_PATH = path.join(__dirname, "..", "quest-i18n.json");
+const QUEST_I18N_PATH = path.join(__dirname, "..", "metaData", "quest-i18n.json");
 const OUTPUT_PATH = path.join(
   __dirname,
   "..",

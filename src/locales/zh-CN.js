@@ -31,6 +31,7 @@
 
   window.DARKTRANS_DICTIONARY = Object.assign(
     {},
+      window.DARKTRANS_CATEGORY_QUESTS || {},
     window.DARKTRANS_CATEGORY_ITEMS || {},
     window.DARKTRANS_CATEGORY_LOOT || {},
     window.DARKTRANS_CATEGORY_MAP_LOCATION || {},
@@ -38,7 +39,6 @@
     window.DARKTRANS_CATEGORY_MONSTERS || {},
     window.DARKTRANS_CATEGORY_HERBS || {},
     window.DARKTRANS_CATEGORY_TRAPS || {},
-    window.DARKTRANS_CATEGORY_QUESTS || {},
     ui
   );
 })();

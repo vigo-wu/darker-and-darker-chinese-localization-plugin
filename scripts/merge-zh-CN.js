@@ -9,8 +9,8 @@ const ITEMS_LOCALE_PATH = path.join(
   "category",
   "items.js"
 );
-const ITEMS_PATH = path.join(__dirname, "..", "item-names-i18n.json");
-const TRANSITION_PATH = path.join(__dirname, "..", "transition.json");
+const ITEMS_PATH = path.join(__dirname, "..", "metaData", "item-names-i18n.json");
+const TRANSITION_PATH = path.join(__dirname, "..", "metaData", "transition.json");
 
 function loadTransitionKeys() {
   const transition = JSON.parse(fs.readFileSync(TRANSITION_PATH, "utf8"));

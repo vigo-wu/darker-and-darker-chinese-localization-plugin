@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const DATA_PATH = path.join(__dirname, "..", "data.json");
-const OUTPUT_PATH = path.join(__dirname, "..", "item-names-i18n.json");
+const DATA_PATH = path.join(__dirname, "..", "metaData", "data.json");
+const OUTPUT_PATH = path.join(__dirname, "..", "metaData", "item-names-i18n.json");
 
 const NFU_PAGES = [
   "https://dnd.nfuwow.com/Item/weapons.html",
@@ -131,7 +131,7 @@ function lookupZh(en, nfuMap, manualMap) {
 }
 
 function loadManualMap() {
-  const manualPath = path.join(__dirname, "..", "item-names-manual-zh.json");
+  const manualPath = path.join(__dirname, "..", "metaData", "item-names-manual-zh.json");
   if (!fs.existsSync(manualPath)) return new Map();
   const raw = JSON.parse(fs.readFileSync(manualPath, "utf8"));
   const map = new Map();

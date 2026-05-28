@@ -15,18 +15,18 @@ function add(obj) {
 }
 
 const transition = JSON.parse(
-  fs.readFileSync(path.join(root, "transition.json"), "utf8")
+  fs.readFileSync(path.join(root, "metaData", "transition.json"), "utf8")
 );
 for (const section of Object.values(transition)) add(section);
 
 const items = JSON.parse(
-  fs.readFileSync(path.join(root, "item-names-i18n.json"), "utf8")
+  fs.readFileSync(path.join(root, "metaData", "item-names-i18n.json"), "utf8")
 ).items;
 for (const { en, zh } of items) {
   if (en && zh) dict[en] = zh;
 }
 
-add(JSON.parse(fs.readFileSync(path.join(root, "item-names-manual-zh.json"), "utf8")));
+add(JSON.parse(fs.readFileSync(path.join(root, "metaData", "item-names-manual-zh.json"), "utf8")));
 
 let hit = 0;
 const miss = [];
