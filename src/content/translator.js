@@ -33,6 +33,18 @@
       }
     }
 
+    setDictionary(dictionary) {
+      this.dictionary = dictionary || {};
+      this.sortedEntries = Object.entries(this.dictionary).sort(
+        (a, b) => b[0].length - a[0].length
+      );
+
+      if (!this.enabled) return;
+
+      this.restoreDocument(document.body);
+      this.translateDocument(document.body);
+    }
+
     shouldSkipElement(element) {
       if (!element || element.nodeType !== Node.ELEMENT_NODE) return true;
       if (SKIP_TAGS.has(element.tagName)) return true;

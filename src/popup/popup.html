@@ -22,11 +22,49 @@
         <p id="statusText" class="popup__status">正在读取设置…</p>
       </section>
 
+      <section class="popup__section">
+        <h2 class="popup__section-title">词典</h2>
+        <p id="dictStats" class="popup__dict-stats">正在统计词条…</p>
+        <div class="popup__actions">
+          <button id="exportAllBtn" type="button" class="btn">导出全部</button>
+          <button id="exportCustomBtn" type="button" class="btn btn--secondary">
+            导出自定义
+          </button>
+          <button id="importBtn" type="button" class="btn">导入 JSON</button>
+          <input
+            id="importFile"
+            type="file"
+            accept=".json,application/json"
+            hidden
+          />
+        </div>
+        <label class="checkbox">
+          <input id="importMergeToggle" type="checkbox" checked />
+          <span>导入时合并到现有自定义词条</span>
+        </label>
+        <p id="dictMessage" class="popup__dict-message" hidden></p>
+        <p class="popup__hint popup__hint--block">
+          支持扁平 <code>{"英文":"中文"}</code>、带
+          <code>entries</code> 的对象，或
+          <code>[{"en":"…","zh":"…"}]</code> 数组；也兼容
+          transition.json 分类结构。
+        </p>
+      </section>
+
       <section class="popup__section popup__section--muted">
         <p class="popup__hint">适用于：</p>
         <p class="popup__url">darkanddarkertracker.com/maps</p>
       </section>
     </main>
+    <script src="../shared/i18n-json.js"></script>
+    <script src="../locales/category/mapLocations.js"></script>
+    <script src="../locales/category/containers.js"></script>
+    <script src="../locales/category/monsters.js"></script>
+    <script src="../locales/category/herbs.js"></script>
+    <script src="../locales/category/traps.js"></script>
+    <script src="../locales/category/loot.js"></script>
+    <script src="../locales/category/items.js"></script>
+    <script src="../locales/zh-CN.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

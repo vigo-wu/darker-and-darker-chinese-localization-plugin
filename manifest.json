@@ -26,6 +26,7 @@
     {
       "matches": ["https://darkanddarkertracker.com/*"],
       "js": [
+        "src/shared/i18n-json.js",
         "src/locales/category/mapLocations.js",
         "src/locales/category/containers.js",
         "src/locales/category/monsters.js",

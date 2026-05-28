@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  min-width: 280px;
+  min-width: 300px;
   font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
   background: #121018;
   color: #f2e8d8;
@@ -104,4 +104,83 @@ body {
 
 .toggle__label {
   font-size: 14px;
+}
+
+.popup__section-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d4a853;
+}
+
+.popup__dict-stats {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #a89b88;
+}
+
+.popup__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 6px 10px;
+  border: 1px solid #4a3f1a;
+  border-radius: 8px;
+  background: #7a5c1e;
+  color: #f2e8d8;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn:hover {
+  background: #8f6d24;
+}
+
+.btn--secondary {
+  background: #2a2433;
+  border-color: #3a3344;
+}
+
+.btn--secondary:hover {
+  background: #352d42;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: #a89b88;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  margin-top: 2px;
+  accent-color: #7a5c1e;
+}
+
+.popup__dict-message {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #8fd4a8;
+}
+
+.popup__dict-message--error {
+  color: #e8a0a0;
+}
+
+.popup__hint--block {
+  margin-top: 10px;
+  line-height: 1.45;
+}
+
+.popup__hint code {
+  font-size: 10px;
+  color: #c9b896;
 }
