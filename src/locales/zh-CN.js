@@ -2,7 +2,7 @@
  * 英文 -> 简体中文 翻译词典（入口）
  * 合并 category/*.js 与地图/UI 词条（UI 优先级最高）
  * 物品词条：npm run extract-item-names
- * 地图/怪物等：npm run merge-transition
+ * 地图/怪物/战利品等：npm run merge-transition
  */
 (function () {
   const ui = {
@@ -20,13 +20,19 @@
     Monsters: "怪物",
     Shrines: "祭坛",
     Hazards: "危险物",
-    traps: "陷阱",
+    Traps: "陷阱",
     Chests: "宝箱",
+    Destructibles: "可破坏物",
+    "High Tier": "高级",
+    "Low Tier": "低级",
+    "Herbs": "植物",
+    "Ores": "矿石",
   };
 
   window.DARKTRANS_DICTIONARY = Object.assign(
     {},
     window.DARKTRANS_CATEGORY_ITEMS || {},
+    window.DARKTRANS_CATEGORY_LOOT || {},
     window.DARKTRANS_CATEGORY_MAP_LOCATION || {},
     window.DARKTRANS_CATEGORY_CONTAINERS || {},
     window.DARKTRANS_CATEGORY_MONSTERS || {},

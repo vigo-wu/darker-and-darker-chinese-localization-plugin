@@ -10,12 +10,32 @@ const ITEMS_LOCALE_PATH = path.join(
   "items.js"
 );
 const ITEMS_PATH = path.join(__dirname, "..", "item-names-i18n.json");
+const TRANSITION_PATH = path.join(__dirname, "..", "transition.json");
+
+function loadTransitionKeys() {
+  const transition = JSON.parse(fs.readFileSync(TRANSITION_PATH, "utf8"));
+  const keys = new Set();
+  for (const section of Object.values(transition)) {
+    for (const key of Object.keys(section)) keys.add(key);
+  }
+  return keys;
+}
 
 function loadItemEntries() {
   const data = JSON.parse(fs.readFileSync(ITEMS_PATH, "utf8"));
+  const transitionKeys = loadTransitionKeys();
   const entries = {};
+  let skipped = 0;
   for (const { en, zh } of data.items) {
-    if (en && zh) entries[en] = zh;
+    if (!en || !zh) continue;
+    if (transitionKeys.has(en)) {
+      skipped++;
+      continue;
+    }
+    entries[en] = zh;
+  }
+  if (skipped) {
+    console.log(`已跳过 transition.json 中已有的 ${skipped} 条`);
   }
   return entries;
 }

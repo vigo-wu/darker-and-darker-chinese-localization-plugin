@@ -14,5 +14,6 @@ window.DARKTRANS_CATEGORY_TRAPS = {
   "Magma Burst": "岩浆喷发",
   "Magma Plate": "岩浆陷阱板",
   "Spider Web": "蜘蛛网",
-  "Wall Spike": "墙壁刺针"
+  "Wall Spike": "墙壁刺针",
+  "Axe Trap": "摆斧陷阱"
 };

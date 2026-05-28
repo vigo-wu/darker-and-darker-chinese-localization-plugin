@@ -31,6 +31,7 @@
         "src/locales/category/monsters.js",
         "src/locales/category/herbs.js",
         "src/locales/category/traps.js",
+        "src/locales/category/loot.js",
         "src/locales/category/items.js",
         "src/locales/zh-CN.js",
         "src/content/translator.js",

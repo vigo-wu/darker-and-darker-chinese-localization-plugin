@@ -35,6 +35,12 @@ const CATEGORIES = [
     global: "DARKTRANS_CATEGORY_TRAPS",
     title: "陷阱",
   },
+  {
+    key: "items_and_loot",
+    file: "loot.js",
+    global: "DARKTRANS_CATEGORY_LOOT",
+    title: "物品与战利品",
+  },
 ];
 
 function formatObjectLiteral(entries) {
