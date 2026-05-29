@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const STRINGS_PATH = path.join(ROOT, "temp-quest-strings.txt");
@@ -78,6 +79,16 @@ const TERM_ZH = {
   ...MERCHANT_ZH,
 };
 
+function loadMapUiDictionary() {
+  const source = fs.readFileSync(
+    path.join(ROOT, "src", "locales", "map-ui.js"),
+    "utf8"
+  );
+  const sandbox = { window: {} };
+  vm.runInContext(source, vm.createContext(sandbox));
+  return sandbox.window.DARKTRANS_MAP_UI || {};
+}
+
 function loadExistingDictionary() {
   const dict = {};
   const add = (obj) => {
@@ -102,17 +113,7 @@ function loadExistingDictionary() {
     JSON.parse(fs.readFileSync(path.join(ROOT, "metaData", "item-names-manual-zh.json"), "utf8"))
   );
 
-  const ui = {
-    "Ruins of Forgotten Castle": "城堡一层",
-    Crypts: "城堡二层",
-    Inferno: "城堡三层",
-    "Goblin Cave": "哥布林洞穴一层",
-    Firedeep: "哥布林洞穴二层",
-    "Frost Mountain": "冰霜山脉一层",
-    "Ice Abyss": "冰霜山脉二层",
-    "Ship Graveyard": "蔚蓝漩涡",
-  };
-  add(ui);
+  add(loadMapUiDictionary());
   add(TERM_ZH);
   add(MERCHANT_ZH);
   add(MAP_ZH);

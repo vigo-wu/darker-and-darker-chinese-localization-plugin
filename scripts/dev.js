@@ -10,6 +10,8 @@ const {
 
 const WATCH_PATHS = [
   path.join(ROOT, "manifest.json"),
+  path.join(ROOT, "logo.png"),
+  path.join(ROOT, "logo.jpg"),
   path.join(ROOT, "icons"),
   path.join(ROOT, "src"),
 ];

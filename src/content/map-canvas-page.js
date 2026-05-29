@@ -508,15 +508,10 @@
     return nativeEncodeURIComponent(value);
   };
 
-  if (document.documentElement) {
-    document.documentElement.dataset.darktransHook = "1";
-  }
-
   document.dispatchEvent(new Event("darktrans-hook-ready"));
 
   window.DarkTransCanvas = {
     setDictionary,
     setEnabled,
-    translateString,
   };
 })();

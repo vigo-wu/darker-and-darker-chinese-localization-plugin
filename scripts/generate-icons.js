@@ -1,73 +1,97 @@
 const fs = require("fs");
 const path = require("path");
-const zlib = require("zlib");
+const { execSync } = require("child_process");
 
-const OUTPUT_DIR = path.join(__dirname, "..", "icons");
+const ROOT = path.join(__dirname, "..");
+const OUTPUT_DIR = path.join(ROOT, "icons");
+const SIZES = [16, 48, 128];
 
-function crc32(buffer) {
-  let crc = 0xffffffff;
-  for (let i = 0; i < buffer.length; i += 1) {
-    crc ^= buffer[i];
-    for (let j = 0; j < 8; j += 1) {
-      crc = crc & 1 ? 0xedb88320 ^ (crc >>> 1) : crc >>> 1;
+function findSourceLogo() {
+  for (const name of ["logo.png", "logo.jpg", "logo.jpeg"]) {
+    const candidate = path.join(ROOT, name);
+    if (fs.existsSync(candidate)) {
+      return candidate;
     }
   }
-  return (crc ^ 0xffffffff) >>> 0;
+  return null;
 }
 
-function createSolidPng(size, rgb) {
-  const [r, g, b] = rgb;
-  const row = Buffer.alloc(1 + size * 3);
-  row[0] = 0;
-  for (let x = 0; x < size; x += 1) {
-    const offset = 1 + x * 3;
-    row[offset] = r;
-    row[offset + 1] = g;
-    row[offset + 2] = b;
-  }
+const SOURCE_LOGO = findSourceLogo();
 
-  const raw = Buffer.alloc((1 + size * 3) * size);
-  for (let y = 0; y < size; y += 1) {
-    row.copy(raw, y * row.length);
-  }
-
-  const compressed = zlib.deflateSync(raw);
-
-  const signature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
-  const ihdrData = Buffer.alloc(13);
-  ihdrData.writeUInt32BE(size, 0);
-  ihdrData.writeUInt32BE(size, 4);
-  ihdrData[8] = 8;
-  ihdrData[9] = 2;
-  ihdrData[10] = 0;
-  ihdrData[11] = 0;
-  ihdrData[12] = 0;
-
-  function chunk(type, data) {
-    const length = Buffer.alloc(4);
-    length.writeUInt32BE(data.length, 0);
-    const typeBuffer = Buffer.from(type);
-    const crcBuffer = Buffer.alloc(4);
-    crcBuffer.writeUInt32BE(crc32(Buffer.concat([typeBuffer, data])), 0);
-    return Buffer.concat([length, typeBuffer, data, crcBuffer]);
-  }
-
-  return Buffer.concat([
-    signature,
-    chunk("IHDR", ihdrData),
-    chunk("IDAT", compressed),
-    chunk("IEND", Buffer.alloc(0)),
-  ]);
+if (!SOURCE_LOGO) {
+  console.error("Missing logo.png or logo.jpg at project root:", ROOT);
+  process.exit(1);
 }
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 }
 
-const color = [212, 168, 83];
-for (const size of [16, 48, 128]) {
-  const png = createSolidPng(size, color);
-  fs.writeFileSync(path.join(OUTPUT_DIR, `icon${size}.png`), png);
+function generatePngIcons() {
+  const ps1Path = path.join(OUTPUT_DIR, ".generate-icons.ps1");
+  const source = SOURCE_LOGO.replace(/'/g, "''");
+  const lines = SIZES.map((size) => {
+    const output = path.join(OUTPUT_DIR, `icon${size}.png`).replace(/'/g, "''");
+    return `
+$size = ${size}
+$bmp = New-Object System.Drawing.Bitmap($size, $size, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+$g = [System.Drawing.Graphics]::FromImage($bmp)
+$g.Clear([System.Drawing.Color]::Transparent)
+$g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+$g.CompositingMode = [System.Drawing.Drawing2D.CompositingMode]::SourceOver
+$g.DrawImage($src, 0, 0, $size, $size)
+$bmp.Save('${output}', [System.Drawing.Imaging.ImageFormat]::Png)
+$g.Dispose()
+$bmp.Dispose()`;
+  });
+
+  const ps1 = `
+Add-Type -AssemblyName System.Drawing
+
+function Test-CheckerboardPixel($color) {
+  if ($color.A -lt 255) { return $true }
+  $avg = ($color.R + $color.G + $color.B) / 3.0
+  $var = [Math]::Abs($color.R - $avg) + [Math]::Abs($color.G - $avg) + [Math]::Abs($color.B - $avg)
+  return ($var -lt 15 -and $avg -gt 175)
 }
 
-console.log("Icons generated in", OUTPUT_DIR);
+function ConvertToTransparentSource($path) {
+  $raw = New-Object System.Drawing.Bitmap($path)
+  $clean = New-Object System.Drawing.Bitmap($raw.Width, $raw.Height, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+
+  for ($y = 0; $y -lt $raw.Height; $y++) {
+    for ($x = 0; $x -lt $raw.Width; $x++) {
+      $color = $raw.GetPixel($x, $y)
+      if (Test-CheckerboardPixel $color) {
+        $clean.SetPixel($x, $y, [System.Drawing.Color]::Transparent)
+      } else {
+        $clean.SetPixel($x, $y, $color)
+      }
+    }
+  }
+
+  $raw.Dispose()
+  return $clean
+}
+
+$src = ConvertToTransparentSource '${source}'
+${lines.join("\n")}
+$src.Dispose()
+`.trim();
+
+  fs.writeFileSync(ps1Path, ps1, "utf8");
+
+  try {
+    execSync(
+      `powershell -NoProfile -ExecutionPolicy Bypass -File "${ps1Path}"`,
+      { stdio: "inherit" }
+    );
+  } finally {
+    if (fs.existsSync(ps1Path)) {
+      fs.unlinkSync(ps1Path);
+    }
+  }
+}
+
+generatePngIcons();
+console.log(`Icons generated from ${path.basename(SOURCE_LOGO)} in`, OUTPUT_DIR);

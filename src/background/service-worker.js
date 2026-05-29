@@ -8,11 +8,6 @@ chrome.runtime.onInstalled.addListener(async () => {
 });
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-  if (message.type === "GET_SETTINGS") {
-    chrome.storage.sync.get(DEFAULT_SETTINGS).then(sendResponse);
-    return true;
-  }
-
   if (message.type === "SET_ENABLED") {
     chrome.storage.sync
       .set({ enabled: Boolean(message.enabled) })

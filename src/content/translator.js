@@ -219,18 +219,6 @@
         characterData: true,
       });
     }
-
-    disconnect() {
-      if (this.observer) {
-        this.observer.disconnect();
-        this.observer = null;
-      }
-
-      if (this.pendingFrame) {
-        cancelAnimationFrame(this.pendingFrame);
-        this.pendingFrame = null;
-      }
-    }
   }
 
   window.DarkTransTranslator = DarkTransTranslator;

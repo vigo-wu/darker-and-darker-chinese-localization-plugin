@@ -94,7 +94,6 @@
   }
 
   window.DarkTransI18nJson = {
-    flattenDictionary,
     parseImportJson,
     serializeExport,
   };

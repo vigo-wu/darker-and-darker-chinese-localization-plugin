@@ -3,14 +3,7 @@
  */
 (() => {
   function buildEarlyDictionary() {
-    return (
-      window.DARKTRANS_DICTIONARY ||
-      Object.assign(
-        {},
-        window.DARKTRANS_CATEGORY_MAP_LOCATION || {},
-        window.DARKTRANS_MAP_UI || {}
-      )
-    );
+    return window.DARKTRANS_DICTIONARY || {};
   }
 
   function publishUpdate(detail) {
