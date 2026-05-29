@@ -107,7 +107,6 @@ window.DARKTRANS_CATEGORY_MAP_LOCATION = {
   "Hidden Altar": "隐藏祭坛",
   "High Priests": "高阶祭司房间",
   "Mermaid Tomb": "美人鱼之墓",
-  "Sailor’s Inn": "水手旅店",
   "Ritual Rooms": "仪式间",
   "Sailor's Inn": "水手旅馆",
   "Slime Forest": "史莱姆森林",

@@ -7,8 +7,6 @@ window.DARKTRANS_CATEGORY_HERBS = {
   "Rubysilver Ore": "红银矿石",
   "Tidestone Ore": "潮石矿",
   "Obsidian Ore": "黑曜石矿石",
-  "Froststone Ore": "铜矿石",
-  "Copper Ore": "霜石矿",
   "Black Rose": "黑玫瑰",
   "Cobalt Ore": "钴矿石",
   "Gold Ore": "金矿石",

@@ -13,7 +13,6 @@ window.DARKTRANS_CATEGORY_MONSTERS = {
   "Frost Skeleton Axeman": "霜冻骷髅斧兵",
   "Frost Skeleton Master": "霜冻骷髅大师",
   "Frost Giant Shielder": "霜冻巨人持盾者",
-  "Frost Skeleton Maceman": "霜冻骷髅锤兵",
   "Skeleton Crossbowman": "骷髅弩手",
   "Tidewalker Spearman": "潮行者长矛兵",
   "Dwarf Handcannoner": "矮人手炮兵",

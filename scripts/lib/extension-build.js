@@ -53,6 +53,9 @@ function patchManifestForDev(manifest) {
 
   const contentScripts = (manifest.content_scripts || []).map((entry) => {
     const scripts = [...(entry.js || [])];
+    if (entry.world === "MAIN") {
+      return { ...entry, js: scripts };
+    }
     if (!scripts.includes("src/content/dev.js")) {
       scripts.splice(scripts.length - 1, 0, "src/content/dev.js");
     }

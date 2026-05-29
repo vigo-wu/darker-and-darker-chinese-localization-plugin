@@ -5,6 +5,8 @@
 ## 功能特性
 
 - **页面实时汉化**：在目标站点自动替换 DOM 文本及 `placeholder`、`title`、`aria-label`、`alt` 等属性
+- **地图标注汉化**（`/maps`）：地图地点名以 SVG `<text>` 绘制为 Pixi 纹理，Hook `btoa` 翻译 SVG 内文字；地图 JSON 经 Worker 代理返回时深度翻译字符串字段
+- **地图 JSON 加载兼容**：站点用 `blob:` Worker 拉取 `/ProcessedModules/*.json`；扩展以**限流队列**代理请求，页面 `fetch` 失败时改由**扩展后台**拉取（缓解 `ERR_CONNECTION_CLOSED`）
 - **动态内容支持**：通过 `MutationObserver` 监听页面变化，SPA 路由切换后仍可继续翻译
 - **开关控制**：可在扩展弹窗中随时启用或关闭汉化
 - **自定义词典**：支持导入 / 导出 JSON，覆盖或补充内置翻译
@@ -199,6 +201,18 @@ flowchart LR
 2. `index.js` 读取内置词典，并与 `chrome.storage.local` 中的自定义词条合并
 3. `DarkTransTranslator` 遍历 DOM，按词条长度降序匹配（优先长词），支持子串替换
 4. `MutationObserver` 在 DOM 变化时 debounce 后重新翻译
+
+**地图页（`/maps`）额外流程：**
+
+1. `document_start` 预加载地图词条；`map-canvas-page.js` 以 `world: MAIN` 注入（符合站点 CSP）
+2. Hook `btoa`：在 SVG 转 data URL 前翻译 `<text>` 节点内容（地图模块名标签的真实绘制路径）
+3. 地图 JSON 加载时按当前词典深度翻译字符串；`document_idle` 后触发 `darktrans-map-labels-refresh` 清除 Pixi 纹理缓存并重绘
+
+**若地图 metadata 仍 `Failed to fetch`：**
+
+- 在控制台执行：`fetch('/ProcessedModules/Cave/Cave.json').then(r=>r.status)`
+- 若此处也失败，请暂时关闭广告拦截后硬刷新 `/maps`
+- 勿在开发模式下频繁触发热重载导致请求中断
 
 **跳过翻译的元素：**
 

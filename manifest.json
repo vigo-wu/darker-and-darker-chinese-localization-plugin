@@ -24,6 +24,30 @@
   },
   "content_scripts": [
     {
+      "matches": ["https://darkanddarkertracker.com/maps*"],
+      "js": ["src/content/map-canvas-page.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://darkanddarkertracker.com/maps*"],
+      "js": [
+        "src/locales/category/mapLocations.js",
+        "src/locales/category/containers.js",
+        "src/locales/category/monsters.js",
+        "src/locales/category/herbs.js",
+        "src/locales/category/traps.js",
+        "src/locales/category/loot.js",
+        "src/locales/category/items.js",
+        "src/locales/category/quests.js",
+        "src/locales/map-ui.js",
+        "src/locales/zh-CN.js",
+        "src/content/map-fetch-bridge.js",
+        "src/content/map-canvas-bootstrap.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
       "matches": ["https://darkanddarkertracker.com/*"],
       "js": [
         "src/shared/i18n-json.js",

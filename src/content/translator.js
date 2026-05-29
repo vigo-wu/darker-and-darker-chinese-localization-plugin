@@ -139,7 +139,18 @@
     }
 
     walkElement(element) {
-      if (!element || this.shouldSkipElement(element)) return;
+      if (!element) return;
+
+      if (element.tagName === "svg" || element.tagName === "SVG") {
+        for (const child of element.childNodes) {
+          if (child.nodeType === Node.ELEMENT_NODE) {
+            this.walkElement(child);
+          }
+        }
+        return;
+      }
+
+      if (this.shouldSkipElement(element)) return;
 
       this.translateAttributes(element);
 

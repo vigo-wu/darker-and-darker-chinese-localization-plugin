@@ -20,5 +20,21 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     return true;
   }
 
+  if (message.type === "FETCH_JSON") {
+    const url = message.url;
+    fetch(url, { cache: "no-cache" })
+      .then(async (res) => {
+        sendResponse({
+          ok: res.ok,
+          status: res.status,
+          text: await res.text(),
+        });
+      })
+      .catch((err) => {
+        sendResponse({ error: err?.message || String(err) });
+      });
+    return true;
+  }
+
   return false;
 });
