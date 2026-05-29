@@ -10,6 +10,7 @@
     "merge-dnd-wiki-map-tiles": "node scripts/extract-dnd-wiki-map-tiles.js && node scripts/merge-dnd-wiki-map-tiles.js && node scripts/merge-transition.js",
     "merge-dnd-wiki-monsters": "node scripts/extract-dnd-wiki-monsters.js && node scripts/merge-dnd-wiki-monsters.js && node scripts/merge-transition.js",
     "extract-item-names": "node scripts/build-manual-zh.js && node scripts/extract-item-names.js && node scripts/merge-zh-CN.js",
+    "merge-nfu-others": "node scripts/extract-nfu-others.js && node scripts/merge-nfu-others.js && node scripts/merge-zh-CN.js && node scripts/merge-transition.js",
     "fetch-quest-tracker": "node scripts/fetch-quest-tracker.js",
     "generate-quest-i18n": "node scripts/generate-quest-i18n.js",
     "merge-quest-i18n": "node scripts/merge-quest-i18n.js",

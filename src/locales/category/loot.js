@@ -32,7 +32,7 @@ window.DARKTRANS_CATEGORY_LOOT = {
   "Ground": "地面道具",
   "Potion": "药水",
   "Weapon": "武器",
-  "Arrow": "箭矢",
+  "Arrow": "箭",
   "Cloak": "披风",
   "Coin": "钱币",
   "Gems": "宝石",

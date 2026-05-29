@@ -1,10 +1,11 @@
 {
   "meta": {
     "source": "data.json",
-    "total": 514,
-    "translated": 514,
+    "total": 560,
+    "translated": 560,
     "missing": 0,
-    "generatedAt": "2026-05-28T03:19:09.461Z"
+    "generatedAt": "2026-05-28T03:19:09.461Z",
+    "nfuOthersMergedAt": "2026-05-29T14:10:41.051Z"
   },
   "items": [
     {
@@ -26,6 +27,10 @@
     {
       "en": "Anchor",
       "zh": "锚"
+    },
+    {
+      "en": "Ancient Scroll",
+      "zh": "远古卷轴"
     },
     {
       "en": "Ancient Stingray Egg",
@@ -73,7 +78,7 @@
     },
     {
       "en": "Arrow",
-      "zh": "弩矢"
+      "zh": "箭"
     },
     {
       "en": "Awl",
@@ -201,7 +206,7 @@
     },
     {
       "en": "Bolt",
-      "zh": "箭"
+      "zh": "弩箭"
     },
     {
       "en": "Bone",
@@ -300,6 +305,14 @@
       "zh": "营火工具"
     },
     {
+      "en": "Candy Cane",
+      "zh": "拐杖糖"
+    },
+    {
+      "en": "Candy Corn",
+      "zh": "玉米糖"
+    },
+    {
       "en": "Captains Corroded Key",
       "zh": "船长锈蚀钥匙"
     },
@@ -322,6 +335,14 @@
     {
       "en": "Centaur Hoof",
       "zh": "半人马蹄子"
+    },
+    {
+      "en": "Centaur Horn",
+      "zh": "半人马之角"
+    },
+    {
+      "en": "Centaur Tail",
+      "zh": "半人马之尾"
     },
     {
       "en": "Ceremonial Dagger",
@@ -372,8 +393,16 @@
       "zh": "棍棒"
     },
     {
+      "en": "Cobalt Ingot",
+      "zh": "钴锭"
+    },
+    {
       "en": "Cobalt Ores",
       "zh": "钴矿"
+    },
+    {
+      "en": "Cobalt Powder",
+      "zh": "钴粉"
     },
     {
       "en": "Cockatrice Egg",
@@ -392,8 +421,16 @@
       "zh": "海螺壳"
     },
     {
+      "en": "Copper Ingot",
+      "zh": "铜锭"
+    },
+    {
       "en": "Copper Ores",
       "zh": "铜矿"
+    },
+    {
+      "en": "Copper Powder",
+      "zh": "铜粉"
     },
     {
       "en": "Coral Fragment",
@@ -480,6 +517,10 @@
       "zh": "独眼巨人的破布"
     },
     {
+      "en": "Cyclops's Club",
+      "zh": "独眼巨人之棒"
+    },
+    {
       "en": "Dark Cassock",
       "zh": "暗色长袍"
     },
@@ -525,7 +566,7 @@
     },
     {
       "en": "Demon Dog Thorns",
-      "zh": "魔犬之刺"
+      "zh": "恶魔犬锥刺"
     },
     {
       "en": "Demon Wing Membrane",
@@ -546,6 +587,10 @@
     {
       "en": "Dog Collar",
       "zh": "狗项圈"
+    },
+    {
+      "en": "Dotted Gold Bangle",
+      "zh": "圆点金手镯"
     },
     {
       "en": "Double Axe",
@@ -597,7 +642,7 @@
     },
     {
       "en": "Extra Thick Pelts",
-      "zh": "加厚毛皮"
+      "zh": "超厚毛皮"
     },
     {
       "en": "Eyepatch",
@@ -626,6 +671,10 @@
     {
       "en": "Firefly Abdomen",
       "zh": "萤火虫腹部"
+    },
+    {
+      "en": "Firefly's Abdomen",
+      "zh": "萤火虫之腹"
     },
     {
       "en": "Flame Gas Bag",
@@ -680,6 +729,10 @@
       "zh": "冰霜飞龙蛋"
     },
     {
+      "en": "Frost Wyvern's Claws",
+      "zh": "冰霜巨龙的利爪"
+    },
+    {
       "en": "Frost Wyverns Hide",
       "zh": "冰霜飞龙皮"
     },
@@ -688,12 +741,24 @@
       "zh": "霜羽"
     },
     {
+      "en": "Froststone Ingot",
+      "zh": "霜石锭"
+    },
+    {
+      "en": "Froststone Powder",
+      "zh": "霜石粉"
+    },
+    {
       "en": "Frozen Claw",
       "zh": "冰冻利爪"
     },
     {
       "en": "Frozen Heart",
       "zh": "冰霜心脏"
+    },
+    {
+      "en": "Frozen Heirlooms",
+      "zh": "冰霜羽毛"
     },
     {
       "en": "Frozen Iron Key",
@@ -736,8 +801,16 @@
       "zh": "巨人脚趾"
     },
     {
+      "en": "Gingerbread Cookie",
+      "zh": "姜饼人曲奇"
+    },
+    {
       "en": "Gjermundbu",
       "zh": "北境战盔"
+    },
+    {
+      "en": "Glimmer Bangle",
+      "zh": "微光手镯"
     },
     {
       "en": "Gloves Of Utility",
@@ -754,6 +827,10 @@
     {
       "en": "Goat Hide Rug",
       "zh": "山羊皮毯"
+    },
+    {
+      "en": "Goblet",
+      "zh": "高脚杯"
     },
     {
       "en": "Goblin Ears",
@@ -820,6 +897,10 @@
       "zh": "金烛托盘"
     },
     {
+      "en": "Gold Chalice",
+      "zh": "金酒杯"
+    },
+    {
       "en": "Gold Chalice A",
       "zh": "金圣杯A"
     },
@@ -829,6 +910,14 @@
     },
     {
       "en": "Gold Coin Bag",
+      "zh": "金币袋"
+    },
+    {
+      "en": "Gold Coin Chest",
+      "zh": "金币箱子"
+    },
+    {
+      "en": "Gold Coin Purse",
       "zh": "金币袋子"
     },
     {
@@ -840,8 +929,16 @@
       "zh": "金王冠"
     },
     {
+      "en": "Gold Ingot",
+      "zh": "金锭"
+    },
+    {
       "en": "Gold Ores",
       "zh": "金矿"
+    },
+    {
+      "en": "Gold Powder",
+      "zh": "金粉"
     },
     {
       "en": "Gold Waterpot",
@@ -850,6 +947,10 @@
     {
       "en": "Golden Key",
       "zh": "黄金钥匙"
+    },
+    {
+      "en": "Golden Skull Token",
+      "zh": "金骷髅徽章"
     },
     {
       "en": "Golden Teeth",
@@ -902,6 +1003,10 @@
     {
       "en": "Healing Potion",
       "zh": "治疗药水"
+    },
+    {
+      "en": "Heart Candy",
+      "zh": "心形糖"
     },
     {
       "en": "Heater Shield",
@@ -980,8 +1085,16 @@
       "zh": "铁链"
     },
     {
+      "en": "Iron Ingot",
+      "zh": "铁锭"
+    },
+    {
       "en": "Iron Ores",
       "zh": "铁矿"
+    },
+    {
+      "en": "Iron Powder",
+      "zh": "铁粉"
     },
     {
       "en": "Jellyfish Glow Essence",
@@ -1016,6 +1129,10 @@
       "zh": "狗头人耳朵"
     },
     {
+      "en": "Kobold's Ear",
+      "zh": "狗头人的耳朵"
+    },
+    {
       "en": "Kris Dagger",
       "zh": "波形匕首"
     },
@@ -1046,6 +1163,10 @@
     {
       "en": "Lavish Shirt",
       "zh": "华丽衬衫"
+    },
+    {
+      "en": "Leaf Gold Bangle",
+      "zh": "叶形金手镯"
     },
     {
       "en": "Leather Bonnet",
@@ -1090,6 +1211,10 @@
     {
       "en": "Light Gauntlets",
       "zh": "轻型板甲护手"
+    },
+    {
+      "en": "Light Gold Bangle",
+      "zh": "浅金手镯"
     },
     {
       "en": "Lightfoot Boots",
@@ -1336,6 +1461,10 @@
       "zh": "牧歌外衣"
     },
     {
+      "en": "Patterned Gold Bangle",
+      "zh": "图案金手镯"
+    },
+    {
       "en": "Pavise",
       "zh": "巨盾"
     },
@@ -1516,8 +1645,16 @@
       "zh": "红宝石"
     },
     {
+      "en": "Rubysilver Ingot",
+      "zh": "红宝石银锭"
+    },
+    {
       "en": "Rubysilver Ores",
       "zh": "红宝石银矿"
+    },
+    {
+      "en": "Rubysilver Powder",
+      "zh": "红宝石银粉"
     },
     {
       "en": "Rugged Boots",
@@ -1592,6 +1729,10 @@
       "zh": "锋利海胆刺"
     },
     {
+      "en": "Shine Bangle",
+      "zh": "闪亮手镯"
+    },
+    {
       "en": "Shining Pearl",
       "zh": "闪亮珍珠"
     },
@@ -1612,6 +1753,22 @@
       "zh": "银币"
     },
     {
+      "en": "Silver Ingot",
+      "zh": "银锭"
+    },
+    {
+      "en": "Silver Powder",
+      "zh": "银粉"
+    },
+    {
+      "en": "Silver Skull Token",
+      "zh": "银色骷髅令牌"
+    },
+    {
+      "en": "Simple Gold Bangle",
+      "zh": "简约金手镯"
+    },
+    {
       "en": "Skinny Finger",
       "zh": "瘦长手指"
     },
@@ -1622,6 +1779,10 @@
     {
       "en": "Sleek Hide Pants",
       "zh": "光滑兽皮裤"
+    },
+    {
+      "en": "Slim Bangle",
+      "zh": "细长手镯"
     },
     {
       "en": "Sling",
@@ -1664,8 +1825,16 @@
       "zh": "长矛"
     },
     {
+      "en": "Spectral Coinbag",
+      "zh": "幽灵金币袋"
+    },
+    {
       "en": "Spectral Fabric",
       "zh": "幽魂织物"
+    },
+    {
+      "en": "Spectral Gold Coin Bag",
+      "zh": "幽灵金币袋"
     },
     {
       "en": "Spectral Hilt",
@@ -1844,6 +2013,10 @@
       "zh": "陷阱师帽"
     },
     {
+      "en": "Triple Gem Bangle",
+      "zh": "三宝石手镯"
+    },
+    {
       "en": "Tripod",
       "zh": "三脚架"
     },
@@ -1870,6 +2043,10 @@
     {
       "en": "Turnshoe",
       "zh": "翻面鞋"
+    },
+    {
+      "en": "Turquoise Gem Bangle",
+      "zh": "绿松石宝石手镯"
     },
     {
       "en": "Twisted Abyss Horn",
@@ -1958,6 +2135,14 @@
     {
       "en": "Wendigo Sharp Claws",
       "zh": "温迪戈利爪"
+    },
+    {
+      "en": "Wendigo's Hoof",
+      "zh": "温迪戈的蹄子"
+    },
+    {
+      "en": "Wendigo's Sharp Claws",
+      "zh": "温迪戈的利爪"
     },
     {
       "en": "Wendigos Antler Fragment",

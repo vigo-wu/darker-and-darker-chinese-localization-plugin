@@ -1,0 +1,547 @@
+{
+  "source": "https://dnd.nfuwow.com/item/others.html",
+  "fetchedAt": "2026-05-29T14:12:04.406Z",
+  "itemCount": 135,
+  "items": [
+    {
+      "en": "Ancient Scroll",
+      "zh": "远古卷轴"
+    },
+    {
+      "en": "Armor Scrap",
+      "zh": "盔甲废料"
+    },
+    {
+      "en": "Arrow",
+      "zh": "箭"
+    },
+    {
+      "en": "Banshee Sonnet",
+      "zh": "十四行诗"
+    },
+    {
+      "en": "Bat Claw",
+      "zh": "蝙蝠爪子"
+    },
+    {
+      "en": "Bat Wing",
+      "zh": "蝙蝠翅膀"
+    },
+    {
+      "en": "Beetle Wings",
+      "zh": "死亡甲虫翅膀"
+    },
+    {
+      "en": "Blue Eyeballs",
+      "zh": "蓝眼球"
+    },
+    {
+      "en": "Blue Sapphire",
+      "zh": "蓝宝石"
+    },
+    {
+      "en": "Bolt",
+      "zh": "弩箭"
+    },
+    {
+      "en": "Bone",
+      "zh": "骨头棒"
+    },
+    {
+      "en": "Bowstring",
+      "zh": "弓弦"
+    },
+    {
+      "en": "Broken Skull",
+      "zh": "破碎的头骨"
+    },
+    {
+      "en": "Bug Shell",
+      "zh": "虫子外壳"
+    },
+    {
+      "en": "Candy Cane",
+      "zh": "拐杖糖"
+    },
+    {
+      "en": "Candy Corn",
+      "zh": "玉米糖"
+    },
+    {
+      "en": "Captured Mana Flakes",
+      "zh": "捕获的魔力碎片"
+    },
+    {
+      "en": "Centaur Hoof",
+      "zh": "半人马蹄子"
+    },
+    {
+      "en": "Centaur Horn",
+      "zh": "半人马之角"
+    },
+    {
+      "en": "Centaur Tail",
+      "zh": "半人马之尾"
+    },
+    {
+      "en": "Ceremonial Dagger",
+      "zh": "仪式匕首"
+    },
+    {
+      "en": "Cobalt Ingot",
+      "zh": "钴锭"
+    },
+    {
+      "en": "Cobalt Ore",
+      "zh": "钴矿"
+    },
+    {
+      "en": "Cobalt Powder",
+      "zh": "钴粉"
+    },
+    {
+      "en": "Cockatrice's Lucky Feather",
+      "zh": "鸡蛇兽的幸运羽毛"
+    },
+    {
+      "en": "Copper Ingot",
+      "zh": "铜锭"
+    },
+    {
+      "en": "Copper Ore",
+      "zh": "铜矿"
+    },
+    {
+      "en": "Copper Powder",
+      "zh": "铜粉"
+    },
+    {
+      "en": "Cursed Crown",
+      "zh": "诅咒之冠"
+    },
+    {
+      "en": "Cyclops Eye",
+      "zh": "独眼巨人的眼球"
+    },
+    {
+      "en": "Cyclops Rags",
+      "zh": "独眼巨人的破布"
+    },
+    {
+      "en": "Cyclops's Club",
+      "zh": "独眼巨人之棒"
+    },
+    {
+      "en": "Dark Matter",
+      "zh": "黑暗物质"
+    },
+    {
+      "en": "Demon Blood",
+      "zh": "恶魔之血"
+    },
+    {
+      "en": "Demon Dog Thorn",
+      "zh": "恶魔犬锥刺"
+    },
+    {
+      "en": "Diamond",
+      "zh": "钻石"
+    },
+    {
+      "en": "Dog Collar",
+      "zh": "狗项圈"
+    },
+    {
+      "en": "Dotted Gold Bangle",
+      "zh": "圆点金手镯"
+    },
+    {
+      "en": "Emerald",
+      "zh": "翡翠"
+    },
+    {
+      "en": "Enchanted Dark Fabric",
+      "zh": "附魔的黑暗织物"
+    },
+    {
+      "en": "Extra Thick Pelt",
+      "zh": "超厚毛皮"
+    },
+    {
+      "en": "Firefly's Abdomen",
+      "zh": "萤火虫之腹"
+    },
+    {
+      "en": "Frost Wyvern Egg",
+      "zh": "冰霜飞龙蛋"
+    },
+    {
+      "en": "Frost Wyvern's Claws",
+      "zh": "冰霜巨龙的利爪"
+    },
+    {
+      "en": "Frost Wyvern's Hide",
+      "zh": "冰霜飞龙皮"
+    },
+    {
+      "en": "Froststone Ingot",
+      "zh": "霜石锭"
+    },
+    {
+      "en": "Froststone Ore",
+      "zh": "霜石矿"
+    },
+    {
+      "en": "Froststone Powder",
+      "zh": "霜石粉"
+    },
+    {
+      "en": "Frozen Heart",
+      "zh": "冰霜心脏"
+    },
+    {
+      "en": "Frozen Heirlooms",
+      "zh": "冰霜羽毛"
+    },
+    {
+      "en": "Gem Necklace",
+      "zh": "宝石项链"
+    },
+    {
+      "en": "Gem Ring",
+      "zh": "宝石戒指"
+    },
+    {
+      "en": "Ghostly Essence",
+      "zh": "幽界精华"
+    },
+    {
+      "en": "Giant Bat Ear",
+      "zh": "巨型蝙蝠耳朵"
+    },
+    {
+      "en": "Giant Bat Hide",
+      "zh": "巨型蝙蝠毛皮"
+    },
+    {
+      "en": "Giant Toe",
+      "zh": "巨人脚趾"
+    },
+    {
+      "en": "Gingerbread Cookie",
+      "zh": "姜饼人曲奇"
+    },
+    {
+      "en": "Glimmer Bangle",
+      "zh": "微光手镯"
+    },
+    {
+      "en": "Glowing Blue Ice Eyes",
+      "zh": "发光的蓝眼睛"
+    },
+    {
+      "en": "Goblet",
+      "zh": "高脚杯"
+    },
+    {
+      "en": "Goblin Ear",
+      "zh": "哥布林耳朵"
+    },
+    {
+      "en": "Gold Band",
+      "zh": "金环"
+    },
+    {
+      "en": "Gold Bowl",
+      "zh": "金碗"
+    },
+    {
+      "en": "Gold Candelabra",
+      "zh": "金烛架"
+    },
+    {
+      "en": "Gold Candle Holder",
+      "zh": "金烛台"
+    },
+    {
+      "en": "Gold Candle Platter",
+      "zh": "金烛托盘"
+    },
+    {
+      "en": "Gold Chalice",
+      "zh": "金酒杯"
+    },
+    {
+      "en": "Gold Coin",
+      "zh": "金币"
+    },
+    {
+      "en": "Gold Coin Bag",
+      "zh": "金币袋"
+    },
+    {
+      "en": "Gold Coin Chest",
+      "zh": "金币箱子"
+    },
+    {
+      "en": "Gold Coin Purse",
+      "zh": "金币袋子"
+    },
+    {
+      "en": "Gold Crown",
+      "zh": "金王冠"
+    },
+    {
+      "en": "Gold Goblet",
+      "zh": "金圣杯"
+    },
+    {
+      "en": "Gold Ingot",
+      "zh": "金锭"
+    },
+    {
+      "en": "Gold Ore",
+      "zh": "金矿"
+    },
+    {
+      "en": "Gold Powder",
+      "zh": "金粉"
+    },
+    {
+      "en": "Gold Waterpot",
+      "zh": "金水壶"
+    },
+    {
+      "en": "Golden Skull Token",
+      "zh": "金骷髅徽章"
+    },
+    {
+      "en": "Golden Teeth",
+      "zh": "金牙"
+    },
+    {
+      "en": "Grave Essence",
+      "zh": "坟墓精华"
+    },
+    {
+      "en": "Heart Candy",
+      "zh": "心形糖"
+    },
+    {
+      "en": "Infected Flesh",
+      "zh": "有毒的肉"
+    },
+    {
+      "en": "Intact Skull",
+      "zh": "完整头骨"
+    },
+    {
+      "en": "Iron Ingot",
+      "zh": "铁锭"
+    },
+    {
+      "en": "Iron Ore",
+      "zh": "铁矿"
+    },
+    {
+      "en": "Iron Powder",
+      "zh": "铁粉"
+    },
+    {
+      "en": "Kobold's Ear",
+      "zh": "狗头人的耳朵"
+    },
+    {
+      "en": "Leaf Gold Bangle",
+      "zh": "叶形金手镯"
+    },
+    {
+      "en": "Lifeleaf",
+      "zh": "生命之叶"
+    },
+    {
+      "en": "Light Gold Bangle",
+      "zh": "浅金手镯"
+    },
+    {
+      "en": "Maggots",
+      "zh": "蛆虫"
+    },
+    {
+      "en": "Mimic Tongue",
+      "zh": "宝箱怪舌头"
+    },
+    {
+      "en": "Mimic Tooth",
+      "zh": "拟态獠牙"
+    },
+    {
+      "en": "Moldy Bread",
+      "zh": "发霉的面包"
+    },
+    {
+      "en": "Old Bloody Bandage",
+      "zh": "古老的血腥绷带"
+    },
+    {
+      "en": "Old Cloth",
+      "zh": "旧布"
+    },
+    {
+      "en": "Patterned Gold Bangle",
+      "zh": "图案金手镯"
+    },
+    {
+      "en": "Pearl Necklace",
+      "zh": "珍珠项链"
+    },
+    {
+      "en": "Phantom Flower",
+      "zh": "幻影花"
+    },
+    {
+      "en": "Primitive Bracelet",
+      "zh": "原始项链"
+    },
+    {
+      "en": "Rotten Fluids",
+      "zh": "腐烂粘液"
+    },
+    {
+      "en": "Ruby",
+      "zh": "红宝石"
+    },
+    {
+      "en": "Rubysilver Ingot",
+      "zh": "红宝石银锭"
+    },
+    {
+      "en": "Rubysilver Ore",
+      "zh": "红宝石银矿"
+    },
+    {
+      "en": "Rubysilver Powder",
+      "zh": "红宝石银粉"
+    },
+    {
+      "en": "Rusty Broken Sword",
+      "zh": "生锈的断剑"
+    },
+    {
+      "en": "Shine Bangle",
+      "zh": "闪亮手镯"
+    },
+    {
+      "en": "Silver Chalice",
+      "zh": "银圣杯"
+    },
+    {
+      "en": "Silver Coin",
+      "zh": "银币"
+    },
+    {
+      "en": "Silver Ingot",
+      "zh": "银锭"
+    },
+    {
+      "en": "Silver Powder",
+      "zh": "银粉"
+    },
+    {
+      "en": "Silver Skull Token",
+      "zh": "银色骷髅令牌"
+    },
+    {
+      "en": "Simple Gold Bangle",
+      "zh": "简约金手镯"
+    },
+    {
+      "en": "Slim Bangle",
+      "zh": "细长手镯"
+    },
+    {
+      "en": "Spectral Coinbag",
+      "zh": "幽灵金币袋"
+    },
+    {
+      "en": "Spectral Gold Coin Bag",
+      "zh": "幽灵金币袋"
+    },
+    {
+      "en": "Spider Silk",
+      "zh": "蜘蛛丝"
+    },
+    {
+      "en": "Token of Honor",
+      "zh": "荣耀徽章"
+    },
+    {
+      "en": "Torn Bat Wing",
+      "zh": "被扯下的蝙蝠翅膀"
+    },
+    {
+      "en": "Triple Gem Bangle",
+      "zh": "三宝石手镯"
+    },
+    {
+      "en": "Troll Pelt",
+      "zh": "巨魔之皮"
+    },
+    {
+      "en": "Troll's Club",
+      "zh": "巨魔之棒"
+    },
+    {
+      "en": "Turquoise Gem Bangle",
+      "zh": "绿松石宝石手镯"
+    },
+    {
+      "en": "Volcanic Ash",
+      "zh": "火山灰"
+    },
+    {
+      "en": "Wardweed",
+      "zh": "护符草"
+    },
+    {
+      "en": "Warlord's Armor Shard",
+      "zh": "督军的铠甲残片"
+    },
+    {
+      "en": "Warlord's Broken Sword Blade",
+      "zh": "督军的断剑"
+    },
+    {
+      "en": "Wendigo's Antler Fragment",
+      "zh": "温迪戈的犄角残片"
+    },
+    {
+      "en": "Wendigo's Entrails",
+      "zh": "温迪戈的大肠"
+    },
+    {
+      "en": "Wendigo's Hoof",
+      "zh": "温迪戈的蹄子"
+    },
+    {
+      "en": "Wendigo's Sharp Claws",
+      "zh": "温迪戈的利爪"
+    },
+    {
+      "en": "Wolf Claw",
+      "zh": "狼爪"
+    },
+    {
+      "en": "Wolf Fang",
+      "zh": "狼牙"
+    },
+    {
+      "en": "Wolf Pelt",
+      "zh": "狼皮"
+    },
+    {
+      "en": "Yeti's Teeth",
+      "zh": "雪怪的牙齿"
+    }
+  ]
+}

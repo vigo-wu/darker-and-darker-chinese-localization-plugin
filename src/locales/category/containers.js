@@ -31,7 +31,7 @@ window.DARKTRANS_CATEGORY_CONTAINERS = {
   "Golden Chest": "金宝箱",
   "Royal Coffin": "皇家棺材",
   "Statue Lever": "雕像拉杆",
-  "Gold Goblet": "金高脚杯",
+  "Gold Goblet": "金圣杯",
   "Golden Door": "黄金门",
   "Secret Wall": "秘密墙壁",
   "Wood Coffin": "木棺材",
