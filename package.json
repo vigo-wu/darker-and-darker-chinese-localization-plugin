@@ -17,6 +17,7 @@
     "dev": "node scripts/dev.js",
     "build": "node scripts/package.js",
     "package": "node scripts/package.js",
+    "test:map-label-svg": "node scripts/test-map-label-svg.js",
     "postinstall": "node scripts/generate-icons.js"
   },
   "devDependencies": {

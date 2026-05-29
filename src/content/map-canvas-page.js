@@ -5,6 +5,17 @@
   if (window.__darktransCanvasHookInstalled) return;
   window.__darktransCanvasHookInstalled = true;
 
+  let dictionary = {};
+  let sortedEntries = [];
+  let enabled = true;
+
+  document.addEventListener("darktrans-update", (e) => {
+    const detail = e?.detail;
+    if (!detail) return;
+    if (detail.dictionary) applyDictionary(detail.dictionary);
+    if (typeof detail.enabled === "boolean") enabled = !!detail.enabled;
+  });
+
   const MAX_CONCURRENT = 2;
   const PAGE_FETCH_RETRIES = 2;
   const jsonCache = new Map();
@@ -180,10 +191,6 @@
 
   patchMapDataWorker();
 
-  let dictionary = {};
-  let sortedEntries = [];
-  let enabled = true;
-
   const CJK_FONT_FAMILY =
     '"Microsoft YaHei", "PingFang SC", "Noto Sans SC", "SimHei", sans-serif';
 
@@ -195,28 +202,17 @@
     window.setTimeout(() => {
       redrawScheduled = false;
       window.dispatchEvent(new Event("resize"));
-      window.dispatchEvent(new CustomEvent("darktrans-map-labels-refresh"));
     }, 300);
   }
 
-  function invalidateMarkerTextures() {
-    const resources = window.PIXI?.Loader?.shared?.resources;
-    if (!resources) return false;
-    for (const key of Object.keys(resources)) {
-      if (key.startsWith("marker_")) {
-        const entry = resources[key];
-        entry?.texture?.destroy?.(true);
-        delete resources[key];
-      }
-    }
-    return true;
+  function applyDictionary(dict) {
+    dictionary = dict || {};
+    sortedEntries = Object.entries(dictionary).sort((a, b) => b[0].length - a[0].length);
+    scheduleMapRedrawOnce();
   }
 
   function setDictionary(dict) {
-    dictionary = dict || {};
-    sortedEntries = Object.entries(dictionary).sort((a, b) => b[0].length - a[0].length);
-    invalidateMarkerTextures();
-    scheduleMapRedrawOnce();
+    applyDictionary(dict);
   }
 
   function setEnabled(value) {
@@ -360,19 +356,99 @@
 
   const SVG_TEXT_RE = /(<text[^>]*>)([\s\S]*?)(<\/text>)/gi;
 
+  function decodeSvgText(text) {
+    return String(text)
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'");
+  }
+
+  function isMapLabelSvg(value) {
+    return typeof value === "string" && value.includes("<svg") && value.includes("<text");
+  }
+
+  /**
+   * 站点按英文字宽 (len * fontSize * 0.6) 算标签背景，中文更宽会被 viewBox 裁切。
+   * 须在 encodeURIComponent 之前处理原始 Unicode SVG（btoa 入参已是 UTF-8 字节串，无法识别中文）。
+   */
+  function widenCjkLabelSvg(svg) {
+    if (!/[\u3400-\u9fff]/.test(svg)) return svg;
+
+    const textMatch = svg.match(/<text\b[^>]*>([\s\S]*?)<\/text>/i);
+    const svgAttrsMatch = svg.match(/<svg\b([^>]*)>/i);
+    if (!textMatch || !svgAttrsMatch) return svg;
+
+    const labelText = decodeSvgText(textMatch[1].trim());
+    const attrs = svgAttrsMatch[1];
+    const widthMatch = attrs.match(/\bwidth="(\d+(?:\.\d+)?)"/);
+    if (!widthMatch) return svg;
+
+    const fontSizeMatch = svg.match(/font-size="(\d+(?:\.\d+)?)px"/i);
+    const fontSize = fontSizeMatch ? Number(fontSizeMatch[1]) : 12;
+    const letterSpacingMatch = svg.match(/letter-spacing="([^"]+)"/i);
+    const letterSpacing = letterSpacingMatch ? parseFloat(letterSpacingMatch[1]) || 0 : 0.3;
+    const strokeMatch = svg.match(/stroke-width="(\d+(?:\.\d+)?)px"/i);
+    const strokeWidth = strokeMatch ? Number(strokeMatch[1]) : 0.7;
+
+    const currentWidth = Number(widthMatch[1]);
+    const heightMatch = attrs.match(/\bheight="(\d+(?:\.\d+)?)"/);
+    const viewBoxMatch = attrs.match(/viewBox="0\s+0\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)"/i);
+    const height = heightMatch
+      ? Number(heightMatch[1])
+      : viewBoxMatch
+        ? Number(viewBoxMatch[2])
+        : fontSize + 16;
+
+    const padding = 14;
+    const latinEstimate = labelText.length * fontSize * 0.6;
+    const cjkCharWidth = fontSize * 1.22 + letterSpacing;
+    const textWidth = labelText.length * cjkCharWidth + strokeWidth * 4;
+    const neededWidth = Math.ceil(Math.max(textWidth, latinEstimate * 1.85) + padding * 2);
+    const newWidth = Math.max(currentWidth, neededWidth, Math.ceil(currentWidth * 1.6));
+
+    const centerX = newWidth / 2;
+    let result = svg;
+
+    result = result.replace(/<svg\b([^>]*)>/i, (full, attrPart) => {
+      let nextAttrs = attrPart.replace(/\bwidth="\d+(?:\.\d+)?"/, `width="${newWidth}"`);
+      if (/viewBox="/i.test(nextAttrs)) {
+        nextAttrs = nextAttrs.replace(
+          /viewBox="0\s+0\s+\d+(?:\.\d+)?\s+\d+(?:\.\d+)?"/i,
+          `viewBox="0 0 ${newWidth} ${height}"`
+        );
+      } else {
+        nextAttrs += ` viewBox="0 0 ${newWidth} ${height}"`;
+      }
+      if (!/overflow="/i.test(nextAttrs)) {
+        nextAttrs += ' overflow="visible"';
+      }
+      return `<svg${nextAttrs}>`;
+    });
+
+    result = result.replace(
+      /<rect\b x="0"\s+y="0"\s+width="\d+(?:\.\d+)?"/i,
+      `<rect x="0" y="0" width="${newWidth}"`
+    );
+
+    result = result.replace(/<text\b([^>]*)>/i, (full, attrPart) => {
+      const nextAttrs = /\bx="/.test(attrPart)
+        ? attrPart.replace(/\bx="[^"]*"/, `x="${centerX}"`)
+        : `${attrPart} x="${centerX}"`;
+      return `<text${nextAttrs}>`;
+    });
+
+    return result;
+  }
+
   function translateSvgString(svg) {
-    if (!enabled || typeof svg !== "string" || !svg.includes("<text")) return svg;
-    let nextSvg = svg.replace(SVG_TEXT_RE, (match, open, text, close) => {
+    if (!enabled || !isMapLabelSvg(svg)) return svg;
+    const nextSvg = svg.replace(SVG_TEXT_RE, (match, open, text, close) => {
       const next = translateMapLabel(text);
       return next === text ? match : `${open}${next}${close}`;
     });
-    if (/[\u3400-\u9fff]/.test(nextSvg)) {
-      nextSvg = nextSvg.replace(/maxWidth:\s*(\d+(?:\.\d+)?)/, (m, n) => {
-        const scaled = Math.ceil(Number(n) * 1.45);
-        return `maxWidth: ${scaled}`;
-      });
-    }
-    return nextSvg;
+    return widenCjkLabelSvg(nextSvg);
   }
 
   function needsCjkFont(text) {
@@ -427,39 +503,56 @@
     patchCanvasTextContext(OffscreenCanvasRenderingContext2D.prototype);
   }
 
+  const nativeEncodeURIComponent = window.encodeURIComponent;
   const nativeBtoa = window.btoa.bind(window);
-  window.btoa = function (value) {
-    if (typeof value === "string" && value.includes("<svg") && value.includes("<text")) {
-      return nativeBtoa(translateSvgString(value));
+
+  function svgToDataUrl(svg) {
+    return `data:image/svg+xml;base64,${nativeBtoa(
+      unescape(nativeEncodeURIComponent(svg))
+    )}`;
+  }
+
+  function patchPixiSvgLoader() {
+    const loader = window.PIXI?.Loader?.shared;
+    if (!loader || loader.__darktransSvgLoaderPatched) return !!loader;
+
+    const origAdd = loader.add.bind(loader);
+    loader.add = function (name, url, ...rest) {
+      if (typeof name === "string" && typeof url === "string" && /^\s*<svg/i.test(url)) {
+        return origAdd(name, svgToDataUrl(translateSvgString(url)), ...rest);
+      }
+      return origAdd(name, url, ...rest);
+    };
+    loader.__darktransSvgLoaderPatched = true;
+    return true;
+  }
+
+  window.encodeURIComponent = function (value) {
+    if (isMapLabelSvg(value)) {
+      return nativeEncodeURIComponent(translateSvgString(value));
     }
-    return nativeBtoa(value);
+    return nativeEncodeURIComponent(value);
   };
 
-  function tryInvalidateMarkerTextures() {
-    if (invalidateMarkerTextures()) return;
+  if (!patchPixiSvgLoader()) {
     let attempts = 0;
     const timer = window.setInterval(() => {
       attempts += 1;
-      if (invalidateMarkerTextures() || attempts >= 40) {
+      if (patchPixiSvgLoader() || attempts >= 80) {
         window.clearInterval(timer);
       }
     }, 250);
   }
 
-  document.addEventListener("darktrans-update", (e) => {
-    const detail = e?.detail;
-    if (!detail) return;
-    if (detail.dictionary) setDictionary(detail.dictionary);
-    if (typeof detail.enabled === "boolean") setEnabled(detail.enabled);
-  });
-
   document.addEventListener("darktrans-map-labels-refresh", () => {
-    tryInvalidateMarkerTextures();
+    window.dispatchEvent(new Event("resize"));
   });
 
   if (document.documentElement) {
     document.documentElement.dataset.darktransHook = "1";
   }
+
+  document.dispatchEvent(new Event("darktrans-hook-ready"));
 
   window.DarkTransCanvas = {
     setDictionary,

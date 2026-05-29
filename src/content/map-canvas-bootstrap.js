@@ -19,6 +19,10 @@
 
   publishUpdate({ dictionary: buildEarlyDictionary() });
 
+  document.addEventListener("darktrans-hook-ready", () => {
+    publishUpdate({ dictionary: buildEarlyDictionary() });
+  });
+
   window.DarkTransCanvas = {
     setDictionary(dict) {
       publishUpdate({ dictionary: dict });

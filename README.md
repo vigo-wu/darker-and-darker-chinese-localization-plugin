@@ -5,7 +5,7 @@
 ## 功能特性
 
 - **页面实时汉化**：在目标站点自动替换 DOM 文本及 `placeholder`、`title`、`aria-label`、`alt` 等属性
-- **地图标注汉化**（`/maps`）：地图地点名以 SVG `<text>` 绘制为 Pixi 纹理，Hook `btoa` 翻译 SVG 内文字；地图 JSON 经 Worker 代理返回时深度翻译字符串字段
+- **地图标注汉化**（`/maps`）：地图地点名以 SVG `<text>` 绘制为 Pixi 纹理，Hook `encodeURIComponent` 在转 data URL 前翻译并加宽中文标签；地图 JSON 经 Worker 代理返回时深度翻译字符串字段
 - **地图 JSON 加载兼容**：站点用 `blob:` Worker 拉取 `/ProcessedModules/*.json`；扩展以**限流队列**代理请求，页面 `fetch` 失败时改由**扩展后台**拉取（缓解 `ERR_CONNECTION_CLOSED`）
 - **动态内容支持**：通过 `MutationObserver` 监听页面变化，SPA 路由切换后仍可继续翻译
 - **开关控制**：可在扩展弹窗中随时启用或关闭汉化
@@ -205,7 +205,7 @@ flowchart LR
 **地图页（`/maps`）额外流程：**
 
 1. `document_start` 预加载地图词条；`map-canvas-page.js` 以 `world: MAIN` 注入（符合站点 CSP）
-2. Hook `btoa`：在 SVG 转 data URL 前翻译 `<text>` 节点内容（地图模块名标签的真实绘制路径）
+2. Hook `encodeURIComponent`：站点经 `btoa(unescape(encodeURIComponent(svg)))` 生成纹理，在编码前翻译 `<text>` 并按中文字宽扩展 SVG viewBox（避免标签被裁切）
 3. 地图 JSON 加载时按当前词典深度翻译字符串；`document_idle` 后触发 `darktrans-map-labels-refresh` 清除 Pixi 纹理缓存并重绘
 
 **若地图 metadata 仍 `Failed to fetch`：**
