@@ -1,0 +1,1327 @@
+{
+  "source": "https://dnd.wiki/monsters",
+  "fetchedAt": "2026-05-29T13:40:46.307Z",
+  "monsterCount": 165,
+  "monsters": [
+    {
+      "slug": "cyclops",
+      "name": "Cyclops",
+      "name_cn": "独眼巨人",
+      "class_type": "首领",
+      "slugFromName": "cyclops",
+      "imageUrl": "/data/images/monsters/cyclops_common.webp"
+    },
+    {
+      "slug": "banshee",
+      "name": "Banshee",
+      "name_cn": "报丧女妖",
+      "class_type": "首领",
+      "slugFromName": "banshee",
+      "imageUrl": "/data/images/monsters/banshee_common.webp"
+    },
+    {
+      "slug": "mimic-small-mid-level",
+      "name": "Mimic",
+      "name_cn": "小型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-small-mid-level_common.webp"
+    },
+    {
+      "slug": "mimic-large-mid-level",
+      "name": "Mimic",
+      "name_cn": "巨型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-large-mid-level_common.webp"
+    },
+    {
+      "slug": "living-armor-unique",
+      "name": "Grottox",
+      "name_cn": "戈洛托斯爵士",
+      "class_type": "普通",
+      "slugFromName": "grottox",
+      "imageUrl": "/data/images/monsters/living-armor-unique_common.webp"
+    },
+    {
+      "slug": "frost-imp-unique",
+      "name": "Grimsley",
+      "name_cn": "幽暗愚者",
+      "class_type": "普通",
+      "slugFromName": "grimsley",
+      "imageUrl": "/data/images/monsters/frost-imp-unique_common.webp"
+    },
+    {
+      "slug": "mimic-large-flat",
+      "name": "Mimic",
+      "name_cn": "巨型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-large-flat_common.webp"
+    },
+    {
+      "slug": "ice-giant-spider-unique",
+      "name": "Frostweaver",
+      "name_cn": "寒霜织者",
+      "class_type": "普通",
+      "slugFromName": "frostweaver",
+      "imageUrl": "/data/images/monsters/ice-giant-spider-unique_common.webp"
+    },
+    {
+      "slug": "frost-wolf-unique",
+      "name": "Scarfang",
+      "name_cn": "狂牙",
+      "class_type": "普通",
+      "slugFromName": "scarfang",
+      "imageUrl": "/data/images/monsters/frost-wolf-unique_common.webp"
+    },
+    {
+      "slug": "skeleton-footman-unique",
+      "name": "Warbone",
+      "name_cn": "战争遗骨",
+      "class_type": "普通",
+      "slugFromName": "warbone",
+      "imageUrl": "/data/images/monsters/skeleton-footman-unique_common.webp"
+    },
+    {
+      "slug": "mimic-large-ornate",
+      "name": "Mimic",
+      "name_cn": "巨型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-large-ornate_common.webp"
+    },
+    {
+      "slug": "slime-unique",
+      "name": "Ozzeling",
+      "name_cn": "奥泽灵",
+      "class_type": "普通",
+      "slugFromName": "ozzeling",
+      "imageUrl": "/data/images/monsters/slime-unique_common.webp"
+    },
+    {
+      "slug": "mimic-small-ornate",
+      "name": "Mimic",
+      "name_cn": "小型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-small-ornate_common.webp"
+    },
+    {
+      "slug": "mimic-medium-mid-level",
+      "name": "Mimic",
+      "name_cn": "宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-medium-mid-level_common.webp"
+    },
+    {
+      "slug": "mimic-medium-mid-level-unique",
+      "name": "Slinkfoul",
+      "name_cn": "中型诡污",
+      "class_type": "普通",
+      "slugFromName": "slinkfoul",
+      "imageUrl": "/data/images/monsters/mimic-medium-mid-level-unique_common.webp"
+    },
+    {
+      "slug": "dwarf-knight",
+      "name": "Dwarf Knight",
+      "name_cn": "矮人骑士",
+      "class_type": "副首领",
+      "slugFromName": "dwarf-knight",
+      "imageUrl": "/data/images/monsters/dwarf-knight_common.webp"
+    },
+    {
+      "slug": "goblin-warrior-unique",
+      "name": "Loot Goblin",
+      "name_cn": "宝藏哥布林",
+      "class_type": "普通",
+      "slugFromName": "loot-goblin",
+      "imageUrl": "/data/images/monsters/goblin-warrior-unique_common.webp"
+    },
+    {
+      "slug": "salmon",
+      "name": "Salmon",
+      "name_cn": "鲑鱼",
+      "class_type": "普通",
+      "slugFromName": "salmon",
+      "imageUrl": "/data/images/monsters/salmon_common.webp"
+    },
+    {
+      "slug": "sea-harpy",
+      "name": "Sea Harpy",
+      "name_cn": "海洋鹰身女妖",
+      "class_type": "普通",
+      "slugFromName": "sea-harpy",
+      "imageUrl": "/data/images/monsters/sea-harpy_common.webp"
+    },
+    {
+      "slug": "black-durgon",
+      "name": "Black Durgon",
+      "name_cn": "黑炮弹鱼",
+      "class_type": "普通",
+      "slugFromName": "black-durgon",
+      "imageUrl": "/data/images/monsters/black-durgon_common.webp"
+    },
+    {
+      "slug": "ice-spider",
+      "name": "Ice Spider",
+      "name_cn": "冰霜蜘蛛",
+      "class_type": "普通",
+      "slugFromName": "ice-spider",
+      "imageUrl": "/data/images/monsters/ice-spider_common.webp"
+    },
+    {
+      "slug": "mimic-medium-simple",
+      "name": "Mimic",
+      "name_cn": "宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-medium-simple_common.webp"
+    },
+    {
+      "slug": "pinchclaw-crab",
+      "name": "Pinchclaw Crab",
+      "name_cn": "钳爪蟹",
+      "class_type": "普通",
+      "slugFromName": "pinchclaw-crab",
+      "imageUrl": "/data/images/monsters/pinchclaw-crab_common.webp"
+    },
+    {
+      "slug": "scrawled-filefish",
+      "name": "Scrawled Filefish",
+      "name_cn": "扫帚鱼",
+      "class_type": "普通",
+      "slugFromName": "scrawled-filefish",
+      "imageUrl": "/data/images/monsters/scrawled-filefish_common.webp"
+    },
+    {
+      "slug": "mimic-small-mid-level-unique",
+      "name": "Slinkfoul",
+      "name_cn": "诡污",
+      "class_type": "普通",
+      "slugFromName": "slinkfoul",
+      "imageUrl": "/data/images/monsters/mimic-small-mid-level-unique_common.webp"
+    },
+    {
+      "slug": "pirate-crossbowman",
+      "name": "Pirate Crossbowman",
+      "name_cn": "海盗弩手",
+      "class_type": "普通",
+      "slugFromName": "pirate-crossbowman",
+      "imageUrl": "/data/images/monsters/pirate-crossbowman_common.webp"
+    },
+    {
+      "slug": "pirate-swiftblade",
+      "name": "Pirate Swiftblade",
+      "name_cn": "海盗快刀手",
+      "class_type": "普通",
+      "slugFromName": "pirate-swiftblade",
+      "imageUrl": "/data/images/monsters/pirate-swiftblade_common.webp"
+    },
+    {
+      "slug": "ifrit",
+      "name": "Ifrit",
+      "name_cn": "炎魔",
+      "class_type": "副首领",
+      "slugFromName": "ifrit",
+      "imageUrl": "/data/images/monsters/ifrit_common.webp"
+    },
+    {
+      "slug": "reefling",
+      "name": "Reefling",
+      "name_cn": "珊瑚灵",
+      "class_type": "普通",
+      "slugFromName": "reefling",
+      "imageUrl": "/data/images/monsters/reefling_common.webp"
+    },
+    {
+      "slug": "midnight-stag",
+      "name": "Midnight Stag",
+      "name_cn": "午夜雄鹿",
+      "class_type": "普通",
+      "slugFromName": "midnight-stag",
+      "imageUrl": "/data/images/monsters/midnight-stag_common.webp"
+    },
+    {
+      "slug": "cave-troll",
+      "name": "Cave Troll",
+      "name_cn": "洞穴巨魔",
+      "class_type": "首领",
+      "slugFromName": "cave-troll",
+      "imageUrl": "/data/images/monsters/cave-troll_common.webp"
+    },
+    {
+      "slug": "napoleon-wrasse",
+      "name": "Napoleon Wrasse",
+      "name_cn": "纹唇鱼",
+      "class_type": "普通",
+      "slugFromName": "napoleon-wrasse",
+      "imageUrl": "/data/images/monsters/napoleon-wrasse_common.webp"
+    },
+    {
+      "slug": "ocean-sunfish",
+      "name": "Ocean Sunfish",
+      "name_cn": "翻车鱼",
+      "class_type": "普通",
+      "slugFromName": "ocean-sunfish",
+      "imageUrl": "/data/images/monsters/ocean-sunfish_common.webp"
+    },
+    {
+      "slug": "small-jellyfish",
+      "name": "Giant Jellyfish",
+      "name_cn": "巨型水母",
+      "class_type": "普通",
+      "slugFromName": "giant-jellyfish",
+      "imageUrl": "/data/images/monsters/small-jellyfish_common.webp"
+    },
+    {
+      "slug": "expressman-otto",
+      "name": "Otto",
+      "name_cn": "小狗奥托",
+      "class_type": "普通",
+      "slugFromName": "otto",
+      "imageUrl": "/data/images/monsters/expressman-otto_common.webp"
+    },
+    {
+      "slug": "frost-elemental",
+      "name": "Frost Elemental",
+      "name_cn": "冰霜元素体",
+      "class_type": "普通",
+      "slugFromName": "frost-elemental",
+      "imageUrl": "/data/images/monsters/frost-elemental_common.webp"
+    },
+    {
+      "slug": "skeleton-royal-guard",
+      "name": "Skeleton Royal Guard",
+      "name_cn": "骷髅皇家卫士",
+      "class_type": "普通",
+      "slugFromName": "skeleton-royal-guard",
+      "imageUrl": "/data/images/monsters/skeleton-royal-guard_common.webp"
+    },
+    {
+      "slug": "spider-mummy",
+      "name": "Spider Mummy",
+      "name_cn": "木乃伊蜘蛛",
+      "class_type": "普通",
+      "slugFromName": "spider-mummy",
+      "imageUrl": "/data/images/monsters/spider-mummy_common.webp"
+    },
+    {
+      "slug": "evil-eye",
+      "name": "Evil Eye",
+      "name_cn": "邪眼",
+      "class_type": "普通",
+      "slugFromName": "evil-eye",
+      "imageUrl": "/data/images/monsters/evil-eye_common.webp"
+    },
+    {
+      "slug": "treant",
+      "name": "Treant Summoned",
+      "name_cn": "被召唤的树人",
+      "class_type": "普通",
+      "slugFromName": "treant-summoned",
+      "imageUrl": "/data/images/monsters/treant_common.webp"
+    },
+    {
+      "slug": "specter",
+      "name": "Specter",
+      "name_cn": "幽灵",
+      "class_type": "普通",
+      "slugFromName": "specter",
+      "imageUrl": "/data/images/monsters/specter_common.webp"
+    },
+    {
+      "slug": "earth-elemental",
+      "name": "Earth Elemental",
+      "name_cn": "土元素",
+      "class_type": "普通",
+      "slugFromName": "earth-elemental",
+      "imageUrl": "/data/images/monsters/earth-elemental_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-guardman",
+      "name": "Frost Skeleton Guardman",
+      "name_cn": "冰霜骷髅卫士",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-guardman",
+      "imageUrl": "/data/images/monsters/frost-skeleton-guardman_common.webp"
+    },
+    {
+      "slug": "otto",
+      "name": "Otto",
+      "name_cn": "小狗 Otto",
+      "class_type": "普通",
+      "slugFromName": "otto",
+      "imageUrl": "/data/images/monsters/otto_common.webp"
+    },
+    {
+      "slug": "goblin-archer",
+      "name": "Goblin Archer",
+      "name_cn": "哥布林弓手",
+      "class_type": "普通",
+      "slugFromName": "goblin-archer",
+      "imageUrl": "/data/images/monsters/goblin-archer_common.webp"
+    },
+    {
+      "slug": "frost-wolf",
+      "name": "Frost Wolf",
+      "name_cn": "冰霜狼",
+      "class_type": "普通",
+      "slugFromName": "frost-wolf",
+      "imageUrl": "/data/images/monsters/frost-wolf_common.webp"
+    },
+    {
+      "slug": "sheepshead",
+      "name": "Sheepshead",
+      "name_cn": "羊头鲷",
+      "class_type": "普通",
+      "slugFromName": "sheepshead",
+      "imageUrl": "/data/images/monsters/sheepshead_common.webp"
+    },
+    {
+      "slug": "giant-spider",
+      "name": "Giant Spider",
+      "name_cn": "巨型蜘蛛",
+      "class_type": "普通",
+      "slugFromName": "giant-spider",
+      "imageUrl": "/data/images/monsters/giant-spider_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-maceman",
+      "name": "Frost Skeleton Maceman",
+      "name_cn": "冰霜骷髅锤手",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-maceman",
+      "imageUrl": "/data/images/monsters/frost-skeleton-maceman_common.webp"
+    },
+    {
+      "slug": "cuttlefish",
+      "name": "Cuttlefish",
+      "name_cn": "乌贼",
+      "class_type": "普通",
+      "slugFromName": "cuttlefish",
+      "imageUrl": "/data/images/monsters/cuttlefish_common.webp"
+    },
+    {
+      "slug": "fire-elemental",
+      "name": "Fire Elemental",
+      "name_cn": "火元素",
+      "class_type": "普通",
+      "slugFromName": "fire-elemental",
+      "imageUrl": "/data/images/monsters/fire-elemental_common.webp"
+    },
+    {
+      "slug": "seaurchin",
+      "name": "Sea Urchin",
+      "name_cn": "海胆",
+      "class_type": "普通",
+      "slugFromName": "sea-urchin",
+      "imageUrl": "/data/images/monsters/seaurchin_common.webp"
+    },
+    {
+      "slug": "fiendling-chopper",
+      "name": "Fiendling Chopper",
+      "name_cn": "劣魔斩切者",
+      "class_type": "普通",
+      "slugFromName": "fiendling-chopper",
+      "imageUrl": "/data/images/monsters/fiendling-chopper_common.webp"
+    },
+    {
+      "slug": "bluefin-tuna",
+      "name": "Bluefin Tuna",
+      "name_cn": "蓝鳍金枪鱼",
+      "class_type": "普通",
+      "slugFromName": "bluefin-tuna",
+      "imageUrl": "/data/images/monsters/bluefin-tuna_common.webp"
+    },
+    {
+      "slug": "bluemarlin",
+      "name": "Bluemarlin",
+      "name_cn": "蓝枪鱼",
+      "class_type": "普通",
+      "slugFromName": "bluemarlin",
+      "imageUrl": "/data/images/monsters/bluemarlin_common.webp"
+    },
+    {
+      "slug": "death-beetle",
+      "name": "Death Beetle",
+      "name_cn": "死亡甲虫",
+      "class_type": "普通",
+      "slugFromName": "death-beetle",
+      "imageUrl": "/data/images/monsters/death-beetle_common.webp"
+    },
+    {
+      "slug": "demon-bat",
+      "name": "Demon Bat",
+      "name_cn": "恶魔蝙蝠",
+      "class_type": "普通",
+      "slugFromName": "demon-bat",
+      "imageUrl": "/data/images/monsters/demon-bat_common.webp"
+    },
+    {
+      "slug": "demon-dog",
+      "name": "Demon Dog",
+      "name_cn": "恶魔犬",
+      "class_type": "普通",
+      "slugFromName": "demon-dog",
+      "imageUrl": "/data/images/monsters/demon-dog_common.webp"
+    },
+    {
+      "slug": "demonfly",
+      "name": "Demonfly",
+      "name_cn": "恶魔蜉蝣",
+      "class_type": "普通",
+      "slugFromName": "demonfly",
+      "imageUrl": "/data/images/monsters/demonfly_common.webp"
+    },
+    {
+      "slug": "frost-imp",
+      "name": "Frost Imp",
+      "name_cn": "冰霜鬼童",
+      "class_type": "普通",
+      "slugFromName": "frost-imp",
+      "imageUrl": "/data/images/monsters/frost-imp_common.webp"
+    },
+    {
+      "slug": "frost-sentinel",
+      "name": "Frost Sentinel",
+      "name_cn": "冰霜哨戒魔像",
+      "class_type": "普通",
+      "slugFromName": "frost-sentinel",
+      "imageUrl": "/data/images/monsters/frost-sentinel_common.webp"
+    },
+    {
+      "slug": "ice-hound",
+      "name": "Ice Hound",
+      "name_cn": "寒冰猎犬",
+      "class_type": "普通",
+      "slugFromName": "ice-hound",
+      "imageUrl": "/data/images/monsters/ice-hound_common.webp"
+    },
+    {
+      "slug": "goblin-axeman",
+      "name": "Goblin Axeman",
+      "name_cn": "哥布林斧手",
+      "class_type": "普通",
+      "slugFromName": "goblin-axeman",
+      "imageUrl": "/data/images/monsters/goblin-axeman_common.webp"
+    },
+    {
+      "slug": "harpy",
+      "name": "Harpy",
+      "name_cn": "鹰身女妖",
+      "class_type": "普通",
+      "slugFromName": "harpy",
+      "imageUrl": "/data/images/monsters/harpy_common.webp"
+    },
+    {
+      "slug": "hell-maggot",
+      "name": "Hell Maggot",
+      "name_cn": "魔蛆",
+      "class_type": "普通",
+      "slugFromName": "hell-maggot",
+      "imageUrl": "/data/images/monsters/hell-maggot_common.webp"
+    },
+    {
+      "slug": "hermit-crab",
+      "name": "Hermit Crab",
+      "name_cn": "寄居蟹",
+      "class_type": "普通",
+      "slugFromName": "hermit-crab",
+      "imageUrl": "/data/images/monsters/hermit-crab_common.webp"
+    },
+    {
+      "slug": "ice-harpy",
+      "name": "Ice Harpy",
+      "name_cn": "寒冰鹰身女妖",
+      "class_type": "普通",
+      "slugFromName": "ice-harpy",
+      "imageUrl": "/data/images/monsters/ice-harpy_common.webp"
+    },
+    {
+      "slug": "ice-kobold-archer",
+      "name": "Ice Kobold Archer",
+      "name_cn": "寒冰狗头人弓手",
+      "class_type": "普通",
+      "slugFromName": "ice-kobold-archer",
+      "imageUrl": "/data/images/monsters/ice-kobold-archer_common.webp"
+    },
+    {
+      "slug": "goblin-warrior",
+      "name": "Goblin Warrior",
+      "name_cn": "哥布林战士",
+      "class_type": "普通",
+      "slugFromName": "goblin-warrior",
+      "imageUrl": "/data/images/monsters/goblin-warrior_common.webp"
+    },
+    {
+      "slug": "ice-kobold-axeman",
+      "name": "Ice Kobold Axeman",
+      "name_cn": "寒冰狗头人斧手",
+      "class_type": "普通",
+      "slugFromName": "ice-kobold-axeman",
+      "imageUrl": "/data/images/monsters/ice-kobold-axeman_common.webp"
+    },
+    {
+      "slug": "skeleton-axeman",
+      "name": "Skeleton Axeman",
+      "name_cn": "骷髅斧兵",
+      "class_type": "普通",
+      "slugFromName": "skeleton-axeman",
+      "imageUrl": "/data/images/monsters/skeleton-axeman_common.webp"
+    },
+    {
+      "slug": "mermaid-corpse",
+      "name": "Mermaid Corpse",
+      "name_cn": "人鱼尸体",
+      "class_type": "普通",
+      "slugFromName": "mermaid-corpse",
+      "imageUrl": "/data/images/monsters/mermaid-corpse_common.webp"
+    },
+    {
+      "slug": "jellyfish",
+      "name": "Jellyfish",
+      "name_cn": "水母",
+      "class_type": "普通",
+      "slugFromName": "jellyfish",
+      "imageUrl": "/data/images/monsters/jellyfish_common.webp"
+    },
+    {
+      "slug": "mummy",
+      "name": "Mummy",
+      "name_cn": "木乃伊",
+      "class_type": "普通",
+      "slugFromName": "mummy",
+      "imageUrl": "/data/images/monsters/mummy_common.webp"
+    },
+    {
+      "slug": "mermaid",
+      "name": "Mermaid",
+      "name_cn": "人鱼",
+      "class_type": "普通",
+      "slugFromName": "mermaid",
+      "imageUrl": "/data/images/monsters/mermaid_common.webp"
+    },
+    {
+      "slug": "living-armor",
+      "name": "Living Armor",
+      "name_cn": "铠甲傀儡",
+      "class_type": "普通",
+      "slugFromName": "living-armor",
+      "imageUrl": "/data/images/monsters/living-armor_common.webp"
+    },
+    {
+      "slug": "living-statue",
+      "name": "Living Statue",
+      "name_cn": "石像鬼",
+      "class_type": "普通",
+      "slugFromName": "living-statue",
+      "imageUrl": "/data/images/monsters/living-statue_common.webp"
+    },
+    {
+      "slug": "mimic-large-simple",
+      "name": "Mimic",
+      "name_cn": "巨型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-large-simple_common.webp"
+    },
+    {
+      "slug": "pirate-swordman",
+      "name": "Pirate Swordman",
+      "name_cn": "海盗剑士",
+      "class_type": "普通",
+      "slugFromName": "pirate-swordman",
+      "imageUrl": "/data/images/monsters/pirate-swordman_common.webp"
+    },
+    {
+      "slug": "lava-slime",
+      "name": "Lava Slime",
+      "name_cn": "熔岩史莱姆",
+      "class_type": "普通",
+      "slugFromName": "lava-slime",
+      "imageUrl": "/data/images/monsters/lava-slime_common.webp"
+    },
+    {
+      "slug": "pirate-axe-thrower",
+      "name": "Pirate Axe Thrower",
+      "name_cn": "海盗掷斧手",
+      "class_type": "普通",
+      "slugFromName": "pirate-axe-thrower",
+      "imageUrl": "/data/images/monsters/pirate-axe-thrower_common.webp"
+    },
+    {
+      "slug": "pirate-bowman",
+      "name": "Pirate Bowman",
+      "name_cn": "海盗弓手",
+      "class_type": "普通",
+      "slugFromName": "pirate-bowman",
+      "imageUrl": "/data/images/monsters/pirate-bowman_common.webp"
+    },
+    {
+      "slug": "sea-walker",
+      "name": "Sea Walker",
+      "name_cn": "深海行尸",
+      "class_type": "普通",
+      "slugFromName": "sea-walker",
+      "imageUrl": "/data/images/monsters/sea-walker_common.webp"
+    },
+    {
+      "slug": "lava-golem",
+      "name": "Lava Golem",
+      "name_cn": "熔岩魔像",
+      "class_type": "副首领",
+      "slugFromName": "lava-golem",
+      "imageUrl": "/data/images/monsters/lava-golem_common.webp"
+    },
+    {
+      "slug": "tidewalker-clubfighter",
+      "name": "Tidewalker Clubfighter",
+      "name_cn": "踏潮者棍手",
+      "class_type": "普通",
+      "slugFromName": "tidewalker-clubfighter",
+      "imageUrl": "/data/images/monsters/tidewalker-clubfighter_common.webp"
+    },
+    {
+      "slug": "tidewalker-spearer",
+      "name": "Tidewalker Spearer",
+      "name_cn": "踏潮者矛手",
+      "class_type": "普通",
+      "slugFromName": "tidewalker-spearer",
+      "imageUrl": "/data/images/monsters/tidewalker-spearer_common.webp"
+    },
+    {
+      "slug": "demon-executioner",
+      "name": "Demon Executioner",
+      "name_cn": "恶魔处刑者",
+      "class_type": "副首领",
+      "slugFromName": "demon-executioner",
+      "imageUrl": "/data/images/monsters/demon-executioner_common.webp"
+    },
+    {
+      "slug": "yeti",
+      "name": "Yeti",
+      "name_cn": "冰雪巨猿",
+      "class_type": "副首领",
+      "slugFromName": "yeti",
+      "imageUrl": "/data/images/monsters/yeti_common.webp"
+    },
+    {
+      "slug": "hell-hunter",
+      "name": "Hell Hunter",
+      "name_cn": "地狱猎手",
+      "class_type": "副首领",
+      "slugFromName": "hell-hunter",
+      "imageUrl": "/data/images/monsters/hell-hunter_common.webp"
+    },
+    {
+      "slug": "abomination",
+      "name": "Abomination",
+      "name_cn": "憎恶",
+      "class_type": "副首领",
+      "slugFromName": "abomination",
+      "imageUrl": "/data/images/monsters/abomination_common.webp"
+    },
+    {
+      "slug": "centaur-demon",
+      "name": "Demon Centaur",
+      "name_cn": "恶魔半人马",
+      "class_type": "副首领",
+      "slugFromName": "demon-centaur",
+      "imageUrl": "/data/images/monsters/centaur-demon_common.webp"
+    },
+    {
+      "slug": "frost-giant-berserker",
+      "name": "Frost Giant Berserker",
+      "name_cn": "冰霜巨人狂战士",
+      "class_type": "副首领",
+      "slugFromName": "frost-giant-berserker",
+      "imageUrl": "/data/images/monsters/frost-giant-berserker_common.webp"
+    },
+    {
+      "slug": "frost-giant-shielder",
+      "name": "Frost Giant Shielder",
+      "name_cn": "冰霜持盾巨人",
+      "class_type": "副首领",
+      "slugFromName": "frost-giant-shielder",
+      "imageUrl": "/data/images/monsters/frost-giant-shielder_common.webp"
+    },
+    {
+      "slug": "giant-worm",
+      "name": "Giant Worm",
+      "name_cn": "巨型蠕虫",
+      "class_type": "副首领",
+      "slugFromName": "giant-worm",
+      "imageUrl": "/data/images/monsters/giant-worm_common.webp"
+    },
+    {
+      "slug": "ruins-golem",
+      "name": "Ruins Golem",
+      "name_cn": "废墟魔像",
+      "class_type": "副首领",
+      "slugFromName": "ruins-golem",
+      "imageUrl": "/data/images/monsters/ruins-golem_common.webp"
+    },
+    {
+      "slug": "dreadspine",
+      "name": "Dreadspine",
+      "name_cn": "畸形骨魔",
+      "class_type": "副首领",
+      "slugFromName": "dreadspine",
+      "imageUrl": "/data/images/monsters/dreadspine_common.webp"
+    },
+    {
+      "slug": "mimic-small-simple",
+      "name": "Mimic",
+      "name_cn": "小型宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-small-simple_common.webp"
+    },
+    {
+      "slug": "tidewalker-slinger",
+      "name": "Tidewalker Boomerang",
+      "name_cn": "踏潮者飞镖投手",
+      "class_type": "普通",
+      "slugFromName": "tidewalker-boomerang",
+      "imageUrl": "/data/images/monsters/tidewalker-slinger_common.webp"
+    },
+    {
+      "slug": "wendigo",
+      "name": "Wendigo",
+      "name_cn": "温迪戈",
+      "class_type": "副首领",
+      "slugFromName": "wendigo",
+      "imageUrl": "/data/images/monsters/wendigo_common.webp"
+    },
+    {
+      "slug": "giant-centipede",
+      "name": "Giant Centipede",
+      "name_cn": "巨型蜈蚣",
+      "class_type": "副首领",
+      "slugFromName": "giant-centipede",
+      "imageUrl": "/data/images/monsters/giant-centipede_common.webp"
+    },
+    {
+      "slug": "frozen-ghost",
+      "name": "Frozen Ghost",
+      "name_cn": "冰霜怨灵",
+      "class_type": "普通",
+      "slugFromName": "frozen-ghost",
+      "imageUrl": "/data/images/monsters/frozen-ghost_common.webp"
+    },
+    {
+      "slug": "baby-turtle",
+      "name": "Baby Turtle",
+      "name_cn": "海龟幼崽",
+      "class_type": "普通",
+      "slugFromName": "baby-turtle",
+      "imageUrl": "/data/images/monsters/baby-turtle_common.webp"
+    },
+    {
+      "slug": "death-skull",
+      "name": "Death Skull",
+      "name_cn": "飞行骷髅头",
+      "class_type": "普通",
+      "slugFromName": "death-skull",
+      "imageUrl": "/data/images/monsters/death-skull_common.webp"
+    },
+    {
+      "slug": "ancient-stingray",
+      "name": "Ancient Stingray",
+      "name_cn": "远古刺鳐",
+      "class_type": "首领",
+      "slugFromName": "ancient-stingray",
+      "imageUrl": "/data/images/monsters/ancient-stingray_common.webp"
+    },
+    {
+      "slug": "crocodilian",
+      "name": "Crocodilian",
+      "name_cn": "鳄鱼人",
+      "class_type": "副首领",
+      "slugFromName": "crocodilian",
+      "imageUrl": "/data/images/monsters/crocodilian_common.webp"
+    },
+    {
+      "slug": "demon-berserker",
+      "name": "Demon Berserker",
+      "name_cn": "恶魔狂战士",
+      "class_type": "副首领",
+      "slugFromName": "demon-berserker",
+      "imageUrl": "/data/images/monsters/demon-berserker_common.webp"
+    },
+    {
+      "slug": "giant-jellyfish",
+      "name": "Giant Jellyfish",
+      "name_cn": "巨型水母",
+      "class_type": "副首领",
+      "slugFromName": "giant-jellyfish",
+      "imageUrl": "/data/images/monsters/giant-jellyfish_common.webp"
+    },
+    {
+      "slug": "cerberus",
+      "name": "Cerberus",
+      "name_cn": "地狱三头犬",
+      "class_type": "副首领",
+      "slugFromName": "cerberus",
+      "imageUrl": "/data/images/monsters/cerberus_common.webp"
+    },
+    {
+      "slug": "skeleton-warlord",
+      "name": "Skeleton Warlord",
+      "name_cn": "骷髅督军",
+      "class_type": "首领",
+      "slugFromName": "skeleton-warlord",
+      "imageUrl": "/data/images/monsters/skeleton-warlord_common.webp"
+    },
+    {
+      "slug": "ghost-king",
+      "name": "Ghost King",
+      "name_cn": "鬼王",
+      "class_type": "首领",
+      "slugFromName": "ghost-king",
+      "imageUrl": "/data/images/monsters/ghost-king_common.webp"
+    },
+    {
+      "slug": "dwarf-axeman",
+      "name": "Dwarf Axeman",
+      "name_cn": "矮人斧手",
+      "class_type": "普通",
+      "slugFromName": "dwarf-axeman",
+      "imageUrl": "/data/images/monsters/dwarf-axeman_common.webp"
+    },
+    {
+      "slug": "fire-spirit",
+      "name": "Fire Spirit",
+      "name_cn": "火灵",
+      "class_type": "普通",
+      "slugFromName": "fire-spirit",
+      "imageUrl": "/data/images/monsters/fire-spirit_common.webp"
+    },
+    {
+      "slug": "mimic-large-mid-level-unique",
+      "name": "Slinkfoul",
+      "name_cn": "巨型诡污",
+      "class_type": "普通",
+      "slugFromName": "slinkfoul",
+      "imageUrl": "/data/images/monsters/mimic-large-mid-level-unique_common.webp"
+    },
+    {
+      "slug": "goblin-bolaslinger",
+      "name": "Goblin Bolaslinger",
+      "name_cn": "哥布林投石手",
+      "class_type": "普通",
+      "slugFromName": "goblin-bolaslinger",
+      "imageUrl": "/data/images/monsters/goblin-bolaslinger_common.webp"
+    },
+    {
+      "slug": "goblin-mage",
+      "name": "Goblin Mage",
+      "name_cn": "哥布林法师",
+      "class_type": "普通",
+      "slugFromName": "goblin-mage",
+      "imageUrl": "/data/images/monsters/goblin-mage_common.webp"
+    },
+    {
+      "slug": "training-dummy",
+      "name": "Training Dummy",
+      "name_cn": "训练假人",
+      "class_type": "普通",
+      "slugFromName": "training-dummy",
+      "imageUrl": "/data/images/monsters/training-dummy_common.webp"
+    },
+    {
+      "slug": "lava-elemental",
+      "name": "Lava Elemental",
+      "name_cn": "熔岩元素",
+      "class_type": "普通",
+      "slugFromName": "lava-elemental",
+      "imageUrl": "/data/images/monsters/lava-elemental_common.webp"
+    },
+    {
+      "slug": "expressman",
+      "name": "Expressman",
+      "name_cn": "快递员",
+      "class_type": "普通",
+      "slugFromName": "expressman",
+      "imageUrl": "/data/images/monsters/expressman_common.webp"
+    },
+    {
+      "slug": "morayeel",
+      "name": "Moray Eel",
+      "name_cn": "海鳗",
+      "class_type": "普通",
+      "slugFromName": "moray-eel",
+      "imageUrl": "/data/images/monsters/morayeel_common.webp"
+    },
+    {
+      "slug": "hydra",
+      "name": "Hydra",
+      "name_cn": "九头蛇",
+      "class_type": "普通",
+      "slugFromName": "hydra",
+      "imageUrl": "/data/images/monsters/hydra_common.webp"
+    },
+    {
+      "slug": "tidewalker-shaman",
+      "name": "Tidewalker Shaman",
+      "name_cn": "踏潮者萨满",
+      "class_type": "普通",
+      "slugFromName": "tidewalker-shaman",
+      "imageUrl": "/data/images/monsters/tidewalker-shaman_common.webp"
+    },
+    {
+      "slug": "skeleton-guardman",
+      "name": "Skeleton Guardman",
+      "name_cn": "骷髅卫士",
+      "class_type": "普通",
+      "slugFromName": "skeleton-guardman",
+      "imageUrl": "/data/images/monsters/skeleton-guardman_common.webp"
+    },
+    {
+      "slug": "skeleton-archer",
+      "name": "Skeleton Archer",
+      "name_cn": "骷髅弓箭手",
+      "class_type": "普通",
+      "slugFromName": "skeleton-archer",
+      "imageUrl": "/data/images/monsters/skeleton-archer_common.webp"
+    },
+    {
+      "slug": "skeleton-spearman",
+      "name": "Skeleton Spearman",
+      "name_cn": "骷髅长枪兵",
+      "class_type": "普通",
+      "slugFromName": "skeleton-spearman",
+      "imageUrl": "/data/images/monsters/skeleton-spearman_common.webp"
+    },
+    {
+      "slug": "slime",
+      "name": "Slime",
+      "name_cn": "史莱姆",
+      "class_type": "普通",
+      "slugFromName": "slime",
+      "imageUrl": "/data/images/monsters/slime_common.webp"
+    },
+    {
+      "slug": "frost-demon",
+      "name": "Frost Demon",
+      "name_cn": "冰霜恶魔大君",
+      "class_type": "副首领",
+      "slugFromName": "frost-demon",
+      "imageUrl": "/data/images/monsters/frost-demon_common.webp"
+    },
+    {
+      "slug": "white-shark",
+      "name": "White Shark",
+      "name_cn": "大白鲨",
+      "class_type": "副首领",
+      "slugFromName": "white-shark",
+      "imageUrl": "/data/images/monsters/white-shark_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-halberdier",
+      "name": "Frost Skeleton Halberdier",
+      "name_cn": "冰霜骷髅戟兵",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-halberdier",
+      "imageUrl": "/data/images/monsters/frost-skeleton-halberdier_common.webp"
+    },
+    {
+      "slug": "cockatrice",
+      "name": "Cockatrice",
+      "name_cn": "蛇尾鸡",
+      "class_type": "副首领",
+      "slugFromName": "cockatrice",
+      "imageUrl": "/data/images/monsters/cockatrice_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-axeman",
+      "name": "Frost Skeleton Axeman",
+      "name_cn": "冰霜骷髅斧手",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-axeman",
+      "imageUrl": "/data/images/monsters/frost-skeleton-axeman_common.webp"
+    },
+    {
+      "slug": "dire-wolf",
+      "name": "Dire Wolf",
+      "name_cn": "恐狼",
+      "class_type": "普通",
+      "slugFromName": "dire-wolf",
+      "imageUrl": "/data/images/monsters/dire-wolf_common.webp"
+    },
+    {
+      "slug": "ice-giant-spider",
+      "name": "Ice Giant Spider",
+      "name_cn": "冰霜巨型蜘蛛",
+      "class_type": "普通",
+      "slugFromName": "ice-giant-spider",
+      "imageUrl": "/data/images/monsters/ice-giant-spider_common.webp"
+    },
+    {
+      "slug": "giant-bat",
+      "name": "Giant Bat",
+      "name_cn": "巨型蝙蝠",
+      "class_type": "普通",
+      "slugFromName": "giant-bat",
+      "imageUrl": "/data/images/monsters/giant-bat_common.webp"
+    },
+    {
+      "slug": "flame-boar",
+      "name": "Flame Boar",
+      "name_cn": "烈焰野猪",
+      "class_type": "普通",
+      "slugFromName": "flame-boar",
+      "imageUrl": "/data/images/monsters/flame-boar_common.webp"
+    },
+    {
+      "slug": "fire-lizard",
+      "name": "Fire Lizard",
+      "name_cn": "火蜥蜴",
+      "class_type": "普通",
+      "slugFromName": "fire-lizard",
+      "imageUrl": "/data/images/monsters/fire-lizard_common.webp"
+    },
+    {
+      "slug": "sea-piranha",
+      "name": "Sea Piranha",
+      "name_cn": "深海食人鱼",
+      "class_type": "普通",
+      "slugFromName": "sea-piranha",
+      "imageUrl": "/data/images/monsters/sea-piranha_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-crossbowman",
+      "name": "Frost Skeleton Crossbowman",
+      "name_cn": "冰霜骷髅弩手",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-crossbowman",
+      "imageUrl": "/data/images/monsters/frost-skeleton-crossbowman_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-footman",
+      "name": "Frost Skeleton Footman",
+      "name_cn": "冰霜骷髅步兵",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-footman",
+      "imageUrl": "/data/images/monsters/frost-skeleton-footman_common.webp"
+    },
+    {
+      "slug": "ghoul",
+      "name": "Ghoul",
+      "name_cn": "食尸鬼",
+      "class_type": "普通",
+      "slugFromName": "ghoul",
+      "imageUrl": "/data/images/monsters/ghoul_common.webp"
+    },
+    {
+      "slug": "dwarf-mauler",
+      "name": "Dwarf Mauler",
+      "name_cn": "矮人重锤手",
+      "class_type": "普通",
+      "slugFromName": "dwarf-mauler",
+      "imageUrl": "/data/images/monsters/dwarf-mauler_common.webp"
+    },
+    {
+      "slug": "lava-turtle",
+      "name": "Lava Turtle",
+      "name_cn": "熔岩龟",
+      "class_type": "普通",
+      "slugFromName": "lava-turtle",
+      "imageUrl": "/data/images/monsters/lava-turtle_common.webp"
+    },
+    {
+      "slug": "zombie",
+      "name": "Zombie",
+      "name_cn": "殭尸",
+      "class_type": "普通",
+      "slugFromName": "zombie",
+      "imageUrl": "/data/images/monsters/zombie_common.webp"
+    },
+    {
+      "slug": "wraith",
+      "name": "Wraith",
+      "name_cn": "幽鬼",
+      "class_type": "副首领",
+      "slugFromName": "wraith",
+      "imageUrl": "/data/images/monsters/wraith_common.webp"
+    },
+    {
+      "slug": "fiendling-slasher",
+      "name": "Fiendling Slasher",
+      "name_cn": "劣魔砍杀者",
+      "class_type": "普通",
+      "slugFromName": "fiendling-slasher",
+      "imageUrl": "/data/images/monsters/fiendling-slasher_common.webp"
+    },
+    {
+      "slug": "frost-skeleton-archer",
+      "name": "Frost Skeleton Archer",
+      "name_cn": "冰霜骷髅弓手",
+      "class_type": "普通",
+      "slugFromName": "frost-skeleton-archer",
+      "imageUrl": "/data/images/monsters/frost-skeleton-archer_common.webp"
+    },
+    {
+      "slug": "giant-dragonfly",
+      "name": "Giant Dragonfly",
+      "name_cn": "剧毒蜻蜓",
+      "class_type": "普通",
+      "slugFromName": "giant-dragonfly",
+      "imageUrl": "/data/images/monsters/giant-dragonfly_common.webp"
+    },
+    {
+      "slug": "skeleton-crossbowman",
+      "name": "Skeleton Crossbowman",
+      "name_cn": "骷髅弩手",
+      "class_type": "普通",
+      "slugFromName": "skeleton-crossbowman",
+      "imageUrl": "/data/images/monsters/skeleton-crossbowman_common.webp"
+    },
+    {
+      "slug": "skeleton-champion",
+      "name": "Skeleton Champion",
+      "name_cn": "骷髅冠军",
+      "class_type": "副首领",
+      "slugFromName": "skeleton-champion",
+      "imageUrl": "/data/images/monsters/skeleton-champion_common.webp"
+    },
+    {
+      "slug": "fiendling-crusher",
+      "name": "Fiendling Crusher",
+      "name_cn": "劣魔粉碎者",
+      "class_type": "普通",
+      "slugFromName": "fiendling-crusher",
+      "imageUrl": "/data/images/monsters/fiendling-crusher_common.webp"
+    },
+    {
+      "slug": "demon-imp",
+      "name": "Demon Imp",
+      "name_cn": "恶魔鬼童",
+      "class_type": "普通",
+      "slugFromName": "demon-imp",
+      "imageUrl": "/data/images/monsters/demon-imp_common.webp"
+    },
+    {
+      "slug": "skeleton-swordman",
+      "name": "Skeleton Swordman",
+      "name_cn": "骷髅双手剑士",
+      "class_type": "普通",
+      "slugFromName": "skeleton-swordman",
+      "imageUrl": "/data/images/monsters/skeleton-swordman_common.webp"
+    },
+    {
+      "slug": "octopus",
+      "name": "Octopus",
+      "name_cn": "章鱼",
+      "class_type": "普通",
+      "slugFromName": "octopus",
+      "imageUrl": "/data/images/monsters/octopus_common.webp"
+    },
+    {
+      "slug": "mimic-medium-ornate",
+      "name": "Mimic",
+      "name_cn": "宝箱怪",
+      "class_type": "普通",
+      "slugFromName": "mimic",
+      "imageUrl": "/data/images/monsters/mimic-medium-ornate_common.webp"
+    },
+    {
+      "slug": "skeleton-mage",
+      "name": "Skeleton Mage",
+      "name_cn": "骷髅法师",
+      "class_type": "普通",
+      "slugFromName": "skeleton-mage",
+      "imageUrl": "/data/images/monsters/skeleton-mage_common.webp"
+    },
+    {
+      "slug": "wisp",
+      "name": "Wisp",
+      "name_cn": "幻灵",
+      "class_type": "普通",
+      "slugFromName": "wisp",
+      "imageUrl": "/data/images/monsters/wisp_common.webp"
+    },
+    {
+      "slug": "demon-overseer",
+      "name": "Demon Overseer",
+      "name_cn": "恶魔监军",
+      "class_type": "首领",
+      "slugFromName": "demon-overseer",
+      "imageUrl": "/data/images/monsters/demon-overseer_common.webp"
+    },
+    {
+      "slug": "fire-colossus",
+      "name": "Fire Colossus",
+      "name_cn": "赤焰巨像",
+      "class_type": "首领",
+      "slugFromName": "fire-colossus",
+      "imageUrl": "/data/images/monsters/fire-colossus_common.webp"
+    },
+    {
+      "slug": "demon-scout",
+      "name": "Demon Scout",
+      "name_cn": "恶魔斥候",
+      "class_type": "普通",
+      "slugFromName": "demon-scout",
+      "imageUrl": "/data/images/monsters/demon-scout_common.webp"
+    },
+    {
+      "slug": "bladehand",
+      "name": "Bladehand",
+      "name_cn": "钉手船长",
+      "class_type": "首领",
+      "slugFromName": "bladehand",
+      "imageUrl": "/data/images/monsters/bladehand_common.webp"
+    },
+    {
+      "slug": "spectral-knight",
+      "name": "Spectral Knight",
+      "name_cn": "鬼灵骑士",
+      "class_type": "首领",
+      "slugFromName": "spectral-knight",
+      "imageUrl": "/data/images/monsters/spectral-knight_common.webp"
+    },
+    {
+      "slug": "lich",
+      "name": "Lich",
+      "name_cn": "巫妖",
+      "class_type": "首领",
+      "slugFromName": "lich",
+      "imageUrl": "/data/images/monsters/lich_common.webp"
+    },
+    {
+      "slug": "frost-wyvern",
+      "name": "Frost Wyvern",
+      "name_cn": "冰霜飞龙",
+      "class_type": "首领",
+      "slugFromName": "frost-wyvern",
+      "imageUrl": "/data/images/monsters/frost-wyvern_common.webp"
+    },
+    {
+      "slug": "skeleton-footman",
+      "name": "Skeleton Footman",
+      "name_cn": "骷髅步兵",
+      "class_type": "普通",
+      "slugFromName": "skeleton-footman",
+      "imageUrl": "/data/images/monsters/skeleton-footman_common.webp"
+    },
+    {
+      "slug": "frost-walker",
+      "name": "Frost Walker",
+      "name_cn": "冰霜行尸",
+      "class_type": "普通",
+      "slugFromName": "frost-walker",
+      "imageUrl": "/data/images/monsters/frost-walker_common.webp"
+    },
+    {
+      "slug": "dwarf-handcannoneer",
+      "name": "Dwarf Handcannoneer",
+      "name_cn": "矮人火铳手",
+      "class_type": "普通",
+      "slugFromName": "dwarf-handcannoneer",
+      "imageUrl": "/data/images/monsters/dwarf-handcannoneer_common.webp"
+    }
+  ]
+}
