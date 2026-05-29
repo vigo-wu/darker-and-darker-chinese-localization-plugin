@@ -123,6 +123,9 @@ darkTrans/
 │   ├── content/
 │   │   ├── index.js           # Content Script 入口
 │   │   ├── translator.js      # DOM 翻译引擎
+│   │   ├── map-canvas-page.js # 地图页主世界 Hook（Canvas / JSON）
+│   │   ├── map-canvas-bootstrap.js
+│   │   ├── map-fetch-bridge.js
 │   │   └── dev.js             # 开发模式标记
 │   ├── popup/
 │   │   ├── popup.html         # 扩展弹窗 UI
@@ -206,7 +209,7 @@ flowchart LR
 
 1. `document_start` 预加载地图词条；`map-canvas-page.js` 以 `world: MAIN` 注入（符合站点 CSP）
 2. Hook `encodeURIComponent`：站点经 `btoa(unescape(encodeURIComponent(svg)))` 生成纹理，在编码前翻译 `<text>` 并按中文字宽扩展 SVG viewBox（避免标签被裁切）
-3. 地图 JSON 加载时按当前词典深度翻译字符串；`document_idle` 后触发 `darktrans-map-labels-refresh` 清除 Pixi 纹理缓存并重绘
+3. 地图 JSON 加载时按当前词典深度翻译字符串；`document_idle` 后触发 `resize` 促使地图重绘
 
 **若地图 metadata 仍 `Failed to fetch`：**
 

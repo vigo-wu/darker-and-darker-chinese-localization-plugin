@@ -12,7 +12,7 @@
   document.addEventListener("darktrans-update", (e) => {
     const detail = e?.detail;
     if (!detail) return;
-    if (detail.dictionary) applyDictionary(detail.dictionary);
+    if (detail.dictionary) setDictionary(detail.dictionary);
     if (typeof detail.enabled === "boolean") enabled = !!detail.enabled;
   });
 
@@ -205,14 +205,10 @@
     }, 300);
   }
 
-  function applyDictionary(dict) {
+  function setDictionary(dict) {
     dictionary = dict || {};
     sortedEntries = Object.entries(dictionary).sort((a, b) => b[0].length - a[0].length);
     scheduleMapRedrawOnce();
-  }
-
-  function setDictionary(dict) {
-    applyDictionary(dict);
   }
 
   function setEnabled(value) {
@@ -504,28 +500,6 @@
   }
 
   const nativeEncodeURIComponent = window.encodeURIComponent;
-  const nativeBtoa = window.btoa.bind(window);
-
-  function svgToDataUrl(svg) {
-    return `data:image/svg+xml;base64,${nativeBtoa(
-      unescape(nativeEncodeURIComponent(svg))
-    )}`;
-  }
-
-  function patchPixiSvgLoader() {
-    const loader = window.PIXI?.Loader?.shared;
-    if (!loader || loader.__darktransSvgLoaderPatched) return !!loader;
-
-    const origAdd = loader.add.bind(loader);
-    loader.add = function (name, url, ...rest) {
-      if (typeof name === "string" && typeof url === "string" && /^\s*<svg/i.test(url)) {
-        return origAdd(name, svgToDataUrl(translateSvgString(url)), ...rest);
-      }
-      return origAdd(name, url, ...rest);
-    };
-    loader.__darktransSvgLoaderPatched = true;
-    return true;
-  }
 
   window.encodeURIComponent = function (value) {
     if (isMapLabelSvg(value)) {
@@ -533,20 +507,6 @@
     }
     return nativeEncodeURIComponent(value);
   };
-
-  if (!patchPixiSvgLoader()) {
-    let attempts = 0;
-    const timer = window.setInterval(() => {
-      attempts += 1;
-      if (patchPixiSvgLoader() || attempts >= 80) {
-        window.clearInterval(timer);
-      }
-    }, 250);
-  }
-
-  document.addEventListener("darktrans-map-labels-refresh", () => {
-    window.dispatchEvent(new Event("resize"));
-  });
 
   if (document.documentElement) {
     document.documentElement.dataset.darktransHook = "1";

@@ -63,7 +63,7 @@
     window.setTimeout(async () => {
       await applyDictionary();
       translator.translateDocument(document.body);
-      document.dispatchEvent(new CustomEvent("darktrans-map-labels-refresh"));
+      window.dispatchEvent(new Event("resize"));
     }, 1500);
   }
 })();

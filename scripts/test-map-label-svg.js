@@ -25,8 +25,6 @@ const sandbox = {
     dispatchEvent() {},
     encodeURIComponent: (v) => encodeURIComponent(v),
     btoa: (v) => Buffer.from(v, "binary").toString("base64"),
-    setInterval: () => 0,
-    clearInterval() {},
     Worker: class Worker {
       static __darktransMapWorkerPatched = true;
     },
@@ -62,8 +60,6 @@ const sandbox = {
   Error,
   setTimeout: (fn) => fn(),
   clearTimeout() {},
-  setInterval: () => 0,
-  clearInterval() {},
 };
 
 vm.createContext(sandbox);
