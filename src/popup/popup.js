@@ -1,5 +1,8 @@
 const toggle = document.getElementById("enabledToggle");
 const statusText = document.getElementById("statusText");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const searchEmpty = document.getElementById("searchEmpty");
 const dictStats = document.getElementById("dictStats");
 const dictMessage = document.getElementById("dictMessage");
 const exportAllBtn = document.getElementById("exportAllBtn");
@@ -10,6 +13,10 @@ const importMergeToggle = document.getElementById("importMergeToggle");
 
 const { parseImportJson, serializeExport } = window.DarkTransI18nJson;
 
+const SEARCH_LIMIT = 40;
+const SEARCH_DEBOUNCE_MS = 180;
+let searchTimer = null;
+
 function getBaseDictionary() {
   return window.DARKTRANS_DICTIONARY || {};
 }
@@ -19,6 +26,135 @@ async function getCustomDictionary() {
     customDictionary: {},
   });
   return customDictionary;
+}
+
+async function getMergedDictionary() {
+  const base = getBaseDictionary();
+  const custom = await getCustomDictionary();
+  return { ...base, ...custom };
+}
+
+function rankSearchMatch(zh, query) {
+  if (zh === query) return 0;
+  if (zh.startsWith(query)) return 1;
+  return 2;
+}
+
+function searchByChinese(dict, query) {
+  const trimmed = query.trim();
+  if (!trimmed) return [];
+
+  const matches = [];
+  for (const [en, zh] of Object.entries(dict)) {
+    if (!zh || !zh.includes(trimmed)) continue;
+    matches.push({ en, zh, rank: rankSearchMatch(zh, trimmed) });
+  }
+
+  matches.sort((a, b) => {
+    if (a.rank !== b.rank) return a.rank - b.rank;
+    return a.zh.localeCompare(b.zh, "zh-CN") || a.en.localeCompare(b.en);
+  });
+
+  return matches.slice(0, SEARCH_LIMIT);
+}
+
+function clearSearchResults() {
+  searchResults.hidden = true;
+  searchResults.replaceChildren();
+  searchEmpty.hidden = true;
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
+
+function renderSearchResults(items) {
+  searchResults.replaceChildren();
+
+  for (const { en, zh } of items) {
+    const item = document.createElement("li");
+    item.className = "search__item";
+
+    const body = document.createElement("div");
+    body.className = "search__body";
+
+    const enEl = document.createElement("div");
+    enEl.className = "search__en";
+    enEl.textContent = en;
+
+    const zhEl = document.createElement("div");
+    zhEl.className = "search__zh";
+    zhEl.textContent = zh;
+
+    const copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.className = "search__copy";
+    copyBtn.textContent = "复制";
+    copyBtn.title = "复制英文";
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await copyText(en);
+        copyBtn.textContent = "已复制";
+        copyBtn.classList.add("search__copy--done");
+        window.setTimeout(() => {
+          copyBtn.textContent = "复制";
+          copyBtn.classList.remove("search__copy--done");
+        }, 1200);
+      } catch {
+        copyBtn.textContent = "失败";
+        window.setTimeout(() => {
+          copyBtn.textContent = "复制";
+        }, 1200);
+      }
+    });
+
+    body.append(enEl, zhEl);
+    item.append(body, copyBtn);
+    searchResults.append(item);
+  }
+
+  searchResults.hidden = false;
+}
+
+async function runSearch() {
+  const query = searchInput.value.trim();
+  if (!query) {
+    clearSearchResults();
+    return;
+  }
+
+  const dict = await getMergedDictionary();
+  const items = searchByChinese(dict, query);
+
+  if (items.length === 0) {
+    searchResults.hidden = true;
+    searchResults.replaceChildren();
+    searchEmpty.hidden = false;
+    return;
+  }
+
+  searchEmpty.hidden = true;
+  renderSearchResults(items);
+}
+
+function scheduleSearch() {
+  window.clearTimeout(searchTimer);
+  searchTimer = window.setTimeout(() => {
+    runSearch();
+  }, SEARCH_DEBOUNCE_MS);
 }
 
 async function getActiveTab() {
@@ -149,6 +285,9 @@ importFile.addEventListener("change", async () => {
 
     await chrome.storage.local.set({ customDictionary: custom });
     await refreshDictStats();
+    if (searchInput.value.trim()) {
+      await runSearch();
+    }
     showDictMessage(
       `已导入 ${importCount} 条，当前自定义共 ${Object.keys(custom).length} 条`
     );
@@ -156,6 +295,9 @@ importFile.addEventListener("change", async () => {
     showDictMessage(error.message || "导入失败", true);
   }
 });
+
+searchInput.addEventListener("input", scheduleSearch);
+searchInput.addEventListener("search", runSearch);
 
 loadSettings();
 refreshDictStats();

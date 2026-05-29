@@ -23,6 +23,21 @@
       </section>
 
       <section class="popup__section">
+        <h2 class="popup__section-title">检索</h2>
+        <input
+          id="searchInput"
+          type="search"
+          class="search__input"
+          placeholder="输入中文检索对应英文"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <p id="searchHint" class="search__hint">在内置与自定义词条中模糊匹配</p>
+        <ul id="searchResults" class="search__results" hidden></ul>
+        <p id="searchEmpty" class="search__empty" hidden>未找到匹配词条</p>
+      </section>
+
+      <section class="popup__section">
         <h2 class="popup__section-title">词典</h2>
         <p id="dictStats" class="popup__dict-stats">正在统计词条…</p>
         <div class="popup__actions">
