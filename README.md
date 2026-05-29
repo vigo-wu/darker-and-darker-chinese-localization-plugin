@@ -209,8 +209,50 @@ flowchart LR
 
 1. `zh-CN.js` 合并各分类词典为 `window.DARKTRANS_DICTIONARY`
 2. `index.js` 读取内置词典，并与 `chrome.storage.local` 中的自定义词条合并
-3. `DarkTransTranslator` 遍历 DOM，按词条长度降序匹配（优先长词），支持子串替换
+3. `DarkTransTranslator` 遍历 DOM，按下方「翻译匹配逻辑」替换文本
 4. `MutationObserver` 在 DOM 变化时 debounce 后重新翻译
+
+### 翻译匹配逻辑
+
+运行时翻译**不是**按英文单词边界（word boundary）匹配，而是**词典键的精确匹配 + 子串全局替换**。实现位于 `src/content/translator.js`（DOM）与 `src/content/map-canvas-page.js`（Canvas / 地图 JSON）。
+
+#### 词典排序
+
+加载词典时，所有键按**长度从长到短**排序（`sortedEntries`）。翻译时优先尝试更长的键，减少短键抢先匹配造成的误替换（例如优先 `"Accessory Old Ruins"` 再匹配 `"Accessory"`）。
+
+#### 通用翻译（`translateString`）
+
+适用于：DOM 文本节点，`placeholder` / `title` / `aria-label` / `alt` 属性，以及 Canvas 的 `fillText` / `strokeText` / `measureText`。
+
+| 步骤 | 规则 |
+|------|------|
+| 1. 整句精确匹配 | 对文本 `trim()` 后，若与词典键完全一致，则替换为对应译文，并保留原文首尾空白 |
+| 2. 子串替换 | 若整句未命中，按 `sortedEntries` 顺序遍历；若当前结果 `includes(键)`，则 `split(键).join(译文)` 全局替换 |
+| 3. 无单词边界 | 不使用 `\b` 等边界判断；键作为普通子串参与匹配 |
+
+**示例：**
+
+- 原文 `"Accessory Old Rust Room"`，词典仅有 `"Accessory": "配饰"`、无 `"Old Rust Room"` → 结果为 `"配饰 Old Rust Room"`（前缀被替换，其余保持英文）
+- 若需整句汉化，应添加完整键，例如 `"Accessory Old Rust Room": "旧锈房间配饰"`
+
+地图 Canvas 侧在以上逻辑基础上额外保护：
+
+- **极短文本**：长度 ≤ 2 的字符串（如单个字母 `"A"`）默认不做子串替换，除非存在整句精确匹配
+- **空译文**：精确匹配到的译文为空或仅空白时，不替换原文
+
+#### 地图标注专用（`translateMapLabel`）
+
+地图 JSON 中的展示字段（如 `label`、`displayName`、`moduleDisplayName` 等）以及 SVG `<text>` 内文字，**仅做整句精确匹配**，不做子串替换。目的是避免误改 `imagePath`、`object_name` 等内部标识字段。
+
+模块标签另有 `resolveModuleLabel`：先尝试现有 `label` 精确匹配，再尝试 `moduleKey` 及其格式化形式（下划线 / 驼峰转空格）。
+
+#### 维护词条时的建议
+
+| 场景 | 建议 |
+|------|------|
+| 复合地点 / 实体名（如 `Accessory Old Rust Room`） | 优先添加**完整英文键**，不要只依赖单词级子串 |
+| 地图 JSON / SVG 标注 | 键必须与页面展示的英文**完全一致**（含大小写、空格） |
+| 自定义词条 | 运行时覆盖内置词典；同 key 以自定义为准 |
 
 **地图页（`/maps`）额外流程：**
 
