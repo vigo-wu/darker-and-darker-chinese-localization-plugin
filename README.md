@@ -145,7 +145,14 @@ darkTrans/
 │           ├── items.js
 │           └── quests.js
 ├── metaData/                  # 翻译数据源与中间文件
+│   ├── transition.json        # 地图/容器/怪物等分类词条（手动维护 + 脚本合并）
+│   ├── dnd-wiki-map-tiles.json # dnd.wiki 地图图块抓取结果（脚本生成）
+│   ├── data.json              # 游戏物品原始数据
+│   └── …
 ├── scripts/                   # 构建与词条生成脚本
+│   ├── extract-dnd-wiki-map-tiles.js  # 从 dnd.wiki 抓取地图图块
+│   ├── merge-dnd-wiki-map-tiles.js    # 将 wiki 中文名合并到 transition.json
+│   └── …
 └── dist/                      # 构建输出（git 忽略）
     ├── dev/                   # 开发构建
     └── extension/             # 生产构建
@@ -229,7 +236,7 @@ flowchart LR
 
 - `src/locales/category/items.js` — 由 `npm run extract-item-names` 生成
 - `src/locales/category/quests.js` — 由 `npm run merge-quest-i18n` 生成
-- `src/locales/category/mapLocations.js` 等 — 由 `npm run merge-transition` 从 `metaData/transition.json` 生成
+- `src/locales/category/mapLocations.js` 等 — 由 `npm run merge-transition` 从 `metaData/transition.json` 生成；地图地点中文可先经 `npm run merge-dnd-wiki-map-tiles` 与 dnd.wiki 同步
 
 ### 词条维护命令
 
@@ -237,11 +244,47 @@ flowchart LR
 |------|------|
 | `npm run extract-strings` | 从站点 UI 提取字符串 |
 | `npm run merge-transition` | 将 `metaData/transition.json` 合并为 category 词典 |
-| `npm run extract-item-names` | 从游戏数据与 NFU  Wiki 提取物品名并合并到 `items.js` |
+| `npm run merge-dnd-wiki-map-tiles` | 从 [dnd.wiki/maps](https://dnd.wiki/maps) 抓取图块中文名 → 合并到 `transition.json` → 更新 `mapLocations.js` |
+| `npm run extract-item-names` | 从游戏数据与 NFU Wiki 提取物品名并合并到 `items.js` |
 | `npm run quest-i18n` | 拉取任务追踪数据 → 生成任务 i18n → 合并到 `quests.js` |
 | `npm run fetch-quest-tracker` | 仅拉取 questtracker 原始数据 |
 | `npm run generate-quest-i18n` | 仅生成 `metaData/quest-i18n.json` |
 | `npm run merge-quest-i18n` | 仅合并任务词条到 `quests.js` |
+
+### 地图地点词条（dnd.wiki）
+
+地图地点（`map_locations`）以 **dnd.wiki 图块中文名为基准** 维护。wiki 站点为 Nuxt SPA，图块数据来自公开 API：
+
+| API | 说明 |
+|-----|------|
+| `GET https://dnd.wiki/api/maps` | 8 张地图列表 |
+| `GET https://dnd.wiki/api/maps/{slug}` | 各地图下的图块（`modules`）及中文 `name` |
+
+**推荐工作流：**
+
+```bash
+# 一键：抓取 → 合并 transition.json → 生成 mapLocations.js
+npm run merge-dnd-wiki-map-tiles
+```
+
+也可分步执行：
+
+```bash
+node scripts/extract-dnd-wiki-map-tiles.js   # 写入 metaData/dnd-wiki-map-tiles.json
+node scripts/merge-dnd-wiki-map-tiles.js       # 按英文名匹配，用 wiki 中文覆盖 map_locations
+npm run merge-transition                       # 同步 src/locales/category/mapLocations.js
+```
+
+**合并规则简述：**
+
+- 英文键仍以 `transition.json` / 游戏内地点名为准，只更新对应的中文译文
+- 匹配优先级：图片路径 / slug 精确映射 → 手动别名 → 英文名模糊匹配（全局一对一，避免重复占用）
+- wiki 图块尚无中文译名、或无法可靠对应的条目保留 `transition.json` 中的原译
+- 合并结果写入 `metaData/transition.json` 的 `map_locations` 字段；其他分类（容器、怪物等）不受影响
+
+抓取结果 `metaData/dnd-wiki-map-tiles.json` 含每张地图的图块列表（`slug`、中文名、推断英文名、图片 URL 等），便于人工核对未匹配项。
+
+若需调整个别英文键与 wiki 图块的对应关系，可编辑 `scripts/merge-dnd-wiki-map-tiles.js` 中的 `MANUAL_ALIASES` 与 `IMAGE_PATH_ALIASES`。
 
 ### 词典合并优先级
 
@@ -278,4 +321,4 @@ ISC
 
 ## 免责声明
 
-本插件为非官方社区项目，与 Ironmace / Dark and Darker 官方及 darkanddarkertracker.com 站点无隶属关系。翻译内容仅供参考，游戏内名称以官方版本为准。
+本插件为非官方社区项目，与 Ironmace / Dark and Darker 官方及 darkanddarkertracker.com 站点无隶属关系。地图地点等翻译部分参考 [dnd.wiki](https://dnd.wiki/maps) 社区 wiki，仅供参考，游戏内名称以官方版本为准。

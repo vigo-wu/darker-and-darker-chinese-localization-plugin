@@ -7,6 +7,7 @@
     "icons": "node scripts/generate-icons.js",
     "extract-strings": "node scripts/extract-ui-strings.js",
     "merge-transition": "node scripts/merge-transition.js",
+    "merge-dnd-wiki-map-tiles": "node scripts/extract-dnd-wiki-map-tiles.js && node scripts/merge-dnd-wiki-map-tiles.js && node scripts/merge-transition.js",
     "extract-item-names": "node scripts/build-manual-zh.js && node scripts/extract-item-names.js && node scripts/merge-zh-CN.js",
     "fetch-quest-tracker": "node scripts/fetch-quest-tracker.js",
     "generate-quest-i18n": "node scripts/generate-quest-i18n.js",

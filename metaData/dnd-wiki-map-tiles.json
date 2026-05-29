@@ -1,0 +1,2207 @@
+{
+  "source": "https://dnd.wiki/maps",
+  "fetchedAt": "2026-05-29T08:21:26.061Z",
+  "mapCount": 8,
+  "tileCount": 268,
+  "maps": [
+    {
+      "slug": "blue-maelstrom",
+      "name": "沉船墓场",
+      "moduleCount": 30,
+      "tiles": [
+        {
+          "slug": "ship-graveyard-mermaid-tomb",
+          "name": "人鱼冢",
+          "englishName": "Ship Graveyard Mermaid Tomb",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_MermaidTomb.png",
+          "poiCount": 70
+        },
+        {
+          "slug": "ship-graveyard-flipped-ship",
+          "name": "倾覆之船",
+          "englishName": "Ship Graveyard Flipped Ship",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_FlippedShip.png",
+          "poiCount": 128
+        },
+        {
+          "slug": "shipgraveyard-twin-chamber",
+          "name": "双子密室",
+          "englishName": "Shipgraveyard Twin Chamber",
+          "imageUrl": "/data/maps/blue-maelstrom/Shipgraveyard_TwinChamber.png",
+          "poiCount": 67
+        },
+        {
+          "slug": "ship-graveyard-hanging-ship",
+          "name": "吊船",
+          "englishName": "Ship Graveyard Hanging Ship",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_HangingShip.png",
+          "poiCount": 156
+        },
+        {
+          "slug": "ship-graveyard-spawning-pool",
+          "name": "孵化池",
+          "englishName": "Ship Graveyard Spawning Pool",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_SpawningPool.png",
+          "poiCount": 133
+        },
+        {
+          "slug": "ship-graveyard-rock-island",
+          "name": "岩岛",
+          "englishName": "Ship Graveyard Rock Island",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_RockIsland.png",
+          "poiCount": 141
+        },
+        {
+          "slug": "ship-graveyard-abandoned-ship-01",
+          "name": "废弃舰船",
+          "englishName": "Ship Graveyard Abandoned Ship 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_AbandonedShip_01.png",
+          "poiCount": 182
+        },
+        {
+          "slug": "ship-graveyard-floating-village",
+          "name": "水上村落",
+          "englishName": "Ship Graveyard Floating Village",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_FloatingVillage.png",
+          "poiCount": 237
+        },
+        {
+          "slug": "ship-graveyard-floating-house-01",
+          "name": "水手客栈",
+          "englishName": "Ship Graveyard Floating House 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_FloatingHouse_01.png",
+          "poiCount": 112
+        },
+        {
+          "slug": "ship-graveyard-sunken-ship-01",
+          "name": "沉没之船",
+          "englishName": "Ship Graveyard Sunken Ship 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_SunkenShip_01.png",
+          "poiCount": 118
+        },
+        {
+          "slug": "ship-graveyard-sleeping-ship",
+          "name": "沉眠之船",
+          "englishName": "Ship Graveyard Sunken Ship 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_SunkenShip_01.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ship-graveyard-ship-rest",
+          "name": "泊船场",
+          "englishName": "Ship Graveyard Ship Rest",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_ShipRest.png",
+          "poiCount": 106
+        },
+        {
+          "slug": "ship-graveyard-floating-island",
+          "name": "浮岛 A",
+          "englishName": "Ship Graveyard Floating Island",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_FloatingIsland.png",
+          "poiCount": 64
+        },
+        {
+          "slug": "ship-graveyard-floating-island-01",
+          "name": "浮岛 B",
+          "englishName": "Ship Graveyard Floating Island",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_FloatingIsland.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ship-graveyard-floating-island-02",
+          "name": "浮岛 C",
+          "englishName": "Ship Graveyard Floating Island",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_FloatingIsland.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ship-graveyard-under-sea-cave",
+          "name": "海底洞穴 A",
+          "englishName": "Ship Graveyard Under Sea Cave 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_UnderSeaCave_01.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "shipgraveyard-under-sea-cave-02",
+          "name": "海底洞穴 B",
+          "englishName": "Ship Graveyard Under Sea Cave 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_UnderSeaCave_01.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ship-graveyard-oceanvolcano",
+          "name": "海底火山",
+          "englishName": "Ship Graveyard Oceanvolcano",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_Oceanvolcano.png",
+          "poiCount": 123
+        },
+        {
+          "slug": "ship-graveyard-starfish-valley",
+          "name": "海星谷",
+          "englishName": "Ship Graveyard Starfish Valley",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_StarfishValley.png",
+          "poiCount": 105
+        },
+        {
+          "slug": "ship-graveyard-trench",
+          "name": "海沟",
+          "englishName": "Ship Graveyard Trench",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_Trench.png",
+          "poiCount": 121
+        },
+        {
+          "slug": "ship-graveyard-sea-fortress",
+          "name": "海洋要塞 A",
+          "englishName": "Ship Graveyard Sea Fortress",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_SeaFortress.png",
+          "poiCount": 119
+        },
+        {
+          "slug": "ship-graveyard-sea-fortress-02",
+          "name": "海洋要塞 B",
+          "englishName": "Ship Graveyard Sea Fortress",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_SeaFortress.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ship-graveyard-pirate-prison",
+          "name": "海盗监狱",
+          "englishName": "Ship Graveyard Pirate Prison",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_PiratePrison.png",
+          "poiCount": 405
+        },
+        {
+          "slug": "ship-graveyard-circle-island",
+          "name": "环形岛",
+          "englishName": "Ship Graveyard Circle Island",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_CircleIsland.png",
+          "poiCount": 96
+        },
+        {
+          "slug": "ship-graveyard-coral-forest-01",
+          "name": "珊瑚密林",
+          "englishName": "Ship Graveyard Coral Forest 01",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_CoralForest_01.png",
+          "poiCount": 67
+        },
+        {
+          "slug": "ship-graveyard-hole",
+          "name": "蓝洞",
+          "englishName": "Ship Graveyard Hole",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_Hole.png",
+          "poiCount": 241
+        },
+        {
+          "slug": "ship-graveyard-elephant-island",
+          "name": "象岛",
+          "englishName": "Ship Graveyard Elephant Island",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_ElephantIsland.png",
+          "poiCount": 37
+        },
+        {
+          "slug": "ship-graveyard-bladehand-refuge",
+          "name": "钉手的藏身处",
+          "englishName": "Ship Graveyard Bladehand Refuge",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_BladehandRefuge.png",
+          "poiCount": 183
+        },
+        {
+          "slug": "ship-graveyard-mist-watch",
+          "name": "雾影岗哨",
+          "englishName": "Ship Graveyard Mist Watch",
+          "imageUrl": "/data/maps/blue-maelstrom/ShipGraveyard_MistWatch.png",
+          "poiCount": 136
+        },
+        {
+          "slug": "ship-graveyard-skull-island",
+          "name": "骷髅岛",
+          "englishName": "Skull",
+          "imageUrl": "/data/maps/blue-maelstrom/Skull.png",
+          "poiCount": 334
+        }
+      ]
+    },
+    {
+      "slug": "crypts",
+      "name": "遗忘城堡-地穴",
+      "moduleCount": 61,
+      "tiles": [
+        {
+          "slug": "h-bridge",
+          "name": "H Bridge",
+          "englishName": "h-bridge",
+          "imageUrl": "/data/maps/h-bridge.webp",
+          "poiCount": 109
+        },
+        {
+          "slug": "sewers",
+          "name": "下水道",
+          "englishName": "Sewers",
+          "imageUrl": "/data/maps/crypts/Sewers.png",
+          "poiCount": 81
+        },
+        {
+          "slug": "crypt-atrium",
+          "name": "中庭",
+          "englishName": "Crypt Atrium",
+          "imageUrl": "/data/maps/crypts/Crypt_Atrium.png",
+          "poiCount": 102
+        },
+        {
+          "slug": "hbridge",
+          "name": "中心桥",
+          "englishName": "HBridge",
+          "imageUrl": "/data/maps/crypts/HBridge.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "four-way-connect",
+          "name": "中心祭坛",
+          "englishName": "Four Way Connect",
+          "imageUrl": "/data/maps/crypts/FourWayConnect.png",
+          "poiCount": 167
+        },
+        {
+          "slug": "cemetery-01",
+          "name": "乱葬岗",
+          "englishName": "Cemetery 01",
+          "imageUrl": "/data/maps/crypts/Cemetery_01.png",
+          "poiCount": 82
+        },
+        {
+          "slug": "crypt-dark-ritual-room-01",
+          "name": "仪式间",
+          "englishName": "Crypt Dark Ritual Room 01",
+          "imageUrl": "/data/maps/crypts/Crypt_DarkRitualRoom_01.png",
+          "poiCount": 31
+        },
+        {
+          "slug": "admirer-room",
+          "name": "信徒会所",
+          "englishName": "Admirer Room",
+          "imageUrl": "/data/maps/crypts/AdmirerRoom.png",
+          "poiCount": 68
+        },
+        {
+          "slug": "storeroom",
+          "name": "储藏室",
+          "englishName": "Storeroom",
+          "imageUrl": "/data/maps/crypts/Storeroom.png",
+          "poiCount": 105
+        },
+        {
+          "slug": "barracks",
+          "name": "军营",
+          "englishName": "Barracks",
+          "imageUrl": "/data/maps/crypts/Barracks.png",
+          "poiCount": 75
+        },
+        {
+          "slug": "cross-road",
+          "name": "十字路口",
+          "englishName": "Cross Road",
+          "imageUrl": "/data/maps/crypts/CrossRoad.png",
+          "poiCount": 91
+        },
+        {
+          "slug": "crypt-four-rooms",
+          "name": "四方房",
+          "englishName": "Crypt Four Rooms",
+          "imageUrl": "/data/maps/crypts/Crypt_FourRooms.png",
+          "poiCount": 49
+        },
+        {
+          "slug": "hallways",
+          "name": "回廊",
+          "englishName": "Hallways",
+          "imageUrl": "/data/maps/crypts/Hallways.png",
+          "poiCount": 90
+        },
+        {
+          "slug": "sanctum",
+          "name": "圣所",
+          "englishName": "Sanctum",
+          "imageUrl": "/data/maps/crypts/Sanctum.png",
+          "poiCount": 84
+        },
+        {
+          "slug": "catacomb",
+          "name": "地下墓穴",
+          "englishName": "Catacomb",
+          "imageUrl": "/data/maps/crypts/Catacomb.png",
+          "poiCount": 94
+        },
+        {
+          "slug": "underground-altar",
+          "name": "地下神坛",
+          "englishName": "Underground Altar",
+          "imageUrl": "/data/maps/crypts/UndergroundAltar.png",
+          "poiCount": 99
+        },
+        {
+          "slug": "armory",
+          "name": "城堡军械库",
+          "englishName": "Armory",
+          "imageUrl": "/data/maps/crypts/Armory.png",
+          "poiCount": 102
+        },
+        {
+          "slug": "crypt-ramparts",
+          "name": "城墙",
+          "englishName": "Crypt Ramparts",
+          "imageUrl": "/data/maps/crypts/Crypt_Ramparts.png",
+          "poiCount": 69
+        },
+        {
+          "slug": "cemetery-03",
+          "name": "墓园",
+          "englishName": "Cemetery 03",
+          "imageUrl": "/data/maps/crypts/Cemetery_03.png",
+          "poiCount": 101
+        },
+        {
+          "slug": "crypt-dungeon",
+          "name": "墓穴地牢",
+          "englishName": "Crypt Dungeon",
+          "imageUrl": "/data/maps/crypts/Crypt_Dungeon.png",
+          "poiCount": 117
+        },
+        {
+          "slug": "high-priest-ossuary",
+          "name": "大祭司",
+          "englishName": "High Priest Ossuary",
+          "imageUrl": "/data/maps/crypts/HighPriestOssuary.png",
+          "poiCount": 105
+        },
+        {
+          "slug": "crypt-great-walkway",
+          "name": "大长廊",
+          "englishName": "Crypt Great Walkway",
+          "imageUrl": "/data/maps/crypts/Crypt_GreatWalkway.png",
+          "poiCount": 122
+        },
+        {
+          "slug": "crypt-mad-corridors",
+          "name": "失心长廊",
+          "englishName": "Corridor Crypt",
+          "imageUrl": "/data/maps/crypts/CorridorCrypt.png",
+          "poiCount": 91
+        },
+        {
+          "slug": "crypt-vault",
+          "name": "宝库大厅",
+          "englishName": "Crypt Vault",
+          "imageUrl": "/data/maps/crypts/Crypt_Vault.png",
+          "poiCount": 64
+        },
+        {
+          "slug": "treasure-room-01",
+          "name": "宝藏间",
+          "englishName": "Treasure Room 01",
+          "imageUrl": "/data/maps/crypts/TreasureRoom_01.png",
+          "poiCount": 100
+        },
+        {
+          "slug": "guard-post",
+          "name": "岗哨",
+          "englishName": "Guard Post",
+          "imageUrl": "/data/maps/crypts/GuardPost.png",
+          "poiCount": 56
+        },
+        {
+          "slug": "center-tower",
+          "name": "巨型环厅",
+          "englishName": "Center Tower",
+          "imageUrl": "/data/maps/crypts/CenterTower.png",
+          "poiCount": 291
+        },
+        {
+          "slug": "eight-to-one-02",
+          "name": "幽鬼巢穴",
+          "englishName": "Eight To One 02",
+          "imageUrl": "/data/maps/crypts/EightToOne_02.png",
+          "poiCount": 75
+        },
+        {
+          "slug": "cliff-bridge",
+          "name": "悬崖",
+          "englishName": "Cliff Bridge",
+          "imageUrl": "/data/maps/crypts/CliffBridge.png",
+          "poiCount": 125
+        },
+        {
+          "slug": "mimic-room",
+          "name": "拟态巢穴",
+          "englishName": "Mimic Room",
+          "imageUrl": "/data/maps/crypts/MimicRoom.png",
+          "poiCount": 82
+        },
+        {
+          "slug": "crypt-chapel",
+          "name": "教堂",
+          "englishName": "Crypt Chapel",
+          "imageUrl": "/data/maps/crypts/Crypt_Chapel.png",
+          "poiCount": 81
+        },
+        {
+          "slug": "crypt-large-room-pit",
+          "name": "断桥",
+          "englishName": "Crypt Large Room Pit",
+          "imageUrl": "/data/maps/crypts/Crypt_LargeRoomPit.png",
+          "poiCount": 87
+        },
+        {
+          "slug": "crypt-lightless-chamber-01",
+          "name": "无光密室",
+          "englishName": "Eight To One 01",
+          "imageUrl": "/data/maps/crypts/EightToOne_01.png",
+          "poiCount": 72
+        },
+        {
+          "slug": "crypt-lightless-tomb-01",
+          "name": "无光陵墓",
+          "englishName": "Eight To One 01",
+          "imageUrl": "/data/maps/crypts/EightToOne_01.png",
+          "poiCount": 152
+        },
+        {
+          "slug": "old-tomb",
+          "name": "旧陵墓",
+          "englishName": "Old Tomb",
+          "imageUrl": "/data/maps/crypts/OldTomb.png",
+          "poiCount": 96
+        },
+        {
+          "slug": "eight-to-one-01",
+          "name": "木乃伊间",
+          "englishName": "Eight To One 01",
+          "imageUrl": "/data/maps/crypts/EightToOne_01.png",
+          "poiCount": 95
+        },
+        {
+          "slug": "cemetery-02",
+          "name": "棺材房",
+          "englishName": "Cemetery 02",
+          "imageUrl": "/data/maps/crypts/Cemetery_02.png",
+          "poiCount": 93
+        },
+        {
+          "slug": "death-hall",
+          "name": "死亡厅堂",
+          "englishName": "Death Hall",
+          "imageUrl": "/data/maps/crypts/DeathHall.png",
+          "poiCount": 110
+        },
+        {
+          "slug": "swamp",
+          "name": "沼泽",
+          "englishName": "Swamp",
+          "imageUrl": "/data/maps/crypts/Swamp.png",
+          "poiCount": 94
+        },
+        {
+          "slug": "fishing-ground",
+          "name": "渔场",
+          "englishName": "Fishing Ground",
+          "imageUrl": "/data/maps/crypts/FishingGround.png",
+          "poiCount": 85
+        },
+        {
+          "slug": "crypt-torchbound-vault",
+          "name": "炬封宝库",
+          "englishName": "Crypt Vault",
+          "imageUrl": "/data/maps/crypts/Crypt_Vault.png",
+          "poiCount": 51
+        },
+        {
+          "slug": "the-cage",
+          "name": "牢笼",
+          "englishName": "The Cage",
+          "imageUrl": "/data/maps/crypts/TheCage.png",
+          "poiCount": 134
+        },
+        {
+          "slug": "ossuary-edge",
+          "name": "环廊",
+          "englishName": "Ossuary Edge",
+          "imageUrl": "/data/maps/crypts/OssuaryEdge.png",
+          "poiCount": 78
+        },
+        {
+          "slug": "prison-01",
+          "name": "监狱 B",
+          "englishName": "Prison 01",
+          "imageUrl": "/data/maps/crypts/Prison_01.png",
+          "poiCount": 64
+        },
+        {
+          "slug": "crypt-blindfall-pit",
+          "name": "盲坑",
+          "englishName": "Corridor Crypt",
+          "imageUrl": "/data/maps/crypts/CorridorCrypt.png",
+          "poiCount": 93
+        },
+        {
+          "slug": "crypt-altar-room-ab",
+          "name": "祭坛室",
+          "englishName": "Altar Room AB",
+          "imageUrl": "/data/maps/crypts/AltarRoomAB.png",
+          "poiCount": 185
+        },
+        {
+          "slug": "cistern",
+          "name": "蓄水池",
+          "englishName": "Cistern",
+          "imageUrl": "/data/maps/crypts/Cistern.png",
+          "poiCount": 70
+        },
+        {
+          "slug": "skeleton-pit",
+          "name": "藏骨堂",
+          "englishName": "Skeleton Pit",
+          "imageUrl": "/data/maps/crypts/SkeletonPit.png",
+          "poiCount": 91
+        },
+        {
+          "slug": "the-pit",
+          "name": "角斗坑",
+          "englishName": "The Pit",
+          "imageUrl": "/data/maps/crypts/ThePit.png",
+          "poiCount": 79
+        },
+        {
+          "slug": "connector-01",
+          "name": "走廊 E",
+          "englishName": "Connector 01",
+          "imageUrl": "/data/maps/crypts/Connector_01.png",
+          "poiCount": 46
+        },
+        {
+          "slug": "the-mini-wheel",
+          "name": "迷你环厅",
+          "englishName": "The Mini Wheel",
+          "imageUrl": "/data/maps/crypts/TheMiniWheel.png",
+          "poiCount": 78
+        },
+        {
+          "slug": "maze",
+          "name": "迷宫",
+          "englishName": "Maze",
+          "imageUrl": "/data/maps/crypts/Maze.png",
+          "poiCount": 103
+        },
+        {
+          "slug": "low-pyramid",
+          "name": "金字塔",
+          "englishName": "Low Pyramid",
+          "imageUrl": "/data/maps/crypts/LowPyramid.png",
+          "poiCount": 77
+        },
+        {
+          "slug": "corridor-crypt",
+          "name": "长廊",
+          "englishName": "Corridor Crypt",
+          "imageUrl": "/data/maps/crypts/CorridorCrypt.png",
+          "poiCount": 35
+        },
+        {
+          "slug": "single-log-bridge",
+          "name": "长桥",
+          "englishName": "Single Log Bridge",
+          "imageUrl": "/data/maps/crypts/SingleLogBridge.png",
+          "poiCount": 105
+        },
+        {
+          "slug": "complex-hall",
+          "name": "门控房间",
+          "englishName": "Complex Hall",
+          "imageUrl": "/data/maps/crypts/ComplexHall.png",
+          "poiCount": 119
+        },
+        {
+          "slug": "tomb-center",
+          "name": "陵墓",
+          "englishName": "Tomb Center",
+          "imageUrl": "/data/maps/crypts/Tomb_Center.png",
+          "poiCount": 84
+        },
+        {
+          "slug": "connector-trap-01",
+          "name": "陷阱走廊 A",
+          "englishName": "Connector Trap 01",
+          "imageUrl": "/data/maps/crypts/Connector_Trap_01.png",
+          "poiCount": 71
+        },
+        {
+          "slug": "connector-trap-02",
+          "name": "陷阱走廊 B",
+          "englishName": "Connector Trap 02",
+          "imageUrl": "/data/maps/crypts/Connector_Trap_02.png",
+          "poiCount": 79
+        },
+        {
+          "slug": "corridorof-dark-priests",
+          "name": "黑暗祭司",
+          "englishName": "Corridorof Dark Priests",
+          "imageUrl": "/data/maps/crypts/CorridorofDarkPriests.png",
+          "poiCount": 65
+        },
+        {
+          "slug": "dark-magic-library-center",
+          "name": "黑魔法图书馆",
+          "englishName": "Dark Magic Library Center",
+          "imageUrl": "/data/maps/crypts/DarkMagicLibrary_Center.png",
+          "poiCount": 162
+        }
+      ]
+    },
+    {
+      "slug": "firedeep",
+      "name": "赤焰深窟",
+      "moduleCount": 11,
+      "tiles": [
+        {
+          "slug": "firedeep-magma-falls",
+          "name": "岩浆瀑布",
+          "englishName": "Magmafalls",
+          "imageUrl": "/data/maps/firedeep/Magmafalls.png",
+          "poiCount": 91
+        },
+        {
+          "slug": "firedeep-collapsed-dig-site",
+          "name": "崩陷矿场",
+          "englishName": "Collapsed Dig Site",
+          "imageUrl": "/data/maps/firedeep/CollapsedDigSite.png",
+          "poiCount": 83
+        },
+        {
+          "slug": "firedeep-greatforge",
+          "name": "巨熔炉",
+          "englishName": null,
+          "imageUrl": null,
+          "poiCount": 5
+        },
+        {
+          "slug": "firedeep-broken-stonebridge",
+          "name": "断石桥",
+          "englishName": "Broken Stonebridge",
+          "imageUrl": "/data/maps/firedeep/BrokenStonebridge.png",
+          "poiCount": 81
+        },
+        {
+          "slug": "firedeep-blaze-tunnel",
+          "name": "烈火隧道",
+          "englishName": "Blaze Tunnel",
+          "imageUrl": "/data/maps/firedeep/BlazeTunnel.png",
+          "poiCount": 56
+        },
+        {
+          "slug": "firedeep-burning-court",
+          "name": "焚庭",
+          "englishName": "Burning Court",
+          "imageUrl": "/data/maps/firedeep/BurningCourt.png",
+          "poiCount": 69
+        },
+        {
+          "slug": "firedeep-molten-pit",
+          "name": "熔坑",
+          "englishName": "Molten Pit",
+          "imageUrl": "/data/maps/firedeep/MoltenPit.png",
+          "poiCount": 83
+        },
+        {
+          "slug": "firedeep-lava-crossway",
+          "name": "熔岩岔路",
+          "englishName": "Lava Crossway",
+          "imageUrl": "/data/maps/firedeep/LavaCrossway.png",
+          "poiCount": 87
+        },
+        {
+          "slug": "firedeep-miner-passage",
+          "name": "矿工通道",
+          "englishName": "Mining Passage",
+          "imageUrl": "/data/maps/firedeep/MiningPassage.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "firedeep-anvil-outpost",
+          "name": "砧火哨站",
+          "englishName": "Anvil Outpost",
+          "imageUrl": "/data/maps/firedeep/AnvilOutpost.png",
+          "poiCount": 74
+        },
+        {
+          "slug": "firedeep-mining-passage",
+          "name": "采矿通道",
+          "englishName": "Mining Passage",
+          "imageUrl": "/data/maps/firedeep/MiningPassage.png",
+          "poiCount": 62
+        }
+      ]
+    },
+    {
+      "slug": "goblin-caves",
+      "name": "哥布林洞穴",
+      "moduleCount": 28,
+      "tiles": [
+        {
+          "slug": "cave-altar-center",
+          "name": "Cave Altar Center",
+          "englishName": "cave-altar-center",
+          "imageUrl": "/data/maps/cave-altar-center.webp",
+          "poiCount": 161
+        },
+        {
+          "slug": "cave-tomb-center",
+          "name": "Cave Tomb Center",
+          "englishName": "cave-tomb-center",
+          "imageUrl": "/data/maps/cave-tomb-center.webp",
+          "poiCount": 138
+        },
+        {
+          "slug": "cave-bandit-camp",
+          "name": "哥布林匪窝",
+          "englishName": "Cave Bandit Camp Center",
+          "imageUrl": "/data/maps/goblin-caves/Cave_BanditCamp_Center.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "cave-rooms",
+          "name": "哥布林宿舍",
+          "englishName": "Cave Rooms",
+          "imageUrl": "/data/maps/goblin-caves/Cave_Rooms.png",
+          "poiCount": 128
+        },
+        {
+          "slug": "cave-town",
+          "name": "哥布林小镇 A",
+          "englishName": "Cave Town",
+          "imageUrl": "/data/maps/goblin-caves/CaveTown.png",
+          "poiCount": 138
+        },
+        {
+          "slug": "cave-town-02",
+          "name": "哥布林小镇 B",
+          "englishName": "Cave Town 02",
+          "imageUrl": "/data/maps/goblin-caves/CaveTown_02.png",
+          "poiCount": 194
+        },
+        {
+          "slug": "goblin-jail",
+          "name": "哥布林监狱 A",
+          "englishName": "Goblin Jail Center 02",
+          "imageUrl": "/data/maps/goblin-caves/GoblinJail_Center_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "goblin-jail-02",
+          "name": "哥布林监狱 B",
+          "englishName": "Cavern Lake 02",
+          "imageUrl": "/data/maps/goblin-caves/CavernLake_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "goblin-mine-center-01",
+          "name": "哥布林矿井",
+          "englishName": "Goblin Mine Center 01",
+          "imageUrl": "/data/maps/goblin-caves/GoblinMineCenter_01.png",
+          "poiCount": 90
+        },
+        {
+          "slug": "cave-maze",
+          "name": "哥布林迷宫 A",
+          "englishName": "Cave Maze",
+          "imageUrl": "/data/maps/goblin-caves/CaveMaze.png",
+          "poiCount": 182
+        },
+        {
+          "slug": "cave-maze-02",
+          "name": "哥布林迷宫 B",
+          "englishName": "Cavern Lake 02",
+          "imageUrl": "/data/maps/goblin-caves/CavernLake_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "cavern-lake-02",
+          "name": "岩洞湖 A",
+          "englishName": "Cavern Lake 02",
+          "imageUrl": "/data/maps/goblin-caves/CavernLake_02.png",
+          "poiCount": 73
+        },
+        {
+          "slug": "cavern-lake-03",
+          "name": "岩洞湖 B",
+          "englishName": "Cavern Lake 03",
+          "imageUrl": "/data/maps/goblin-caves/CavernLake_03.png",
+          "poiCount": 62
+        },
+        {
+          "slug": "cave-valley",
+          "name": "峡谷 A",
+          "englishName": "Cave Valley",
+          "imageUrl": "/data/maps/goblin-caves/Cave_Valley.png",
+          "poiCount": 70
+        },
+        {
+          "slug": "cave-valley-02",
+          "name": "峡谷 B",
+          "englishName": "Cave Valley 02",
+          "imageUrl": "/data/maps/goblin-caves/Cave_Valley_02.png",
+          "poiCount": 94
+        },
+        {
+          "slug": "cave-pit-hall",
+          "name": "洞坑大厅",
+          "englishName": "Cave Pit Hall",
+          "imageUrl": "/data/maps/goblin-caves/Cave_PitHall.png",
+          "poiCount": 87
+        },
+        {
+          "slug": "cave-tomb",
+          "name": "洞穴墓葬",
+          "englishName": "Cave Tomb Center",
+          "imageUrl": "/data/maps/goblin-caves/Cave_Tomb_Center.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "caveltar",
+          "name": "洞穴祭坛 A",
+          "englishName": "Cave Altar Center",
+          "imageUrl": "/data/maps/goblin-caves/Cave_Altar_Center.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "cave-altar-02",
+          "name": "洞穴祭坛 B",
+          "englishName": "Cave Altar 02",
+          "imageUrl": "/data/maps/goblin-caves/Cave_Altar_02.png",
+          "poiCount": 85
+        },
+        {
+          "slug": "hideout-cave",
+          "name": "洞穴藏身处 A",
+          "englishName": "Hideout Cave 02",
+          "imageUrl": "/data/maps/goblin-caves/HideoutCave_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "hideout-cave-02",
+          "name": "洞穴藏身处 B",
+          "englishName": "Hideout Cave 02",
+          "imageUrl": "/data/maps/goblin-caves/HideoutCave_02.png",
+          "poiCount": 104
+        },
+        {
+          "slug": "goblin-cave-corner-01",
+          "name": "洞穴隧道",
+          "englishName": "Goblin Cave Corner 01",
+          "imageUrl": "/data/maps/goblin-caves/GoblinCaveCorner_01.png",
+          "poiCount": 93
+        },
+        {
+          "slug": "stone-grave",
+          "name": "石坟 A",
+          "englishName": "Stone Grave Center",
+          "imageUrl": "/data/maps/goblin-caves/StoneGrave_Center.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "stone-grave-02",
+          "name": "石坟 B",
+          "englishName": "Cavern Lake 02",
+          "imageUrl": "/data/maps/goblin-caves/CavernLake_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "cave-ants-nest",
+          "name": "蚁巢",
+          "englishName": "Cave Ants Nest",
+          "imageUrl": "/data/maps/goblin-caves/Cave_AntsNest.png",
+          "poiCount": 122
+        },
+        {
+          "slug": "cave-spider-nest-02",
+          "name": "蛛网巢穴",
+          "englishName": "Cave Spider Nest 02",
+          "imageUrl": "/data/maps/goblin-caves/Cave_SpiderNest_02.png",
+          "poiCount": 90
+        },
+        {
+          "slug": "spider-cave-02",
+          "name": "蜘蛛洞",
+          "englishName": "Spider Cave 02",
+          "imageUrl": "/data/maps/goblin-caves/SpiderCave_02.png",
+          "poiCount": 89
+        },
+        {
+          "slug": "cave-mole-tunnel",
+          "name": "鼹鼠隧道",
+          "englishName": "Cave Mole Tunnel",
+          "imageUrl": "/data/maps/goblin-caves/Cave_MoleTunnel.png",
+          "poiCount": 67
+        }
+      ]
+    },
+    {
+      "slug": "ice-abyss",
+      "name": "寒冰深渊",
+      "moduleCount": 22,
+      "tiles": [
+        {
+          "slug": "ice-abyss-false-throne",
+          "name": "伪王座",
+          "englishName": "Ice Abyss False Throne",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_FalseThrone.png",
+          "poiCount": 112
+        },
+        {
+          "slug": "ice-abyss-reversed-pyramid",
+          "name": "倒金字塔",
+          "englishName": "Ice Abyss Reversed Pyramid",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_ReversedPyramid.png",
+          "poiCount": 58
+        },
+        {
+          "slug": "ice-abyss-charnel-house",
+          "name": "停尸房",
+          "englishName": "Ice Abyss Charnel House",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_CharnelHouse.png",
+          "poiCount": 75
+        },
+        {
+          "slug": "ice-abyss-frost-maw",
+          "name": "冰封之喉",
+          "englishName": "Ice Abyss Frost Maw",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_FrostMaw.png",
+          "poiCount": 93
+        },
+        {
+          "slug": "ice-abyss-glacivia",
+          "name": "冰峡关",
+          "englishName": "Ice Abyss Glacivia",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_Glacivia.png",
+          "poiCount": 114
+        },
+        {
+          "slug": "ice-abyss-abyss-tooth",
+          "name": "冰川獠牙",
+          "englishName": "Ice Abyss Abyss Tooth",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_AbyssTooth.png",
+          "poiCount": 81
+        },
+        {
+          "slug": "ice-abyss-demonic-den",
+          "name": "冰渊魔窟",
+          "englishName": "Ice Abyss Demonic Den",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_DemonicDen.png",
+          "poiCount": 100
+        },
+        {
+          "slug": "ice-abyss-ice-maze",
+          "name": "冰迷宫",
+          "englishName": "Ice Abyss Ice Maze",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_IceMaze.png",
+          "poiCount": 114
+        },
+        {
+          "slug": "ice-abyss-wyvern-lair",
+          "name": "冰龙巢穴",
+          "englishName": "Ice Abyss Wyvern Lair",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_WyvernLair.png",
+          "poiCount": 143
+        },
+        {
+          "slug": "ice-abyss-deep-flow",
+          "name": "寒渊之流",
+          "englishName": "Ice Abyss Deep Flow",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_DeepFlow.png",
+          "poiCount": 92
+        },
+        {
+          "slug": "ice-abyss-grand-hollow",
+          "name": "巨坑",
+          "englishName": "Ice Abyss Grand Hollow",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_GrandHollow.png",
+          "poiCount": 116
+        },
+        {
+          "slug": "ice-abyss-monoliths",
+          "name": "巨构体",
+          "englishName": "Ice Abyss Monoliths",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_Monoliths.png",
+          "poiCount": 75
+        },
+        {
+          "slug": "ice-abyss-imp-ritual-rooms",
+          "name": "恶灵仪式室",
+          "englishName": "Ice Abyss Imp Ritual Rooms",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_ImpRitualRooms.png",
+          "poiCount": 48
+        },
+        {
+          "slug": "ice-abyss-death-pit",
+          "name": "死亡深渊",
+          "englishName": "Ice Abyss Death Pit",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_DeathPit.png",
+          "poiCount": 84
+        },
+        {
+          "slug": "ice-abyss-sinking-pillars",
+          "name": "沉墟柱廊",
+          "englishName": "Ice Abyss Sinking Pillars",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_SinkingPillars.png",
+          "poiCount": 122
+        },
+        {
+          "slug": "ice-abyss-shallow-valley",
+          "name": "浅谷",
+          "englishName": "Ice Abyss Shallow Valley",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_ShallowValley.png",
+          "poiCount": 74
+        },
+        {
+          "slug": "ice-abyss-hound-vale",
+          "name": "犬啸谷",
+          "englishName": "Ice Abyss Hound Vale",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_HoundVale.png",
+          "poiCount": 121
+        },
+        {
+          "slug": "ice-abyss-pillars",
+          "name": "石柱廊",
+          "englishName": "Ice Abyss Pillars",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_Pillars.png",
+          "poiCount": 153
+        },
+        {
+          "slug": "ice-abyss-dividing-hill",
+          "name": "裂丘",
+          "englishName": "Ice Abyss Dividing Hill",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_DividingHill.png",
+          "poiCount": 57
+        },
+        {
+          "slug": "ice-abyss-staircase-hill",
+          "name": "阶梯山丘",
+          "englishName": "Ice Abyss Staircase Hill",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_StaircaseHill.png",
+          "poiCount": 82
+        },
+        {
+          "slug": "ice-abyss-frostwoven-pillars",
+          "name": "霜纹柱廊",
+          "englishName": "Ice Abyss Frostwoven Pillars",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_FrostwovenPillars.png",
+          "poiCount": 86
+        },
+        {
+          "slug": "ice-abyss-frozen-hold",
+          "name": "霜锢堡垒",
+          "englishName": "Ice Abyss Frozen Hold",
+          "imageUrl": "/data/maps/ice-abyss/IceAbyss_FrozenHold.png",
+          "poiCount": 138
+        }
+      ]
+    },
+    {
+      "slug": "ice-cavern",
+      "name": "寒冰洞穴",
+      "moduleCount": 28,
+      "tiles": [
+        {
+          "slug": "ice-cave-cabin-raft",
+          "name": "Ice Cave Cabin Raft",
+          "englishName": "ice-cave-cabin-raft",
+          "imageUrl": "/data/maps/ice-cave-cabin-raft.webp",
+          "poiCount": 73
+        },
+        {
+          "slug": "ice-cave-cross-road",
+          "name": "Ice Cave Cross Road",
+          "englishName": "ice-cave-cross-road",
+          "imageUrl": "/data/maps/ice-cave-cross-road.webp",
+          "poiCount": 100
+        },
+        {
+          "slug": "ice-cave-maze",
+          "name": "Ice Cave Maze",
+          "englishName": "ice-cave-maze",
+          "imageUrl": "/data/maps/ice-cave-maze.webp",
+          "poiCount": 90
+        },
+        {
+          "slug": "ice-cave-pyramid",
+          "name": "Ice Cave Pyramid",
+          "englishName": "ice-cave-pyramid",
+          "imageUrl": "/data/maps/ice-cave-pyramid.webp",
+          "poiCount": 90
+        },
+        {
+          "slug": "ice-cave-sanctum",
+          "name": "Ice Cave Sanctum",
+          "englishName": "ice-cave-sanctum",
+          "imageUrl": "/data/maps/ice-cave-sanctum.webp",
+          "poiCount": 107
+        },
+        {
+          "slug": "ice-cave-watchtower",
+          "name": "Ice Cave Watchtower",
+          "englishName": "ice-cave-watchtower",
+          "imageUrl": "/data/maps/ice-cave-watchtower.webp",
+          "poiCount": 96
+        },
+        {
+          "slug": "ice-cave-icicle-cave",
+          "name": "冰柱洞",
+          "englishName": "Ice Cave Icicle Cave",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_IcicleCave.png",
+          "poiCount": 53
+        },
+        {
+          "slug": "ice-cave-bridge",
+          "name": "冰桥",
+          "englishName": "Ice Cave Bridge",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Bridge.png",
+          "poiCount": 84
+        },
+        {
+          "slug": "ice-cave-cabin",
+          "name": "冰港",
+          "englishName": "Ice Cave Cabin Raft",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Cabin_Raft.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ice-cave-frozen-lake",
+          "name": "冻湖",
+          "englishName": "Ice Cave Frozen Lake",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_FrozenLake.png",
+          "poiCount": 102
+        },
+        {
+          "slug": "ice-cave-dual-caverns",
+          "name": "双子洞穴",
+          "englishName": "Ice Cave Dual Caverns",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_DualCaverns.png",
+          "poiCount": 67
+        },
+        {
+          "slug": "ice-cave-four-route",
+          "name": "四方路",
+          "englishName": "Ice Cave Four Route",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_FourRoute.png",
+          "poiCount": 101
+        },
+        {
+          "slug": "ice-cave-altar",
+          "name": "圣坛",
+          "englishName": "Ice Cave Altar",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Altar.png",
+          "poiCount": 58
+        },
+        {
+          "slug": "ice-cave-hut-01",
+          "name": "小屋 A",
+          "englishName": "Ice Cave Hut 01",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Hut_01.png",
+          "poiCount": 83
+        },
+        {
+          "slug": "ice-cave-hut-02",
+          "name": "小屋 B",
+          "englishName": "Ice Cave Hut 02",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Hut_02.png",
+          "poiCount": 75
+        },
+        {
+          "slug": "ice-cave-hut-03",
+          "name": "小屋 C",
+          "englishName": "Ice Cave Hut 03",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Hut_03.png",
+          "poiCount": 52
+        },
+        {
+          "slug": "ice-cave-path",
+          "name": "小道 A",
+          "englishName": "Ice Cave Path",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Path.png",
+          "poiCount": 91
+        },
+        {
+          "slug": "ice-cave-mountain-pass",
+          "name": "山隘",
+          "englishName": "Ice Cave Mountain Pass",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_MountainPass.png",
+          "poiCount": 143
+        },
+        {
+          "slug": "ice-cave-guardpost",
+          "name": "岗哨",
+          "englishName": "Ice Cave Guard Post",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_GuardPost.png",
+          "poiCount": 68
+        },
+        {
+          "slug": "ice-cave-barricade",
+          "name": "拒马阵地",
+          "englishName": "Ice Cave Barricade",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Barricade.png",
+          "poiCount": 59
+        },
+        {
+          "slug": "ice-cave-cave-swamp",
+          "name": "洞穴沼泽",
+          "englishName": "Ice Cave Cave Swamp",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_CaveSwamp.png",
+          "poiCount": 64
+        },
+        {
+          "slug": "ice-cave-cave-pathway",
+          "name": "洞穴通道",
+          "englishName": "Ice Cave Cave Pathway",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_CavePathway.png",
+          "poiCount": 72
+        },
+        {
+          "slug": "ice-cave-wolf-cave",
+          "name": "狼洞",
+          "englishName": "Ice Cave Wolf Cave",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_WolfCave.png",
+          "poiCount": 60
+        },
+        {
+          "slug": "ice-cave-narrow-bridge",
+          "name": "窄桥",
+          "englishName": "Ice Cave Narrow Bridge",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_NarrowBridge.png",
+          "poiCount": 69
+        },
+        {
+          "slug": "ice-cave-hive-03",
+          "name": "蜂巢",
+          "englishName": "Ice Cave Hive 03",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Hive_03.png",
+          "poiCount": 154
+        },
+        {
+          "slug": "ice-cave-spiral",
+          "name": "转楼",
+          "englishName": "Ice Cave Spiral",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Spiral.png",
+          "poiCount": 81
+        },
+        {
+          "slug": "ice-cave-quarry",
+          "name": "采石场",
+          "englishName": "Ice Cave Quarry",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Quarry.png",
+          "poiCount": 104
+        },
+        {
+          "slug": "ice-cave-turnnel-01",
+          "name": "隧道",
+          "englishName": "Ice Cave Hut 01",
+          "imageUrl": "/data/maps/ice-cavern/IceCave_Hut_01.png",
+          "poiCount": 71
+        }
+      ]
+    },
+    {
+      "slug": "inferno",
+      "name": "遗忘城堡-炼狱",
+      "moduleCount": 36,
+      "tiles": [
+        {
+          "slug": "inferno-batroost",
+          "name": "Inferno Batroost",
+          "englishName": "inferno-batroost",
+          "imageUrl": "/data/maps/inferno-batroost.webp",
+          "poiCount": 106
+        },
+        {
+          "slug": "inferno-bloodyfalls",
+          "name": "Inferno Bloodyfalls",
+          "englishName": "inferno-bloodyfalls",
+          "imageUrl": "/data/maps/inferno-bloodyfalls.webp",
+          "poiCount": 107
+        },
+        {
+          "slug": "inferno-doomcage",
+          "name": "Inferno Doomcage",
+          "englishName": "inferno-doomcage",
+          "imageUrl": "/data/maps/inferno-doomcage.webp",
+          "poiCount": 170
+        },
+        {
+          "slug": "inferno-drain",
+          "name": "Inferno Drain",
+          "englishName": "inferno-drain",
+          "imageUrl": "/data/maps/inferno-drain.webp",
+          "poiCount": 128
+        },
+        {
+          "slug": "inferno-hellcrossbridge",
+          "name": "Inferno Hellcrossbridge",
+          "englishName": "inferno-hellcrossbridge",
+          "imageUrl": "/data/maps/inferno-hellcrossbridge.webp",
+          "poiCount": 160
+        },
+        {
+          "slug": "inferno-hellwind",
+          "name": "Inferno Hellwind",
+          "englishName": "inferno-hellwind",
+          "imageUrl": "/data/maps/inferno-hellwind.webp",
+          "poiCount": 135
+        },
+        {
+          "slug": "inferno-judgementroad",
+          "name": "Inferno Judgementroad",
+          "englishName": "inferno-judgementroad",
+          "imageUrl": "/data/maps/inferno-judgementroad.webp",
+          "poiCount": 125
+        },
+        {
+          "slug": "inferno-obelisk",
+          "name": "Inferno Obelisk",
+          "englishName": "inferno-obelisk",
+          "imageUrl": "/data/maps/inferno-obelisk.webp",
+          "poiCount": 113
+        },
+        {
+          "slug": "inferno-painfulsteps",
+          "name": "Inferno Painfulsteps",
+          "englishName": "inferno-painfulsteps",
+          "imageUrl": "/data/maps/inferno-painfulsteps.webp",
+          "poiCount": 151
+        },
+        {
+          "slug": "inferno-rooms",
+          "name": "仪式室",
+          "englishName": "Inferno Rooms",
+          "imageUrl": "/data/maps/inferno/InfernoRooms.png",
+          "poiCount": 142
+        },
+        {
+          "slug": "judgementroad",
+          "name": "判罪之路",
+          "englishName": "Inferno Judgementroad",
+          "imageUrl": "/data/maps/inferno/Inferno_Judgementroad.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "hellwind",
+          "name": "厄风领",
+          "englishName": "Inferno Hellwind",
+          "imageUrl": "/data/maps/inferno/Inferno_Hellwind.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "inferno-mouth",
+          "name": "恶魔之口",
+          "englishName": "Inferno Mouth",
+          "imageUrl": "/data/maps/inferno/InfernoMouth.png",
+          "poiCount": 169
+        },
+        {
+          "slug": "inferno-gate",
+          "name": "恶魔之门",
+          "englishName": "Inferno Gate",
+          "imageUrl": "/data/maps/inferno/InfernoGate.png",
+          "poiCount": 136
+        },
+        {
+          "slug": "inferno-lava-corner",
+          "name": "恶魔巢穴",
+          "englishName": "Inferno Lava Corner",
+          "imageUrl": "/data/maps/inferno/Inferno_LavaCorner.png",
+          "poiCount": 57
+        },
+        {
+          "slug": "throne-room-02",
+          "name": "恶魔王座",
+          "englishName": "Throne Room 02",
+          "imageUrl": "/data/maps/inferno/ThroneRoom_02.png",
+          "poiCount": 62
+        },
+        {
+          "slug": "demon-overseers-dominion",
+          "name": "恶魔监军之殿",
+          "englishName": "Inferno Demon Overseers Dominion",
+          "imageUrl": "/data/maps/inferno/Inferno_DemonOverseersDominion.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "inferno-lava-stairway",
+          "name": "恶魔阶梯",
+          "englishName": "Inferno Lava Stairway",
+          "imageUrl": "/data/maps/inferno/Inferno_LavaStairway.png",
+          "poiCount": 60
+        },
+        {
+          "slug": "drain",
+          "name": "排水沟",
+          "englishName": "Inferno Drain",
+          "imageUrl": "/data/maps/inferno/Inferno_Drain.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "doomcage",
+          "name": "末日囚笼",
+          "englishName": "Inferno Doomcage",
+          "imageUrl": "/data/maps/inferno/Inferno_Doomcage.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "death-altar",
+          "name": "死亡祭坛",
+          "englishName": "Death Altar",
+          "imageUrl": "/data/maps/inferno/DeathAltar.png",
+          "poiCount": 102
+        },
+        {
+          "slug": "demon-den",
+          "name": "炼狱魔窟",
+          "englishName": "Demon Den",
+          "imageUrl": "/data/maps/inferno/DemonDen.png",
+          "poiCount": 102
+        },
+        {
+          "slug": "hellcrossbridge",
+          "name": "百鬼桥",
+          "englishName": "Inferno Hellcrossbridge",
+          "imageUrl": "/data/maps/inferno/Inferno_Hellcrossbridge.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "conector-double-bridge",
+          "name": "硫火之桥",
+          "englishName": "Conector Double Bridge",
+          "imageUrl": "/data/maps/inferno/ConectorDoubleBridge.png",
+          "poiCount": 68
+        },
+        {
+          "slug": "inferno-river",
+          "name": "硫火之河",
+          "englishName": "Inferno River",
+          "imageUrl": "/data/maps/inferno/InfernoRiver.png",
+          "poiCount": 76
+        },
+        {
+          "slug": "inferno-castle-conner",
+          "name": "硫火城堡",
+          "englishName": "Inferno Castle Conner",
+          "imageUrl": "/data/maps/inferno/InfernoCastleConner.png",
+          "poiCount": 103
+        },
+        {
+          "slug": "inferno-death-platforms",
+          "name": "硫火平台",
+          "englishName": "Inferno Death Platforms",
+          "imageUrl": "/data/maps/inferno/Inferno_DeathPlatforms.png",
+          "poiCount": 91
+        },
+        {
+          "slug": "inferno-columns",
+          "name": "硫火柱廊",
+          "englishName": "Inferno Columns",
+          "imageUrl": "/data/maps/inferno/InfernoColumns.png",
+          "poiCount": 69
+        },
+        {
+          "slug": "bloodyfalls",
+          "name": "硫火瀑布",
+          "englishName": "Inferno Bloodyfalls",
+          "imageUrl": "/data/maps/inferno/Inferno_Bloodyfalls.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "skull",
+          "name": "硫火监牢",
+          "englishName": "Skull",
+          "imageUrl": "/data/maps/inferno/Skull.png",
+          "poiCount": 69
+        },
+        {
+          "slug": "down-stair",
+          "name": "等候室",
+          "englishName": "Inferno Down Stair",
+          "imageUrl": "/data/maps/inferno/Inferno_DownStair.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "obelisk",
+          "name": "腐化尖碑",
+          "englishName": "Inferno Obelisk",
+          "imageUrl": "/data/maps/inferno/Inferno_Obelisk.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "painfulsteps",
+          "name": "苦行阶梯",
+          "englishName": "Inferno Painfulsteps",
+          "imageUrl": "/data/maps/inferno/Inferno_Painfulsteps.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "spider-cave-01",
+          "name": "蜘蛛巢穴",
+          "englishName": "Spider Cave 01",
+          "imageUrl": "/data/maps/inferno/SpiderCave_01.png",
+          "poiCount": 66
+        },
+        {
+          "slug": "batroost",
+          "name": "蝙蝠窝",
+          "englishName": "Inferno Batroost",
+          "imageUrl": "/data/maps/inferno/Inferno_Batroost.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "dark-ritual-room-04",
+          "name": "黑暗仪式室",
+          "englishName": "Dark Ritual Room 04",
+          "imageUrl": "/data/maps/inferno/DarkRitualRoom_04.png",
+          "poiCount": 25
+        }
+      ]
+    },
+    {
+      "slug": "ruins",
+      "name": "遗忘城堡-废墟",
+      "moduleCount": 52,
+      "tiles": [
+        {
+          "slug": "ruins-passage-inner-01",
+          "name": "Ruins Passage Inner 01",
+          "englishName": "ruins-passage-inner-01",
+          "imageUrl": "/data/maps/ruins-passage-inner-01.webp",
+          "poiCount": 22
+        },
+        {
+          "slug": "ruins-passage-inner-02",
+          "name": "Ruins Passage Inner 02",
+          "englishName": "ruins-passage-inner-02",
+          "imageUrl": "/data/maps/ruins-passage-inner-02.webp",
+          "poiCount": 19
+        },
+        {
+          "slug": "ruins-passage-inner-03",
+          "name": "Ruins Passage Inner 03",
+          "englishName": "ruins-passage-inner-03",
+          "imageUrl": "/data/maps/ruins-passage-inner-03.webp",
+          "poiCount": 23
+        },
+        {
+          "slug": "ruins-passage-inner-04",
+          "name": "Ruins Passage Inner 04",
+          "englishName": "ruins-passage-inner-04",
+          "imageUrl": "/data/maps/ruins-passage-inner-04.webp",
+          "poiCount": 20
+        },
+        {
+          "slug": "ruins-passage-inner-05",
+          "name": "Ruins Passage Inner 05",
+          "englishName": "ruins-passage-inner-05",
+          "imageUrl": "/data/maps/ruins-passage-inner-05.webp",
+          "poiCount": 23
+        },
+        {
+          "slug": "ruins-passage-outer-01",
+          "name": "Ruins Passage Outer 01",
+          "englishName": "ruins-passage-outer-01",
+          "imageUrl": "/data/maps/ruins-passage-outer-01.webp",
+          "poiCount": 21
+        },
+        {
+          "slug": "ruins-passage-outer-02",
+          "name": "Ruins Passage Outer 02",
+          "englishName": "ruins-passage-outer-02",
+          "imageUrl": "/data/maps/ruins-passage-outer-02.webp",
+          "poiCount": 21
+        },
+        {
+          "slug": "ruins-passage-outer-03",
+          "name": "Ruins Passage Outer 03",
+          "englishName": "ruins-passage-outer-03",
+          "imageUrl": "/data/maps/ruins-passage-outer-03.webp",
+          "poiCount": 30
+        },
+        {
+          "slug": "ruins-passage-outer-04",
+          "name": "Ruins Passage Outer 04",
+          "englishName": "ruins-passage-outer-04",
+          "imageUrl": "/data/maps/ruins-passage-outer-04.webp",
+          "poiCount": 21
+        },
+        {
+          "slug": "ruins-passage-outer-05",
+          "name": "Ruins Passage Outer 05",
+          "englishName": "ruins-passage-outer-05",
+          "imageUrl": "/data/maps/ruins-passage-outer-05.webp",
+          "poiCount": 23
+        },
+        {
+          "slug": "ruins-tower-01-destroyed",
+          "name": "Ruins Tower 01 Destroyed",
+          "englishName": "ruins-tower-01-destroyed",
+          "imageUrl": "/data/maps/ruins-tower-01-destroyed.webp",
+          "poiCount": 98
+        },
+        {
+          "slug": "ruins-cemetery-01",
+          "name": "乱葬岗",
+          "englishName": "Ruins Cemetery 01",
+          "imageUrl": "/data/maps/ruins/Ruins_Cemetery_01.png",
+          "poiCount": 75
+        },
+        {
+          "slug": "ruins-watchtower",
+          "name": "了望塔",
+          "englishName": "Ruins Watchtower",
+          "imageUrl": "/data/maps/ruins/Ruins_Watchtower.png",
+          "poiCount": 131
+        },
+        {
+          "slug": "ruins-refectory",
+          "name": "修道院食堂",
+          "englishName": "Ruins Refectory",
+          "imageUrl": "/data/maps/ruins/Ruins_Refectory.png",
+          "poiCount": 139
+        },
+        {
+          "slug": "ruins-slime-forest-01",
+          "name": "史莱姆森林",
+          "englishName": "Ruins Slime Forest 01",
+          "imageUrl": "/data/maps/ruins/Ruins_SlimeForest_01.png",
+          "poiCount": 60
+        },
+        {
+          "slug": "ruins-grave",
+          "name": "坟场",
+          "englishName": "Ruins Grave",
+          "imageUrl": "/data/maps/ruins/Ruins_Grave.png",
+          "poiCount": 79
+        },
+        {
+          "slug": "ruins-armory",
+          "name": "城堡军械库",
+          "englishName": "Ruins Armory",
+          "imageUrl": "/data/maps/ruins/Ruins_Armory.png",
+          "poiCount": 83
+        },
+        {
+          "slug": "ruins-end-wall",
+          "name": "城墙尽头",
+          "englishName": "Ruins End Wall",
+          "imageUrl": "/data/maps/ruins/Ruins_EndWall.png",
+          "poiCount": 96
+        },
+        {
+          "slug": "ruins-tower-bridge-destroyed",
+          "name": "塔桥",
+          "englishName": "Ruins Tower Bridge Destroyed",
+          "imageUrl": "/data/maps/ruins/Ruins_TowerBridge_Destroyed.png",
+          "poiCount": 165
+        },
+        {
+          "slug": "ruins-forsaken-cloister",
+          "name": "寂灭回廊",
+          "englishName": "Ruins Forsaken Cloister",
+          "imageUrl": "/data/maps/ruins/Ruins_ForsakenCloister.png",
+          "poiCount": 194
+        },
+        {
+          "slug": "ruins-square-01",
+          "name": "广场 A",
+          "englishName": "Ruins Square 01",
+          "imageUrl": "/data/maps/ruins/Ruins_Square_01.png",
+          "poiCount": 69
+        },
+        {
+          "slug": "ruins-square-02",
+          "name": "广场 B",
+          "englishName": "Ruins Square 02",
+          "imageUrl": "/data/maps/ruins/Ruins_Square_02.png",
+          "poiCount": 81
+        },
+        {
+          "slug": "ruins-chapel",
+          "name": "废弃圣所",
+          "englishName": "Ruins Chapel",
+          "imageUrl": "/data/maps/ruins/Ruins_Chapel.png",
+          "poiCount": 77
+        },
+        {
+          "slug": "ruins-bandit-forest",
+          "name": "强盗森林",
+          "englishName": "Ruins Bandit Forest",
+          "imageUrl": "/data/maps/ruins/Ruins_BanditForest.png",
+          "poiCount": 63
+        },
+        {
+          "slug": "ruins-bandit-camp",
+          "name": "强盗营地",
+          "englishName": "Ruins Bandit Camp",
+          "imageUrl": "/data/maps/ruins/Ruins_BanditCamp.png",
+          "poiCount": 86
+        },
+        {
+          "slug": "ruins-forest-08",
+          "name": "林间小路",
+          "englishName": "Ruins Forest 08",
+          "imageUrl": "/data/maps/ruins/Ruins_Forest_08.png",
+          "poiCount": 125
+        },
+        {
+          "slug": "ruins-forest-01",
+          "name": "森林 A",
+          "englishName": "Ruins Forest 01",
+          "imageUrl": "/data/maps/ruins/Ruins_Forest_01.png",
+          "poiCount": 44
+        },
+        {
+          "slug": "ruins-forest-02",
+          "name": "森林 B",
+          "englishName": "Ruins Forest 02",
+          "imageUrl": "/data/maps/ruins/Ruins_Forest_02.png",
+          "poiCount": 42
+        },
+        {
+          "slug": "ruins-wells-02",
+          "name": "水井",
+          "englishName": "Ruins Wells 02",
+          "imageUrl": "/data/maps/ruins/Ruins_Wells_02.png",
+          "poiCount": 99
+        },
+        {
+          "slug": "ruins-bath",
+          "name": "洗澡堂",
+          "englishName": "Ruins Bath",
+          "imageUrl": "/data/maps/ruins/Ruins_Bath.png",
+          "poiCount": 82
+        },
+        {
+          "slug": "ruins-wollf-colony",
+          "name": "狼穴",
+          "englishName": "Ruins Wollf Colony",
+          "imageUrl": "/data/maps/ruins/Ruins_WollfColony.png",
+          "poiCount": 58
+        },
+        {
+          "slug": "ruins-treasure-room",
+          "name": "王之宝库",
+          "englishName": "Treasure Room 01",
+          "imageUrl": "/data/maps/ruins/TreasureRoom_01.png",
+          "poiCount": 53
+        },
+        {
+          "slug": "ruins-barbican-01",
+          "name": "瓮城",
+          "englishName": "Ruins Barbican 01",
+          "imageUrl": "/data/maps/ruins/Ruins_Barbican_01.png",
+          "poiCount": 152
+        },
+        {
+          "slug": "ruins-stonehenge",
+          "name": "碎石地",
+          "englishName": "Ruins Stonehenge",
+          "imageUrl": "/data/maps/ruins/Ruins_Stonehenge.png",
+          "poiCount": 58
+        },
+        {
+          "slug": "ruins-great-hall-01-destroyed",
+          "name": "礼拜堂 A",
+          "englishName": "Ruins Great Hall 01 Destroyed",
+          "imageUrl": "/data/maps/ruins/Ruins_GreatHall_01_Destroyed.png",
+          "poiCount": 111
+        },
+        {
+          "slug": "ruins-great-hall-02-destroyed",
+          "name": "礼拜堂 B",
+          "englishName": "Ruins Great Hall 02 Destroyed",
+          "imageUrl": "/data/maps/ruins/Ruins_GreatHall_02_Destroyed.png",
+          "poiCount": 74
+        },
+        {
+          "slug": "ruins-great-hall-03-destroyed",
+          "name": "礼拜堂 C",
+          "englishName": "Ruins Great Hall 03 Destroyed",
+          "imageUrl": "/data/maps/ruins/Ruins_GreatHall_03_Destroyed.png",
+          "poiCount": 84
+        },
+        {
+          "slug": "ruins-keep",
+          "name": "要塞",
+          "englishName": "Ruins Keep",
+          "imageUrl": "/data/maps/ruins/Ruins_Keep.png",
+          "poiCount": 120
+        },
+        {
+          "slug": "ruins-forest-06",
+          "name": "迷失森林",
+          "englishName": "Ruins Forest 06",
+          "imageUrl": "/data/maps/ruins/Ruins_Forest_06.png",
+          "poiCount": 64
+        },
+        {
+          "slug": "ruins-outer-01",
+          "name": "遗忘旷野",
+          "englishName": "Ruins Cemetery 01",
+          "imageUrl": "/data/maps/ruins/Ruins_Cemetery_01.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-outer-05",
+          "name": "遗忘暗道",
+          "englishName": "Ruins Passage Inner 05",
+          "imageUrl": "/data/maps/ruins/Ruins_Passage_Inner_05.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-outer-02",
+          "name": "遗忘林地",
+          "englishName": "Ruins Wells 02",
+          "imageUrl": "/data/maps/ruins/Ruins_Wells_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-outer-04",
+          "name": "遗忘森林",
+          "englishName": "Ruins Passage Inner 04",
+          "imageUrl": "/data/maps/ruins/Ruins_Passage_Inner_04.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-outer-03",
+          "name": "遗忘荒地",
+          "englishName": "Ruins Great Hall 03 Destroyed",
+          "imageUrl": "/data/maps/ruins/Ruins_GreatHall_03_Destroyed.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-inner-01",
+          "name": "陷落之殿",
+          "englishName": "Ruins Cemetery 01",
+          "imageUrl": "/data/maps/ruins/Ruins_Cemetery_01.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-inner-05",
+          "name": "陷落坑道",
+          "englishName": "Ruins Passage Inner 05",
+          "imageUrl": "/data/maps/ruins/Ruins_Passage_Inner_05.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-inner-02",
+          "name": "陷落房间",
+          "englishName": "Ruins Wells 02",
+          "imageUrl": "/data/maps/ruins/Ruins_Wells_02.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-inner-03",
+          "name": "陷落长廊",
+          "englishName": "Ruins Great Hall 03 Destroyed",
+          "imageUrl": "/data/maps/ruins/Ruins_GreatHall_03_Destroyed.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-inner-04",
+          "name": "陷落隘口",
+          "englishName": "Ruins Passage Inner 04",
+          "imageUrl": "/data/maps/ruins/Ruins_Passage_Inner_04.png",
+          "poiCount": 0
+        },
+        {
+          "slug": "ruins-underground-altar-01",
+          "name": "隐蔽圣坛",
+          "englishName": "Ruins Underground Altar 01",
+          "imageUrl": "/data/maps/ruins/Ruins_UndergroundAltar_01.png",
+          "poiCount": 87
+        },
+        {
+          "slug": "ruins-water-hole",
+          "name": "饮水池",
+          "englishName": "Ruins Water Hole",
+          "imageUrl": "/data/maps/ruins/Ruins_WaterHole.png",
+          "poiCount": 65
+        },
+        {
+          "slug": "ruins-stables-02",
+          "name": "马厩",
+          "englishName": "Ruins Stables 02",
+          "imageUrl": "/data/maps/ruins/Ruins_Stables_02.png",
+          "poiCount": 184
+        }
+      ]
+    }
+  ],
+  "allNames": [
+    "百鬼桥",
+    "宝藏间",
+    "宝库大厅",
+    "崩陷矿场",
+    "蝙蝠窝",
+    "冰川獠牙",
+    "冰封之喉",
+    "冰港",
+    "冰龙巢穴",
+    "冰迷宫",
+    "冰桥",
+    "冰峡关",
+    "冰渊魔窟",
+    "冰柱洞",
+    "采矿通道",
+    "采石场",
+    "藏骨堂",
+    "沉没之船",
+    "沉眠之船",
+    "沉墟柱廊",
+    "城堡军械库",
+    "城墙",
+    "城墙尽头",
+    "储藏室",
+    "大祭司",
+    "大长廊",
+    "倒金字塔",
+    "地下墓穴",
+    "地下神坛",
+    "等候室",
+    "吊船",
+    "钉手的藏身处",
+    "冻湖",
+    "洞坑大厅",
+    "洞穴藏身处 A",
+    "洞穴藏身处 B",
+    "洞穴祭坛 A",
+    "洞穴祭坛 B",
+    "洞穴墓葬",
+    "洞穴隧道",
+    "洞穴通道",
+    "洞穴沼泽",
+    "断桥",
+    "断石桥",
+    "厄风领",
+    "恶灵仪式室",
+    "恶魔巢穴",
+    "恶魔监军之殿",
+    "恶魔阶梯",
+    "恶魔王座",
+    "恶魔之口",
+    "恶魔之门",
+    "废弃舰船",
+    "废弃圣所",
+    "坟场",
+    "焚庭",
+    "蜂巢",
+    "孵化池",
+    "浮岛 A",
+    "浮岛 B",
+    "浮岛 C",
+    "腐化尖碑",
+    "岗哨",
+    "哥布林匪窝",
+    "哥布林监狱 A",
+    "哥布林监狱 B",
+    "哥布林矿井",
+    "哥布林迷宫 A",
+    "哥布林迷宫 B",
+    "哥布林宿舍",
+    "哥布林小镇 A",
+    "哥布林小镇 B",
+    "棺材房",
+    "广场 A",
+    "广场 B",
+    "海盗监狱",
+    "海底洞穴 A",
+    "海底洞穴 B",
+    "海底火山",
+    "海沟",
+    "海星谷",
+    "海洋要塞 A",
+    "海洋要塞 B",
+    "寒渊之流",
+    "黑暗祭司",
+    "黑暗仪式室",
+    "黑魔法图书馆",
+    "环廊",
+    "环形岛",
+    "回廊",
+    "寂灭回廊",
+    "祭坛室",
+    "监狱 B",
+    "角斗坑",
+    "教堂",
+    "阶梯山丘",
+    "金字塔",
+    "旧陵墓",
+    "巨构体",
+    "巨坑",
+    "巨熔炉",
+    "巨型环厅",
+    "拒马阵地",
+    "炬封宝库",
+    "军营",
+    "骷髅岛",
+    "苦行阶梯",
+    "矿工通道",
+    "蓝洞",
+    "狼洞",
+    "狼穴",
+    "牢笼",
+    "了望塔",
+    "礼拜堂 A",
+    "礼拜堂 B",
+    "礼拜堂 C",
+    "炼狱魔窟",
+    "烈火隧道",
+    "裂丘",
+    "林间小路",
+    "陵墓",
+    "硫火城堡",
+    "硫火监牢",
+    "硫火平台",
+    "硫火瀑布",
+    "硫火之河",
+    "硫火之桥",
+    "硫火柱廊",
+    "乱葬岗",
+    "马厩",
+    "盲坑",
+    "门控房间",
+    "迷宫",
+    "迷你环厅",
+    "迷失森林",
+    "末日囚笼",
+    "木乃伊间",
+    "墓穴地牢",
+    "墓园",
+    "拟态巢穴",
+    "排水沟",
+    "判罪之路",
+    "泊船场",
+    "浅谷",
+    "强盗森林",
+    "强盗营地",
+    "倾覆之船",
+    "犬啸谷",
+    "人鱼冢",
+    "熔坑",
+    "熔岩岔路",
+    "森林 A",
+    "森林 B",
+    "山隘",
+    "珊瑚密林",
+    "圣所",
+    "圣坛",
+    "失心长廊",
+    "十字路口",
+    "石坟 A",
+    "石坟 B",
+    "石柱廊",
+    "史莱姆森林",
+    "双子洞穴",
+    "双子密室",
+    "霜锢堡垒",
+    "霜纹柱廊",
+    "水井",
+    "水上村落",
+    "水手客栈",
+    "死亡祭坛",
+    "死亡深渊",
+    "死亡厅堂",
+    "四方房",
+    "四方路",
+    "碎石地",
+    "隧道",
+    "塔桥",
+    "停尸房",
+    "王之宝库",
+    "伪王座",
+    "瓮城",
+    "无光陵墓",
+    "无光密室",
+    "雾影岗哨",
+    "洗澡堂",
+    "峡谷 A",
+    "峡谷 B",
+    "下水道",
+    "陷阱走廊 A",
+    "陷阱走廊 B",
+    "陷落隘口",
+    "陷落房间",
+    "陷落坑道",
+    "陷落长廊",
+    "陷落之殿",
+    "象岛",
+    "小道 A",
+    "小屋 A",
+    "小屋 B",
+    "小屋 C",
+    "信徒会所",
+    "修道院食堂",
+    "蓄水池",
+    "悬崖",
+    "岩岛",
+    "岩洞湖 A",
+    "岩洞湖 B",
+    "岩浆瀑布",
+    "鼹鼠隧道",
+    "要塞",
+    "仪式间",
+    "仪式室",
+    "遗忘暗道",
+    "遗忘荒地",
+    "遗忘旷野",
+    "遗忘林地",
+    "遗忘森林",
+    "蚁巢",
+    "饮水池",
+    "隐蔽圣坛",
+    "幽鬼巢穴",
+    "渔场",
+    "窄桥",
+    "长廊",
+    "长桥",
+    "沼泽",
+    "砧火哨站",
+    "蜘蛛巢穴",
+    "蜘蛛洞",
+    "中庭",
+    "中心祭坛",
+    "中心桥",
+    "蛛网巢穴",
+    "转楼",
+    "走廊 E",
+    "Cave Altar Center",
+    "Cave Tomb Center",
+    "H Bridge",
+    "Ice Cave Cabin Raft",
+    "Ice Cave Cross Road",
+    "Ice Cave Maze",
+    "Ice Cave Pyramid",
+    "Ice Cave Sanctum",
+    "Ice Cave Watchtower",
+    "Inferno Batroost",
+    "Inferno Bloodyfalls",
+    "Inferno Doomcage",
+    "Inferno Drain",
+    "Inferno Hellcrossbridge",
+    "Inferno Hellwind",
+    "Inferno Judgementroad",
+    "Inferno Obelisk",
+    "Inferno Painfulsteps",
+    "Ruins Passage Inner 01",
+    "Ruins Passage Inner 02",
+    "Ruins Passage Inner 03",
+    "Ruins Passage Inner 04",
+    "Ruins Passage Inner 05",
+    "Ruins Passage Outer 01",
+    "Ruins Passage Outer 02",
+    "Ruins Passage Outer 03",
+    "Ruins Passage Outer 04",
+    "Ruins Passage Outer 05",
+    "Ruins Tower 01 Destroyed"
+  ]
+}
