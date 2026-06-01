@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const STRINGS_PATH = path.join(ROOT, "temp-quest-strings.txt");
@@ -80,13 +79,11 @@ const TERM_ZH = {
 };
 
 function loadMapUiDictionary() {
-  const source = fs.readFileSync(
-    path.join(ROOT, "src", "locales", "map-ui.js"),
-    "utf8"
-  );
-  const sandbox = { window: {} };
-  vm.runInContext(source, vm.createContext(sandbox));
-  return sandbox.window.DARKTRANS_MAP_UI || {};
+  const mapUiPath = path.join(ROOT, "metaData", "map-ui.json");
+  if (fs.existsSync(mapUiPath)) {
+    return JSON.parse(fs.readFileSync(mapUiPath, "utf8"));
+  }
+  return {};
 }
 
 function loadExistingDictionary() {

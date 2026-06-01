@@ -6,6 +6,7 @@
   "scripts": {
     "icons": "node scripts/generate-icons.js",
     "extract-strings": "node scripts/extract-ui-strings.js",
+    "rebuild-dictionary": "node scripts/rebuild-dictionary.js",
     "merge-transition": "node scripts/merge-transition.js",
     "merge-dnd-wiki-map-tiles": "node scripts/extract-dnd-wiki-map-tiles.js && node scripts/merge-dnd-wiki-map-tiles.js && node scripts/merge-transition.js",
     "merge-dnd-wiki-monsters": "node scripts/extract-dnd-wiki-monsters.js && node scripts/merge-dnd-wiki-monsters.js && node scripts/merge-transition.js",
