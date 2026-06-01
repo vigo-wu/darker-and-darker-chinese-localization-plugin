@@ -10,7 +10,7 @@
 - **动态内容支持**：通过 `MutationObserver` 监听页面变化，SPA 路由切换后仍可继续翻译
 - **开关控制**：可在扩展弹窗中随时启用或关闭汉化
 - **自定义词典**：支持导入 / 导出 JSON，覆盖或补充内置翻译
-- **分类词条库**：覆盖地图地点、怪物、容器、陷阱、草药、战利品、物品、任务等游戏相关术语
+- **统一内置词典**：覆盖地图地点、怪物、容器、陷阱、草药、战利品、物品、任务等游戏相关术语
 
 ## 适用站点
 
@@ -134,24 +134,12 @@ darkTrans/
 │   ├── shared/
 │   │   └── i18n-json.js       # JSON 导入 / 导出解析
 │   └── locales/
-│       ├── zh-CN.js           # 词典合并入口
-│       └── category/          # 分类词条（部分由脚本生成）
-│           ├── mapLocations.js
-│           ├── containers.js
-│           ├── monsters.js
-│           ├── herbs.js
-│           ├── traps.js
-│           ├── loot.js
-│           ├── items.js
-│           └── quests.js
-├── metaData/                  # 翻译数据源与中间文件
-│   ├── transition.json        # 地图/容器/怪物等分类词条（手动维护 + 脚本合并）
-│   ├── dnd-wiki-map-tiles.json # dnd.wiki 地图图块抓取结果（脚本生成）
-│   ├── data.json              # 游戏物品原始数据
+│       ├── zh-CN.json         # 内置词典数据源（手动维护）
+│       └── zh-CN.js           # 由 rebuild-dictionary 自动生成，扩展运行时加载
+├── metaData/                  # 历史翻译数据源（归档参考，不再参与构建）
 │   └── …
 ├── scripts/                   # 构建与词条生成脚本
-│   ├── extract-dnd-wiki-map-tiles.js  # 从 dnd.wiki 抓取地图图块
-│   ├── merge-dnd-wiki-map-tiles.js    # 将 wiki 中文名合并到 transition.json
+│   ├── rebuild-dictionary.js  # 从 zh-CN.json 生成 zh-CN.js
 │   └── …
 └── dist/                      # 构建输出（git 忽略）
     ├── dev/                   # 开发构建
@@ -207,7 +195,7 @@ flowchart LR
 
 **翻译流程：**
 
-1. `zh-CN.js` 合并各分类词典为 `window.DARKTRANS_DICTIONARY`
+1. `zh-CN.js` 暴露 `window.DARKTRANS_DICTIONARY`（由 `zh-CN.json` 生成）
 2. `index.js` 读取内置词典，并与 `chrome.storage.local` 中的自定义词条合并
 3. `DarkTransTranslator` 遍历 DOM，按下方「翻译匹配逻辑」替换文本
 4. `MutationObserver` 在 DOM 变化时 debounce 后重新翻译
@@ -274,75 +262,24 @@ flowchart LR
 
 ## 维护翻译数据
 
-部分词条文件由脚本自动生成，**请勿手动编辑**以下文件：
+内置词典统一维护在 `src/locales/zh-CN.json` 的 `entries` 字段中。修改后运行：
 
-- `src/locales/category/items.js` — 由 `npm run extract-item-names` 生成
-- `src/locales/category/quests.js` — 由 `npm run merge-quest-i18n` 生成
-- `src/locales/category/mapLocations.js` 等 — 由 `npm run merge-transition` 从 `metaData/transition.json` 生成；地图地点中文可先经 `npm run merge-dnd-wiki-map-tiles` 与 dnd.wiki 同步
+```bash
+npm run rebuild-dictionary
+```
+
+会重新生成 `src/locales/zh-CN.js`（扩展运行时加载此文件，**请勿手改**）。
 
 ### 词条维护命令
 
 | 命令 | 说明 |
 |------|------|
-| `npm run extract-strings` | 从站点 UI 提取字符串 |
-| `npm run merge-transition` | 将 `metaData/transition.json` 合并为 category 词典 |
-| `npm run merge-dnd-wiki-map-tiles` | 从 [dnd.wiki/maps](https://dnd.wiki/maps) 抓取图块中文名 → 合并到 `transition.json` → 更新 `mapLocations.js` |
-| `npm run extract-item-names` | 从游戏数据与 NFU Wiki 提取物品名并合并到 `items.js` |
-| `npm run quest-i18n` | 拉取任务追踪数据 → 生成任务 i18n → 合并到 `quests.js` |
-| `npm run fetch-quest-tracker` | 仅拉取 questtracker 原始数据 |
-| `npm run generate-quest-i18n` | 仅生成 `metaData/quest-i18n.json` |
-| `npm run merge-quest-i18n` | 仅合并任务词条到 `quests.js` |
+| `npm run rebuild-dictionary` | 从 `zh-CN.json` 生成 `zh-CN.js` |
+| `npm run extract-strings` | 从站点 bundle 提取 UI 字符串（辅助发现未收录词条） |
 
-### 地图地点词条（dnd.wiki）
+`metaData/` 目录保留历史数据源，供对照参考；当前构建流程不再读取这些文件。
 
-地图地点（`map_locations`）以 **dnd.wiki 图块中文名为基准** 维护。wiki 站点为 Nuxt SPA，图块数据来自公开 API：
-
-| API | 说明 |
-|-----|------|
-| `GET https://dnd.wiki/api/maps` | 8 张地图列表 |
-| `GET https://dnd.wiki/api/maps/{slug}` | 各地图下的图块（`modules`）及中文 `name` |
-
-**推荐工作流：**
-
-```bash
-# 一键：抓取 → 合并 transition.json → 生成 mapLocations.js
-npm run merge-dnd-wiki-map-tiles
-```
-
-也可分步执行：
-
-```bash
-node scripts/extract-dnd-wiki-map-tiles.js   # 写入 metaData/dnd-wiki-map-tiles.json
-node scripts/merge-dnd-wiki-map-tiles.js       # 按英文名匹配，用 wiki 中文覆盖 map_locations
-npm run merge-transition                       # 同步 src/locales/category/mapLocations.js
-```
-
-**合并规则简述：**
-
-- 英文键仍以 `transition.json` / 游戏内地点名为准，只更新对应的中文译文
-- 匹配优先级：图片路径 / slug 精确映射 → 手动别名 → 英文名模糊匹配（全局一对一，避免重复占用）
-- wiki 图块尚无中文译名、或无法可靠对应的条目保留 `transition.json` 中的原译
-- 合并结果写入 `metaData/transition.json` 的 `map_locations` 字段；其他分类（容器、怪物等）不受影响
-
-抓取结果 `metaData/dnd-wiki-map-tiles.json` 含每张地图的图块列表（`slug`、中文名、推断英文名、图片 URL 等），便于人工核对未匹配项。
-
-若需调整个别英文键与 wiki 图块的对应关系，可编辑 `scripts/merge-dnd-wiki-map-tiles.js` 中的 `MANUAL_ALIASES` 与 `IMAGE_PATH_ALIASES`。
-
-### 词典合并优先级
-
-`zh-CN.js` 中合并顺序（后者覆盖前者）：
-
-1. 任务（quests）
-2. 物品（items）
-3. 战利品（loot）
-4. 地图地点（mapLocations）
-5. 容器（containers）
-6. 怪物（monsters）
-7. 草药（herbs）
-8. 陷阱（traps）
-9. UI 固定词条（优先级最高）
-
-自定义词条在运行时覆盖以上全部内置词条。
+自定义词条在运行时覆盖全部内置词条。
 
 ## 权限说明
 
