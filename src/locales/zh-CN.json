@@ -1510,6 +1510,19 @@
     "Kumaron’s Claw": "库玛龙爪",
     "Kuma’s Fang": "库玛龙牙",
     "Kumaron’s Tooth": "库玛龙牙",
-    "No markers for map/mode": "地图/模式暂无标记"
+    "No markers for map/mode": "地图/模式暂无标记",
+    "Jan": "1月",
+    "Feb": "2月",
+    "Mar": "3月",
+    "Apr": "4月",
+    "May": "5月",
+    "Jun": "6月",
+    "Jul": "7月",
+    "Aug": "8月",
+    "Sep": "9月",
+    "Oct": "10月",
+    "Nov": "11月",
+    "Dec": "12月",
+    "Map data last updated": "地图数据最后更新于"
   }
 }
