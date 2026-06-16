@@ -1,9 +1,18 @@
 import { createI18n } from 'vue-i18n';
 import dictData from '@locales/zh-CN.json';
+import itemsData from '@locales/Items.json';
 import { createDictionaryTranslator } from './dictionary';
 import zhCN from './messages/zh-CN';
 
-const { translate: td, toEnglish } = createDictionaryTranslator(dictData);
+const mergedDict = {
+  ...dictData,
+  entries: {
+    ...(dictData.entries || {}),
+    ...(itemsData.entries || {}),
+  },
+};
+
+const { translate: td, toEnglish } = createDictionaryTranslator(mergedDict);
 
 export const i18n = createI18n({
   legacy: false,

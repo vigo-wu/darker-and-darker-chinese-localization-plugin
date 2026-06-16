@@ -3,14 +3,21 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const DICT_JSON_PATH = path.join(ROOT, "src", "locales", "zh-CN.json");
+const ITEMS_JSON_PATH = path.join(ROOT, "src", "locales", "Items.json");
 const DICT_JS_PATH = path.join(ROOT, "src", "locales", "zh-CN.js");
 
-function readEntries() {
-  const data = JSON.parse(fs.readFileSync(DICT_JSON_PATH, "utf8"));
+function readEntries(filePath) {
+  const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
   if (data.entries && typeof data.entries === "object") {
     return data.entries;
   }
   return data;
+}
+
+function readMergedEntries() {
+  const builtin = readEntries(DICT_JSON_PATH);
+  const items = fs.existsSync(ITEMS_JSON_PATH) ? readEntries(ITEMS_JSON_PATH) : {};
+  return { ...builtin, ...items };
 }
 
 function writeDictionaryJson(entries) {
@@ -39,19 +46,21 @@ function writeDictionaryJs(entries) {
 }
 
 function main() {
-  const entries = readEntries();
+  const entries = readMergedEntries();
   const count = Object.keys(entries).length;
 
   writeDictionaryJs(entries);
 
-  console.log(`已写入 ${DICT_JS_PATH}（${count} 条）`);
+  console.log(`已写入 ${DICT_JS_PATH}（${count} 条，含物品词典）`);
 }
 
 module.exports = {
   readEntries,
+  readMergedEntries,
   writeDictionaryJson,
   writeDictionaryJs,
   DICT_JSON_PATH,
+  ITEMS_JSON_PATH,
   DICT_JS_PATH,
 };
 
