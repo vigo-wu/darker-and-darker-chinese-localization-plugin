@@ -102,6 +102,13 @@ function writeDevMeta(outDir) {
   );
 }
 
+function buildMarket() {
+  execSync("npm run build:market", {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
+}
+
 function buildExtension(options = {}) {
   const mode = options.mode || "prod";
   const outDir =
@@ -109,6 +116,7 @@ function buildExtension(options = {}) {
     path.join(ROOT, "dist", mode === "dev" ? "dev" : "extension");
 
   ensureIcons();
+  buildMarket();
   removePath(outDir);
   fs.mkdirSync(outDir, { recursive: true });
 
@@ -181,6 +189,7 @@ function packageExtension(options = {}) {
 module.exports = {
   ROOT,
   RELOAD_PORT,
+  buildMarket,
   buildExtension,
   packageExtension,
   ensureIcons,

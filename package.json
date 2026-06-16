@@ -7,6 +7,8 @@
     "icons": "node scripts/generate-icons.js",
     "extract-strings": "node scripts/extract-ui-strings.js",
     "rebuild-dictionary": "node scripts/rebuild-dictionary.js",
+    "build:market": "vite build --config market/vite.config.js",
+    "dev:market": "vite --config market/vite.config.js --mode development",
     "build:dev": "node scripts/build.js --mode=dev",
     "build:prod": "node scripts/build.js --mode=prod",
     "dev": "node scripts/dev.js",
@@ -15,8 +17,16 @@
     "test:map-label-svg": "node scripts/test-map-label-svg.js",
     "postinstall": "node scripts/generate-icons.js"
   },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "ant-design-vue": "^4.2.6",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.2"
+  },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
     "chokidar": "^4.0.3",
+    "vite": "^6.0.3",
     "ws": "^8.18.3"
   },
   "keywords": [

@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background: #111;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.price-gold {
+  color: #f2b300;
+  font-weight: 700;
+}
+
+.rarity-text {
+  font-weight: 700;
+}
+
+.stat-secondary {
+  color: #c6a46c;
+}
+
+.market-table :deep(.ant-table) {
+  background: transparent;
+}
+
+.market-table :deep(.ant-table-thead > tr > th) {
+  background: #1a1a1a;
+}
+
+.market-table :deep(.ant-table-tbody > tr > td) {
+  background: #1a1a1a;
+}
+
+.market-table :deep(.ant-table-tbody > tr:hover > td) {
+  background: #242424 !important;
+}

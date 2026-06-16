@@ -250,6 +250,12 @@ body {
   background: #352d42;
 }
 
+.btn--market {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 10px;
+}
+
 .checkbox {
   display: flex;
   align-items: flex-start;

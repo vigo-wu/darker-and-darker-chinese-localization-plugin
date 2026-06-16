@@ -1,5 +1,6 @@
 node_modules/
 dist/
+src/market/
 .idea/
 *.log
 Thumbs.db

@@ -1,0 +1,49 @@
+---
+description: Vue 3 前端项目 AI 编码指南
+alwaysApply: true
+---
+
+## 1. 核心技术栈与基础配置
+* **核心框架**：Vue 3.x（必须使用组合式 API，严禁生成 Vue 2 选项式代码）
+* **开发语言**：TypeScript 5.x（严格模式，严禁滥用 any 类型）
+* **构建工具**：Vite
+* **组件库**：Ant Design Vue
+* **状态管理**：Pinia
+* **网络请求**：Axios
+
+## 2. 组件编写与 Setup 规范
+* **脚本范式**：必须统一使用 `<script setup lang="ts">` 语法糖。
+* **文件命名**：组件文件必须采用大驼峰命名（PascalCase），例如 `UserTable.vue`。
+* **标签规范**：在 Template 中，Ant Design Vue 组件和自定义组件必须使用`Kebab Case`命名法闭合标签，例如 `<a-button>`、`<a-table />`。
+* **逻辑组织**：相关的响应式变量、计算属性和方法必须聚合在一起编写，严禁将所有 ref 堆放在顶部而将 function 堆放在底部。
+
+## 3. Ant Design Vue (ant-design-vue) 特定规范
+* **按需引入**：项目已配置自动导入，在组件中直接使用 `<a-button>` 或 `<AButton>` 即可，**严禁**手动 `import { Button } from 'ant-design-vue'`。
+* **表单**：
+  * 优先使用`@qin-ui/antd-vue-pro`提供的`ProForm`和`useForm`
+  * 表单数据绑定必须使用 `v-model:value`，严禁错误地写成 `v-model`（Vue 3 下 Antdv 的主要绑定属性是 `value`）。
+* **表格**：
+  * 优先使用`@qin-ui/antd-vue-pro`提供的`ProTable`和`useTable`
+* **通知与提示**：组件内提示必须使用 `message.success()` 或 `notification.open()`。使用前必须通过 `import { message } from 'ant-design-vue'` 引入，或者调用上下文提供的方法。
+* **图标使用**：必须使用 `@ant-design/icons-vue` 包，例如 `<PlusOutlined />`。
+
+## 4. Axios 网络请求规范
+* **统一实例**：严禁直接导入原生 `axios`，必须使用项目中封装好的统一实例。
+  * *推荐路径*：`@/utils/request`
+* **接口定义**：
+  * 所有的 API 请求必须统一抽取到 `@/api/` 目录下的独立模块文件中，严禁在 `.vue` 组件内直接编写 `request.post('/url')`。
+  * 每个 API 函数都必须使用 TypeScript 显式定义入参（Params/Data）和出参（Response）的类型。
+
+## 5. Vue 3 响应式与数据流约束
+* **响应式声明**：
+  * 优先使用 `ref()` 声明基础数据和列表对象。
+  * 仅在声明表单、大量静态属性对象时允许使用 `reactive()`。
+* **解构限制**：
+  * 严禁直接解构 `props` 或 `Pinia store`，这会导致响应式丢失。
+  * 必须使用 `toRefs(props)` 或 `storeToRefs(store)` 进行解构。
+* **计算属性**：所有依赖其他响应式数据的状态，必须使用 `computed()` 包装，严禁在模板中写复杂的逻辑表达式。
+
+## 6. 样式与严禁事项 (Do's & Don'ts)
+* ❌ **严禁污染全局样式**：所有 `.vue` 组件的 `<style>` 标签必须加上 `scoped` 属性。
+* ❌ **严禁在模板中直接修改 Props**：必须通过 `emit` 向父组件派发事件，或者使用 `v-model:` 双向绑定语法。
+* ❌ **严禁使用 `watch` 的 `deep: true` 滥用**：如需监听对象中的某个具体属性，必须使用 Getter 函数形式，例如 `watch(() => form.username, (newVal) => { ... })`。

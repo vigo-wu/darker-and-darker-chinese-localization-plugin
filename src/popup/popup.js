@@ -10,6 +10,7 @@ const exportCustomBtn = document.getElementById("exportCustomBtn");
 const importBtn = document.getElementById("importBtn");
 const importFile = document.getElementById("importFile");
 const importMergeToggle = document.getElementById("importMergeToggle");
+const openMarketBtn = document.getElementById("openMarketBtn");
 
 const { parseImportJson, serializeExport } = window.DarkTransI18nJson;
 
@@ -298,6 +299,10 @@ importFile.addEventListener("change", async () => {
 
 searchInput.addEventListener("input", scheduleSearch);
 searchInput.addEventListener("search", runSearch);
+
+openMarketBtn.addEventListener("click", () => {
+  chrome.tabs.create({ url: chrome.runtime.getURL("src/market/index.html") });
+});
 
 loadSettings();
 refreshDictStats();

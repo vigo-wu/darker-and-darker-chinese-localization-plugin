@@ -13,6 +13,7 @@ const WATCH_PATHS = [
   path.join(ROOT, "logo.png"),
   path.join(ROOT, "logo.jpg"),
   path.join(ROOT, "icons"),
+  path.join(ROOT, "market"),
   path.join(ROOT, "src"),
 ];
 
