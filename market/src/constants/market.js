@@ -1,6 +1,7 @@
 export const RARITY_OPTIONS = [
   { value: '' },
   { value: 'Poor' },
+  { value: 'Common' },
   { value: 'Uncommon' },
   { value: 'Rare' },
   { value: 'Epic' },
@@ -23,6 +24,7 @@ export const SLOT_OPTIONS = [
   { value: 'Secondary' },
   { value: 'Sash' },
   { value: 'Utility' },
+  { value: 'Unarmed' },
 ];
 
 export const TYPE_OPTIONS = [
