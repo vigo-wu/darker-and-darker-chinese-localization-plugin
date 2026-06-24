@@ -40,7 +40,8 @@ const {
   detailOpen,
   isCatalogMode,
   activeFilterTags,
-  searchOptions,
+  itemSelectOptions,
+  filterItemOption,
   RARITIES,
   SLOT_TYPES,
   ITEM_TYPES,
@@ -89,10 +90,6 @@ function displayDescription(record) {
   return translated.length > 80 ? `${preview}...` : preview;
 }
 
-function onSelectSearch(value) {
-  filters.search = value;
-  search();
-}
 </script>
 
 <template>
@@ -120,14 +117,15 @@ function onSelectSearch(value) {
 
     <a-card class="filter-card" :bordered="false">
       <a-space wrap class="filter-row">
-        <a-auto-complete
+        <a-select
           v-model:value="filters.search"
-          :options="searchOptions"
-          style="width: 260px"
-          :placeholder="t('market.searchPlaceholder')"
+          :options="itemSelectOptions"
+          :filter-option="filterItemOption"
+          show-search
           allow-clear
-          @select="onSelectSearch"
-          @press-enter="search"
+          style="width: 280px"
+          :placeholder="t('market.searchPlaceholder')"
+          @change="search"
         />
 
         <a-select v-model:value="filters.rarity" style="width: 140px" @change="search">

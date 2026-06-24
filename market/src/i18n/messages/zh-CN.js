@@ -7,7 +7,7 @@ export default {
     dungeon: '地牢',
     lobby: '大厅',
     api: 'API',
-    searchPlaceholder: '搜索物品名称...',
+    searchPlaceholder: '选择或搜索物品...',
     search: '搜索',
     advancedFilters: '高级筛选',
     refresh: '刷新',

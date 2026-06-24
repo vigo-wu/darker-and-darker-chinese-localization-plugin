@@ -1,4 +1,5 @@
 import { ref, reactive, computed, onMounted } from 'vue';
+import itemsDict from '@locales/Items.json';
 import {
   fetchMarket,
   fetchItems,
@@ -29,7 +30,6 @@ export function useMarket() {
   const currentPage = ref(1);
   const sortMode = ref(null);
   const attributeMap = ref({});
-  const itemNames = ref([]);
   const expandedKeys = ref([]);
 
   const meta = reactive({
@@ -107,23 +107,24 @@ export function useMarket() {
     return tags;
   });
 
-  const searchOptions = computed(() => {
-    if (!filters.search) return [];
-    const lower = filters.search.toLowerCase();
-    return itemNames.value
-      .filter((name) => {
-        const translated = td(name);
-        return (
-          name.toLowerCase().includes(lower) ||
-          translated.toLowerCase().includes(lower)
-        );
-      })
-      .slice(0, 20)
+  const itemSelectOptions = computed(() =>
+    Object.keys(itemsDict.entries || {})
       .map((name) => ({
         value: name,
-        label: td(name),
-      }));
-  });
+        label: td(name) || name,
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label, 'zh-CN')),
+  );
+
+  const itemNames = computed(() => itemSelectOptions.value.map((option) => option.value));
+
+  function filterItemOption(input, option) {
+    const keyword = input.trim().toLowerCase();
+    if (!keyword) return true;
+    const value = String(option?.value ?? '').toLowerCase();
+    const label = String(option?.label ?? '').toLowerCase();
+    return value.includes(keyword) || label.includes(keyword);
+  }
 
   function resolveMode() {
     mode.value = filters.slot || filters.type ? 'items' : 'market';
@@ -288,21 +289,6 @@ export function useMarket() {
     detailItem.value = null;
   }
 
-  async function loadItemNames() {
-    try {
-      const names = new Set();
-      for (let page = 1; page <= 5; page++) {
-        const data = await fetchItems({ limit: '50', page: String(page) });
-        const batch = data.body || [];
-        batch.forEach((item) => names.add(item.name));
-        if (batch.length < 50) break;
-      }
-      itemNames.value = [...names].sort((a, b) => a.localeCompare(b, 'zh-CN'));
-    } catch {
-      itemNames.value = [];
-    }
-  }
-
   async function loadMeta() {
     try {
       const [health, population] = await Promise.all([fetchHealthCheck(), fetchPopulation()]);
@@ -329,7 +315,7 @@ export function useMarket() {
   }
 
   onMounted(async () => {
-    await Promise.all([loadAttributeMap(), loadItemNames(), loadMeta()]);
+    await Promise.all([loadAttributeMap(), loadMeta()]);
     await loadData(true);
   });
 
@@ -349,7 +335,8 @@ export function useMarket() {
     detailOpen,
     isCatalogMode,
     activeFilterTags,
-    searchOptions,
+    itemSelectOptions,
+    filterItemOption,
     RARITIES,
     SLOT_TYPES,
     ITEM_TYPES,
