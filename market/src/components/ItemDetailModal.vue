@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue';
+import { BellOutlined } from '@ant-design/icons-vue';
 import ItemIcon from '@/components/ItemIcon.vue';
 import { useMarketI18n } from '@/composables/useMarketI18n';
 import { rarityColor } from '@/constants/market';
@@ -19,7 +20,7 @@ const props = defineProps({
   catalogMode: Boolean,
 });
 
-const emit = defineEmits(['update:open']);
+const emit = defineEmits(['update:open', 'subscribe']);
 
 const { t, td, translateRarity, translateSlotOrType } = useMarketI18n();
 
@@ -53,6 +54,12 @@ const saleStatus = computed(() => {
 function close() {
   visible.value = false;
 }
+
+function subscribeItem() {
+  if (props.item) {
+    emit('subscribe', props.item);
+  }
+}
 </script>
 
 <template>
@@ -60,7 +67,6 @@ function close() {
     v-model:open="visible"
     :title="itemName"
     width="520px"
-    :footer="null"
     destroy-on-close
     @cancel="close"
   >
@@ -123,6 +129,14 @@ function close() {
         </a-descriptions>
       </template>
     </div>
+
+    <template #footer>
+      <a-button @click="close">{{ t('subscription.cancel') }}</a-button>
+      <a-button v-if="!isCatalog" type="primary" @click="subscribeItem">
+        <template #icon><BellOutlined /></template>
+        {{ t('subscription.subscribe') }}
+      </a-button>
+    </template>
   </a-modal>
 </template>
 

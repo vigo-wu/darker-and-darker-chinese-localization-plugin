@@ -8,11 +8,18 @@ import {
   SortDescendingOutlined,
   UserOutlined,
   TeamOutlined,
+  BellOutlined,
+  EyeOutlined,
 } from '@ant-design/icons-vue';
 import ItemIcon from '@/components/ItemIcon.vue';
 import ItemDetailModal from '@/components/ItemDetailModal.vue';
+import SubscriptionPanel from '@/components/SubscriptionPanel.vue';
+import SubscribeItemModal from '@/components/SubscribeItemModal.vue';
 import { useMarket } from '@/composables/useMarket';
+import { useItemSubscription } from '@/composables/useItemSubscription';
 import { useMarketI18n } from '@/composables/useMarketI18n';
+import { toEnglish } from '@/i18n';
+import itemsData from '@locales/Items.json';
 import { rarityColor } from '@/constants/market';
 import {
   formatPrice,
@@ -24,6 +31,8 @@ import {
 } from '@/utils/market';
 
 const { t, td, translateRarity, translateSlotOrType } = useMarketI18n();
+
+const canonicalItemNames = Object.keys(itemsData.entries || {});
 
 const {
   items,
@@ -56,6 +65,46 @@ const {
   closeDetail,
 } = useMarket();
 
+const {
+  subscriptions,
+  emailSettings,
+  emailSettingsSummary,
+  loading: subscriptionLoading,
+  savingSettings,
+  testingEmail,
+  checking,
+  settingsOpen,
+  subscribeOpen,
+  subscribeDefaults,
+  openSubscribe,
+  setSettingsOpen,
+  submitSubscribe,
+  deleteSubscription,
+  setSubscriptionEnabled,
+  updateEmailSettings,
+  sendTestEmail,
+  checkNow,
+  hasSubscriptionFor,
+} = useItemSubscription();
+
+const selectedSearchItem = computed(() => toEnglish(filters.search, canonicalItemNames) || filters.search || '');
+
+function handleSubscribeCurrentItem() {
+  openSubscribe(toEnglish(filters.search, canonicalItemNames), filters.rarity || '');
+}
+
+function handleSubscribeRow(record) {
+  openSubscribe(record.item || record.name || '', record.rarity || '');
+}
+
+function getRowItemName(record) {
+  return record.item || record.name || '';
+}
+
+function isRowSubscribed(record) {
+  return hasSubscriptionFor(getRowItemName(record));
+}
+
 const tableColumns = computed(() => {
   if (isCatalogMode.value) {
     return [
@@ -63,7 +112,7 @@ const tableColumns = computed(() => {
       { title: t('table.slotType'), dataIndex: 'slot_type', key: 'slot', width: 120 },
       { title: t('table.gearScore'), dataIndex: 'gear_score', key: 'gear_score', width: 100 },
       { title: t('table.vendorPrice'), key: 'vendor_price', width: 120, align: 'right' },
-      { title: t('table.action'), key: 'action', width: 80, align: 'center' },
+      { title: t('table.action'), key: 'action', width: 56, align: 'center' },
     ];
   }
   return [
@@ -71,7 +120,7 @@ const tableColumns = computed(() => {
     { title: t('table.time'), key: 'time', width: 130 },
     { title: t('table.quantity'), dataIndex: 'quantity', key: 'quantity', width: 80, align: 'center' },
     { title: t('table.price'), key: 'price', width: 120, align: 'right' },
-    { title: t('table.action'), key: 'action', width: 80, align: 'center' },
+    { title: t('table.action'), key: 'action', width: 72, align: 'center' },
   ];
 });
 
@@ -158,6 +207,16 @@ function displayDescription(record) {
           {{ t('market.refresh') }}
         </a-button>
 
+        <a-button
+          v-if="selectedSearchItem"
+          :type="hasSubscriptionFor(selectedSearchItem) ? 'default' : 'primary'"
+          ghost
+          @click="handleSubscribeCurrentItem"
+        >
+          <template #icon><BellOutlined /></template>
+          {{ hasSubscriptionFor(selectedSearchItem) ? t('subscription.subscribed') : t('subscription.subscribe') }}
+        </a-button>
+
         <a-button-group>
           <a-button
             :type="sortMode === 'asc' ? 'primary' : 'default'"
@@ -220,6 +279,24 @@ function displayDescription(record) {
         <a-button type="link" size="small" @click="clearAllFilters">{{ t('market.clearAll') }}</a-button>
       </div>
     </a-card>
+
+    <SubscriptionPanel
+      :subscriptions="subscriptions"
+      :email-settings="emailSettings"
+      :email-settings-summary="emailSettingsSummary"
+      :loading="subscriptionLoading"
+      :saving-settings="savingSettings"
+      :testing-email="testingEmail"
+      :checking="checking"
+      :settings-open="settingsOpen"
+      @update:settings-open="setSettingsOpen"
+      @subscribe="openSubscribe()"
+      @remove="deleteSubscription"
+      @toggle="setSubscriptionEnabled"
+      @save-settings="updateEmailSettings"
+      @test-email="sendTestEmail"
+      @check-now="checkNow"
+    />
 
     <a-card class="list-card" :bordered="false">
       <a-spin :spinning="loading">
@@ -306,7 +383,27 @@ function displayDescription(record) {
             </template>
 
             <template v-else-if="column.key === 'action'">
-              <a-button type="link" size="small" @click="openDetail(record)">{{ t('market.detail') }}</a-button>
+              <div class="action-cell">
+                <a-tooltip :title="t('market.detail')">
+                  <a-button type="text" size="small" class="action-btn" @click="openDetail(record)">
+                    <template #icon><EyeOutlined /></template>
+                  </a-button>
+                </a-tooltip>
+                <a-tooltip
+                  v-if="!isCatalogMode"
+                  :title="isRowSubscribed(record) ? t('table.subscribed') : t('table.subscribe')"
+                >
+                  <a-button
+                    type="text"
+                    size="small"
+                    class="action-btn"
+                    :class="{ 'action-btn--subscribed': isRowSubscribed(record) }"
+                    @click="handleSubscribeRow(record)"
+                  >
+                    <template #icon><BellOutlined /></template>
+                  </a-button>
+                </a-tooltip>
+              </div>
             </template>
           </template>
 
@@ -361,6 +458,16 @@ function displayDescription(record) {
       :attribute-map="attributeMap"
       :catalog-mode="isCatalogMode"
       @update:open="(v) => !v && closeDetail()"
+      @subscribe="handleSubscribeRow"
+    />
+
+    <SubscribeItemModal
+      v-model:open="subscribeOpen"
+      :defaults="subscribeDefaults"
+      :rarity-options="RARITIES"
+      :item-options="itemSelectOptions"
+      :filter-item-option="filterItemOption"
+      @submit="submitSubscribe"
     />
   </div>
 </template>
@@ -483,6 +590,27 @@ function displayDescription(record) {
 .load-more {
   margin-top: 16px;
   text-align: center;
+}
+
+.action-cell {
+  align-items: center;
+  display: inline-flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.action-btn {
+  color: rgba(255, 255, 255, 0.55);
+  height: 28px;
+  width: 28px;
+}
+
+.action-btn:hover {
+  color: #c6a46c;
+}
+
+.action-btn--subscribed {
+  color: #c6a46c;
 }
 
 .page-footer {

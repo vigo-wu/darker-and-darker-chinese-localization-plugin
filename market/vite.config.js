@@ -13,6 +13,7 @@ export default defineConfig(({ command }) => ({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@locales': path.resolve(rootDir, '../src/locales'),
+      '@shared': path.resolve(rootDir, '../src/shared'),
     },
   },
   build: {

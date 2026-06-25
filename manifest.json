@@ -3,10 +3,11 @@
   "name": "Dark and Darker Tracker 汉化",
   "version": "1.0.0",
   "description": "为 darkanddarkertracker.com 地图页面提供中文汉化",
-  "permissions": ["storage"],
+  "permissions": ["storage", "alarms", "notifications"],
   "host_permissions": [
     "https://darkanddarkertracker.com/*",
-    "https://api.darkerdb.com/*"
+    "https://api.darkerdb.com/*",
+    "https://api.resend.com/*"
   ],
   "action": {
     "default_popup": "src/popup/popup.html",
@@ -23,7 +24,8 @@
     "128": "icons/icon128.png"
   },
   "background": {
-    "service_worker": "src/background/service-worker.js"
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
   },
   "content_scripts": [
     {

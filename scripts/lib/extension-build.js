@@ -3,7 +3,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 const ROOT = path.join(__dirname, "..", "..");
-const INCLUDE_PATHS = ["icons", "src"];
+const INCLUDE_PATHS = ["icons", "src", "market/config"];
 const RELOAD_PORT = 35729;
 
 function readManifest() {
@@ -73,18 +73,27 @@ function patchManifestForDev(manifest) {
 }
 
 function appendDevReloader(serviceWorkerPath) {
-  const content = fs.readFileSync(serviceWorkerPath, "utf8");
-  const marker = "importScripts('./dev-reloader.js');";
+  const staticImport = "import './dev-reloader.js';";
+  const dynamicImport = "import('./dev-reloader.js');";
+  let content = fs.readFileSync(serviceWorkerPath, "utf8");
 
-  if (content.includes(marker)) {
+  content = content.replace(/\n*import\(['"]\.\/dev-reloader\.js['"]\);\s*/g, "\n");
+
+  if (content.includes(staticImport) || content.includes("importScripts('./dev-reloader.js')")) {
+    fs.writeFileSync(serviceWorkerPath, `${content.trim()}\n`, "utf8");
     return;
   }
 
-  fs.writeFileSync(
-    serviceWorkerPath,
-    `${content.trim()}\n\n${marker}\n`,
-    "utf8"
+  const updated = content.replace(
+    /from '\.\/market-subscription\.js';\r?\n/,
+    `from './market-subscription.js';\n${staticImport}\n`,
   );
+
+  if (updated === content) {
+    throw new Error(`Unable to inject dev reloader into ${serviceWorkerPath}`);
+  }
+
+  fs.writeFileSync(serviceWorkerPath, `${updated.trim()}\n`, "utf8");
 }
 
 function writeDevMeta(outDir) {

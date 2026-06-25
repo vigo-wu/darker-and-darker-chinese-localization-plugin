@@ -1,8 +1,10 @@
 # DarkTrans — Dark and Darker Tracker 汉化插件
 
-为 [darkanddarkertracker.com](https://darkanddarkertracker.com) 地图与任务追踪页面提供中文汉化的 Chrome 扩展（Manifest V3）。
+为 [darkanddarkertracker.com](https://darkanddarkertracker.com) 地图与任务追踪页面提供中文汉化的 Chrome 扩展（Manifest V3），并内置基于 [DarkerDB API](https://darkerdb.com) 的**中文市场查询**页面。
 
 ## 功能特性
+
+### 站点汉化
 
 - **页面实时汉化**：在目标站点自动替换 DOM 文本及 `placeholder`、`title`、`aria-label`、`alt` 等属性
 - **地图标注汉化**（`/maps`）：地图地点名以 SVG `<text>` 绘制为 Pixi 纹理，Hook `encodeURIComponent` 在转 data URL 前翻译并加宽中文标签；地图 JSON 经 Worker 代理返回时深度翻译字符串字段
@@ -11,6 +13,15 @@
 - **开关控制**：可在扩展弹窗中随时启用或关闭汉化
 - **自定义词典**：支持导入 / 导出 JSON，覆盖或补充内置翻译
 - **统一内置词典**：覆盖地图地点、怪物、容器、陷阱、草药、战利品、物品、任务等游戏相关术语
+
+### 市场查询
+
+- **双模式浏览**：默认展示 [DarkerDB](https://darkerdb.com) 实时市场挂单；选择装备部位或物品类型筛选时自动切换为**物品图鉴模式**
+- **中文界面**：物品名称、属性、稀有度、部位等字段复用扩展内置词典（`src/locales/Items.json`）进行汉化
+- **多维筛选**：支持按物品名称、稀有度、部位、类型、价格区间、卖家、在售 / 已售状态筛选
+- **排序与分页**：支持按价格升序 / 降序排序；市场模式使用游标分页，图鉴模式使用页码分页，均可加载更多
+- **详情弹窗**：查看物品图标、固定 / 随机属性、价格、卖家、发布时间等完整信息
+- **实时统计**：页头展示当前在线人数、地牢 / 大厅人数及 API 版本
 
 ## 适用站点
 
@@ -62,6 +73,23 @@ npm run build
 2. 点击浏览器工具栏中的 **DarkTrans** 图标打开弹窗
 3. 使用「启用汉化」开关控制翻译状态
 4. 弹窗底部可查看内置词条与自定义词条数量
+
+### 市场查询
+
+1. 点击扩展弹窗中的 **打开市场查询** 按钮
+2. 在新标签页中浏览市场挂单或物品图鉴
+3. 使用顶部筛选栏搜索物品、设置稀有度 / 部位 / 类型等条件
+4. 点击 **高级筛选** 可设置价格区间、卖家名称、在售状态
+5. 点击表格中的 **详情** 查看物品完整属性
+
+**模式说明：**
+
+| 模式 | 触发条件 | 数据来源 | 表格列 |
+|------|----------|----------|--------|
+| 市场挂单模式 | 未选择部位 / 类型筛选 | `GET /v1/market` | 物品、时间、数量、价格 |
+| 物品图鉴模式 | 选择了部位或类型筛选 | `GET /v1/items` | 物品、部位/类型、装备评分、商人价 |
+
+市场数据来源于 [DarkerDB API](https://darkerdb.com)，API 中文文档见 [`market/DOCUMENTATION.zh-CN.md`](market/DOCUMENTATION.zh-CN.md)。
 
 ### 词典导入 / 导出
 
@@ -133,11 +161,23 @@ darkTrans/
 │   │   └── popup.css
 │   ├── shared/
 │   │   └── i18n-json.js       # JSON 导入 / 导出解析
+│   ├── market/                # 市场查询构建产物（由 build:market 生成，勿手改）
 │   └── locales/
 │       ├── zh-CN.json         # 内置词典数据源（手动维护）
-│       └── zh-CN.js           # 由 rebuild-dictionary 自动生成，扩展运行时加载
+│       ├── zh-CN.js           # 由 rebuild-dictionary 自动生成，扩展运行时加载
+│       └── Items.json         # 物品名称词典，市场查询汉化复用
 ├── metaData/                  # 历史翻译数据源（归档参考，不再参与构建）
 │   └── …
+├── market/                    # 市场查询子应用（Vue 3 源码）
+│   ├── src/
+│   │   ├── views/MarketView.vue       # 市场主页面
+│   │   ├── components/                # ItemIcon、ItemDetailModal 等
+│   │   ├── composables/               # useMarket、useMarketI18n
+│   │   ├── api/darkerdb.js            # DarkerDB API 封装
+│   │   ├── i18n/                      # 界面文案与词典桥接
+│   │   └── …
+│   ├── vite.config.js         # 构建输出至 src/market/
+│   └── DOCUMENTATION.zh-CN.md # DarkerDB API 中文文档
 ├── scripts/                   # 构建与词条生成脚本
 │   ├── rebuild-dictionary.js  # 从 zh-CN.json 生成 zh-CN.js
 │   └── …
@@ -146,12 +186,21 @@ darkTrans/
     └── extension/             # 生产构建
 ```
 
+扩展构建时会自动执行 `npm run build:market`，将 `market/` 源码编译到 `src/market/` 后一并打包进扩展。
+
 ## 开发指南
 
 ### 环境要求
 
 - Node.js 18+
 - Google Chrome（或基于 Chromium 的浏览器）
+
+### 技术栈
+
+| 模块 | 技术 |
+|------|------|
+| Chrome 扩展 | Manifest V3、原生 JS |
+| 市场查询 | Vue 3（组合式 API）、Ant Design Vue、Vue I18n、Vite |
 
 ### 常用命令
 
@@ -162,12 +211,26 @@ darkTrans/
 | `npm run build:prod` | 单次生产构建 → `dist/extension/` |
 | `npm run build` / `npm run package` | 生产构建并打包 zip |
 | `npm run icons` | 生成扩展图标 |
+| `npm run dev:market` | 单独启动市场查询开发服务器（`http://localhost:3011`，代理 DarkerDB API） |
+| `npm run build:market` | 单独构建市场查询 → `src/market/` |
 
 ### 开发模式工作流
 
 1. 运行 `npm run dev`
 2. 在 Chrome 加载 `dist/dev/` 目录（扩展名称会显示为 `[DEV] Dark and Darker Tracker 汉化`）
-3. 修改 `src/` 或 `manifest.json` 后，脚本会自动重建并通过 WebSocket（端口 `35729`）触发扩展与目标页面刷新
+3. 修改 `src/`、`market/` 或 `manifest.json` 后，脚本会自动重建并通过 WebSocket（端口 `35729`）触发扩展与目标页面刷新
+
+### 市场查询开发
+
+单独调试市场页面时，可运行：
+
+```bash
+npm run dev:market
+```
+
+开发服务器在 `http://localhost:3011` 启动，通过 Vite 代理将 `/api` 转发至 `https://api.darkerdb.com`，避免本地开发时的跨域问题。修改 `market/src/` 后页面热更新。
+
+集成到扩展内测试时，使用 `npm run dev` 或 `npm run build:market` 将产物输出到 `src/market/`，再通过弹窗「打开市场查询」访问。
 
 ### 架构概览
 
@@ -287,6 +350,7 @@ npm run rebuild-dictionary
 |------|------|
 | `storage` | 保存汉化开关状态与自定义词典 |
 | `host_permissions: darkanddarkertracker.com` | 在目标站点注入 content script |
+| `host_permissions: api.darkerdb.com` | 市场查询页面请求 DarkerDB API 与物品图标 |
 
 开发构建额外申请 `tabs` 权限及本地 WebSocket 主机权限，用于热重载。
 
@@ -300,4 +364,4 @@ ISC
 
 ## 免责声明
 
-本插件为非官方社区项目，与 Ironmace / Dark and Darker 官方及 darkanddarkertracker.com 站点无隶属关系。地图地点等翻译部分参考 [dnd.wiki](https://dnd.wiki/maps) 社区 wiki，仅供参考，游戏内名称以官方版本为准。
+本插件为非官方社区项目，与 Ironmace / Dark and Darker 官方及 darkanddarkertracker.com 站点无隶属关系。地图地点等翻译部分参考 [dnd.wiki](https://dnd.wiki/maps) 社区 wiki；市场查询数据来自 [DarkerDB](https://darkerdb.com)，界面参考 [dnd.wiki/market](https://dnd.wiki/market)，仅供参考，游戏内名称以官方版本为准。
