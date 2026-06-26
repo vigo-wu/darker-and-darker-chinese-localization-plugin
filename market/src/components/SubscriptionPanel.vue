@@ -26,6 +26,7 @@ const props = defineProps({
   loading: Boolean,
   savingSettings: Boolean,
   testingEmail: Boolean,
+  testingNotification: Boolean,
   checking: Boolean,
   settingsOpen: Boolean,
 });
@@ -36,6 +37,7 @@ const emit = defineEmits([
   'toggle',
   'save-settings',
   'test-email',
+  'test-notification',
   'check-now',
   'update:settings-open',
 ]);
@@ -130,9 +132,11 @@ function openSettings() {
       :email-settings="emailSettings"
       :saving="savingSettings"
       :testing="testingEmail"
+      :testing-notification="testingNotification"
       @update:open="(value) => emit('update:settings-open', value)"
       @save="(payload) => emit('save-settings', payload)"
       @test="(payload) => emit('test-email', payload)"
+      @test-notification="(payload) => emit('test-notification', payload)"
     />
   </a-card>
 </template>

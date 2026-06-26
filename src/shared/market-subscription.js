@@ -1,3 +1,7 @@
+import { resolveCanonicalItemName } from './item-name.js';
+
+export { resolveCanonicalItemName };
+
 export const STORAGE_KEYS = {
   SUBSCRIPTIONS: 'marketSubscriptions',
   EMAIL_SETTINGS: 'marketEmailSettings',
@@ -5,8 +9,12 @@ export const STORAGE_KEYS = {
 
 export const ALARM_NAME = 'market-subscription-check';
 
+export const MIN_POLL_INTERVAL_SECONDS = 10;
+export const MAX_POLL_INTERVAL_SECONDS = 3600;
+export const DEFAULT_POLL_INTERVAL_SECONDS = 300;
+
 export const DEFAULT_EMAIL_SETTINGS = {
-  pollIntervalMinutes: 5,
+  pollIntervalSeconds: DEFAULT_POLL_INTERVAL_SECONDS,
   lastUsedEmail: '',
   enableEmail: true,
   enableNotifications: true,
@@ -22,7 +30,50 @@ const LEGACY_EMAIL_SETTING_KEYS = [
   'clearResendApiKey',
   'webhookUrl',
   'webhookSecret',
+  'pollIntervalMinutes',
 ];
+
+export function getPollIntervalSeconds(settings = {}) {
+  const rawSeconds = Number(settings.pollIntervalSeconds);
+  if (Number.isFinite(rawSeconds) && rawSeconds > 0) {
+    return Math.max(MIN_POLL_INTERVAL_SECONDS, Math.min(MAX_POLL_INTERVAL_SECONDS, Math.round(rawSeconds)));
+  }
+
+  const legacyMinutes = Number(settings.pollIntervalMinutes);
+  if (Number.isFinite(legacyMinutes) && legacyMinutes > 0) {
+    return Math.max(
+      MIN_POLL_INTERVAL_SECONDS,
+      Math.min(MAX_POLL_INTERVAL_SECONDS, Math.round(legacyMinutes * 60)),
+    );
+  }
+
+  return DEFAULT_POLL_INTERVAL_SECONDS;
+}
+
+export function splitPollIntervalSeconds(seconds) {
+  const normalized = getPollIntervalSeconds({ pollIntervalSeconds: seconds });
+  if (normalized % 60 === 0) {
+    return { value: normalized / 60, unit: 'minutes' };
+  }
+  return { value: normalized, unit: 'seconds' };
+}
+
+export function toPollIntervalSeconds(value, unit) {
+  const amount = Number(value);
+  if (!Number.isFinite(amount) || amount <= 0) return 0;
+  const seconds = unit === 'minutes' ? Math.round(amount * 60) : Math.round(amount);
+  return Math.max(MIN_POLL_INTERVAL_SECONDS, Math.min(MAX_POLL_INTERVAL_SECONDS, seconds));
+}
+
+export function getPollIntervalLimits(unit) {
+  if (unit === 'minutes') {
+    return {
+      min: Math.ceil(MIN_POLL_INTERVAL_SECONDS / 60),
+      max: Math.floor(MAX_POLL_INTERVAL_SECONDS / 60),
+    };
+  }
+  return { min: MIN_POLL_INTERVAL_SECONDS, max: MAX_POLL_INTERVAL_SECONDS };
+}
 
 export function createSubscriptionId() {
   return crypto.randomUUID();
@@ -38,10 +89,6 @@ export function buildListingId(listing) {
 export function normalizeItemName(name) {
   return String(name || '').trim();
 }
-
-import { resolveCanonicalItemName } from './item-name.js';
-
-export { resolveCanonicalItemName };
 
 export function getListingItemName(listing) {
   return resolveCanonicalItemName(listing?.item || listing?.archetype || listing?.name);
@@ -95,6 +142,78 @@ export function buildNotificationBody(listing) {
   return `价格 ${price} · 卖家 ${seller}`;
 }
 
+export function isBrowserNotificationEnabled(settings = {}) {
+  return settings.enableNotifications !== false;
+}
+
+export function buildTestNotificationContent() {
+  return {
+    title: '[DarkTrans] 浏览器通知测试',
+    message: '如果您看到这条通知，说明市场订阅的浏览器提醒已配置正确。',
+  };
+}
+
+export function showMarketNotification(subscription, listing, emailSettings = {}) {
+  if (!isBrowserNotificationEnabled(emailSettings)) {
+    return Promise.resolve(false);
+  }
+
+  if (typeof chrome === 'undefined' || !chrome.notifications?.create || !chrome.runtime?.getURL) {
+    return Promise.resolve(false);
+  }
+
+  const listingId = buildListingId(listing);
+  const title = `新挂单：${subscription.itemName}`;
+  const message = buildNotificationBody(listing);
+
+  return new Promise((resolve) => {
+    chrome.notifications.create(`market-sub-${listingId}`, {
+      type: 'basic',
+      iconUrl: chrome.runtime.getURL('icons/icon128.png'),
+      title,
+      message,
+      priority: 2,
+    }, (notificationId) => {
+      const lastError = chrome.runtime.lastError;
+      if (lastError) {
+        console.error('[market-subscription] 浏览器通知失败:', lastError.message);
+        resolve(false);
+        return;
+      }
+      resolve(Boolean(notificationId));
+    });
+  });
+}
+
+export function sendTestBrowserNotification(emailSettings = {}) {
+  if (!isBrowserNotificationEnabled(emailSettings)) {
+    return Promise.reject(new Error('NOTIFICATIONS_DISABLED'));
+  }
+
+  if (typeof chrome === 'undefined' || !chrome.notifications?.create || !chrome.runtime?.getURL) {
+    return Promise.reject(new Error('NOTIFICATIONS_UNAVAILABLE'));
+  }
+
+  const { title, message } = buildTestNotificationContent();
+
+  return new Promise((resolve, reject) => {
+    chrome.notifications.create(`market-sub-test-${Date.now()}`, {
+      type: 'basic',
+      iconUrl: chrome.runtime.getURL('icons/icon128.png'),
+      title,
+      message,
+      priority: 2,
+    }, (notificationId) => {
+      const lastError = chrome.runtime.lastError;
+      if (lastError) {
+        reject(new Error(lastError.message));
+        return;
+      }
+      resolve({ ok: true, notificationId });
+    });
+  });
+}
+
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function isValidEmail(email) {
@@ -117,7 +236,7 @@ export function getEmailSettingsSummary(settings = {}, hasResendApiKey = false) 
   return {
     emailReady,
     notificationsReady: settings.enableNotifications !== false,
-    pollIntervalMinutes: Math.max(1, Number(settings.pollIntervalMinutes) || 5),
+    pollIntervalSeconds: getPollIntervalSeconds(settings),
     lastUsedEmail: settings.lastUsedEmail || '',
     hasResendApiKey,
   };
@@ -138,7 +257,10 @@ export function mergeEmailSettings(stored = {}, next = {}) {
     ...next,
   };
 
-  merged.pollIntervalMinutes = Math.max(1, Math.min(60, Number(merged.pollIntervalMinutes) || 5));
+  merged.pollIntervalSeconds = getPollIntervalSeconds({
+    pollIntervalSeconds: next.pollIntervalSeconds ?? stored.pollIntervalSeconds,
+    pollIntervalMinutes: next.pollIntervalMinutes ?? stored.pollIntervalMinutes,
+  });
   merged.lastUsedEmail = String(merged.lastUsedEmail || '').trim();
   merged.enableEmail = merged.enableEmail !== false;
   merged.enableNotifications = merged.enableNotifications !== false;
@@ -153,8 +275,22 @@ export function mergeEmailSettings(stored = {}, next = {}) {
 export function validateEmailSettings(form = {}, options = {}) {
   const errors = {};
 
-  if (form.pollIntervalMinutes == null || Number(form.pollIntervalMinutes) < 1 || Number(form.pollIntervalMinutes) > 60) {
-    errors.pollIntervalMinutes = 'INVALID_POLL_INTERVAL';
+  const pollIntervalSeconds = Number.isFinite(Number(form.pollIntervalSeconds))
+    ? Number(form.pollIntervalSeconds)
+    : (() => {
+      const amount = Number(form.pollIntervalValue);
+      if (!Number.isFinite(amount) || amount <= 0) return 0;
+      return form.pollIntervalUnit === 'minutes'
+        ? Math.round(amount * 60)
+        : Math.round(amount);
+    })();
+
+  if (
+    !pollIntervalSeconds
+    || pollIntervalSeconds < MIN_POLL_INTERVAL_SECONDS
+    || pollIntervalSeconds > MAX_POLL_INTERVAL_SECONDS
+  ) {
+    errors.pollInterval = 'INVALID_POLL_INTERVAL';
   }
 
   if (form.lastUsedEmail && !isValidEmail(form.lastUsedEmail)) {

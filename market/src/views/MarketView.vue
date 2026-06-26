@@ -72,6 +72,7 @@ const {
   loading: subscriptionLoading,
   savingSettings,
   testingEmail,
+  testingNotification,
   checking,
   settingsOpen,
   subscribeOpen,
@@ -83,6 +84,7 @@ const {
   setSubscriptionEnabled,
   updateEmailSettings,
   sendTestEmail,
+  sendTestNotification,
   checkNow,
   hasSubscriptionFor,
 } = useItemSubscription();
@@ -287,6 +289,7 @@ function displayDescription(record) {
       :loading="subscriptionLoading"
       :saving-settings="savingSettings"
       :testing-email="testingEmail"
+      :testing-notification="testingNotification"
       :checking="checking"
       :settings-open="settingsOpen"
       @update:settings-open="setSettingsOpen"
@@ -295,6 +298,7 @@ function displayDescription(record) {
       @toggle="setSubscriptionEnabled"
       @save-settings="updateEmailSettings"
       @test-email="sendTestEmail"
+      @test-notification="sendTestNotification"
       @check-now="checkNow"
     />
 

@@ -4,11 +4,12 @@ import {
   DEFAULT_EMAIL_SETTINGS,
   buildListingId,
   buildEmailHtml,
-  buildNotificationBody,
   isEmailDeliveryConfigured,
   buildTestEmailContent,
   mergeEmailSettings,
   resolveCanonicalItemName,
+  getPollIntervalSeconds,
+  showMarketNotification,
 } from '../shared/market-subscription.js';
 import { getResendConfig, hasResendApiKey } from '../shared/resend-config.js';
 import { runSubscriptionCheck } from '../shared/run-subscription-check.js';
@@ -102,18 +103,8 @@ export async function sendTestEmail(emailSettings, to) {
 }
 
 function showChromeNotification(subscription, listing, emailSettings) {
-  if (emailSettings?.enableNotifications === false) return;
-
-  const listingId = buildListingId(listing);
-  const title = `新挂单：${subscription.itemName}`;
-  const message = buildNotificationBody(listing);
-
-  chrome.notifications.create(`market-sub-${listingId}`, {
-    type: 'basic',
-    iconUrl: 'icons/icon128.png',
-    title,
-    message,
-    priority: 2,
+  showMarketNotification(subscription, listing, emailSettings).catch((err) => {
+    console.error('[market-subscription] 浏览器通知异常:', err);
   });
 }
 
@@ -145,10 +136,11 @@ export async function scheduleSubscriptionAlarm() {
     return null;
   }
 
-  const minutes = Math.max(1, Number(emailSettings.pollIntervalMinutes) || 5);
-  await chrome.alarms.create(ALARM_NAME, { periodInMinutes: minutes });
+  const seconds = getPollIntervalSeconds(emailSettings);
+  const when = Date.now() + seconds * 1000;
+  await chrome.alarms.create(ALARM_NAME, { when });
   const alarm = await chrome.alarms.get(ALARM_NAME);
-  console.info('[market-subscription] 轮询已调度', { minutes, alarm });
+  console.info('[market-subscription] 轮询已调度', { seconds, when, alarm });
   return alarm;
 }
 
@@ -161,6 +153,15 @@ export async function checkSubscriptions() {
   });
 }
 
+function logCheckSummary(label, result) {
+  console.info(`[market-subscription] ${label}`, result);
+  if (result.checked > 0 && result.fetched === 0) {
+    console.info(
+      '[market-subscription] 未拉取到挂单：可能市场暂无符合条件的数据，或订阅物品名/稀有度/价格筛选不匹配',
+    );
+  }
+}
+
 export async function initMarketSubscription() {
   await initItemNames();
 
@@ -169,7 +170,8 @@ export async function initMarketSubscription() {
     console.info('[market-subscription] 定时轮询触发', alarm);
     checkSubscriptions()
       .then((result) => {
-        console.info('[market-subscription] 轮询完成', result);
+        logCheckSummary('轮询完成', result);
+        return scheduleSubscriptionAlarm();
       })
       .catch((err) => {
         console.error('[market-subscription] 定时检查失败:', err);
@@ -179,7 +181,7 @@ export async function initMarketSubscription() {
   try {
     await scheduleSubscriptionAlarm();
     const result = await checkSubscriptions();
-    console.info('[market-subscription] 初始化检查完成', result);
+    logCheckSummary('初始化检查完成', result);
   } catch (err) {
     console.error('[market-subscription] 初始化失败:', err);
   }

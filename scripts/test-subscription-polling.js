@@ -3,7 +3,13 @@
  * 运行：node scripts/test-subscription-polling.js
  */
 
-const { ALARM_NAME, DEFAULT_EMAIL_SETTINGS, mergeEmailSettings } = require('../src/shared/market-subscription.js');
+const {
+  ALARM_NAME,
+  DEFAULT_EMAIL_SETTINGS,
+  mergeEmailSettings,
+  getPollIntervalSeconds,
+  DEFAULT_POLL_INTERVAL_SECONDS,
+} = require('../src/shared/market-subscription.js');
 const { runSubscriptionCheck } = require('../src/shared/run-subscription-check.js');
 
 let passed = 0;
@@ -66,8 +72,8 @@ async function simulateScheduleAlarm(storage, alarmApi) {
 
   if (activeCount === 0) return null;
 
-  const minutes = Math.max(1, Number(emailSettings.pollIntervalMinutes) || 5);
-  await alarmApi.create(ALARM_NAME, { periodInMinutes: minutes });
+  const seconds = getPollIntervalSeconds(emailSettings);
+  await alarmApi.create(ALARM_NAME, { when: Date.now() + seconds * 1000 });
   return alarmApi.get(ALARM_NAME);
 }
 
@@ -79,7 +85,10 @@ console.log('订阅轮询逻辑测试\n');
   assert(ALARM_NAME === 'market-subscription-check', 'ALARM_NAME 常量正确');
 
   const merged = mergeEmailSettings({ pollIntervalMinutes: 3 });
-  assert(merged.pollIntervalMinutes === 3, '邮件设置合并轮询间隔');
+  assert(merged.pollIntervalSeconds === 180, '邮件设置合并轮询间隔（兼容分钟）');
+
+  const mergedSeconds = mergeEmailSettings({ pollIntervalSeconds: 30 });
+  assert(mergedSeconds.pollIntervalSeconds === 30, '邮件设置合并轮询间隔（秒）');
 
   const alarmMock = createAlarmMock();
   const storage = {
@@ -89,11 +98,11 @@ console.log('订阅轮询逻辑测试\n');
 
   const alarm = await simulateScheduleAlarm(storage, alarmMock.api);
   assert(Boolean(alarm), '有活跃订阅时会创建 alarm');
-  assert(alarm.periodInMinutes === 5, '默认 5 分钟轮询');
+  assert(alarm.when > Date.now(), '默认按秒级间隔调度 alarm');
 
-  storage.emailSettings = { pollIntervalMinutes: 2 };
+  storage.emailSettings = { pollIntervalSeconds: 120 };
   const alarm2 = await simulateScheduleAlarm(storage, alarmMock.api);
-  assert(alarm2.periodInMinutes === 2, '修改间隔后会按新值调度');
+  assert(getPollIntervalSeconds(storage.emailSettings) === 120, '修改间隔后会按新值调度');
 
   storage.subscriptions = [];
   const cleared = await simulateScheduleAlarm(storage, alarmMock.api);
@@ -104,7 +113,7 @@ console.log('订阅轮询逻辑测试\n');
   alarmMock.api.onAlarm.addListener((item) => {
     if (item.name === ALARM_NAME) pollRuns += 1;
   });
-  await alarmMock.api.create(ALARM_NAME, { periodInMinutes: 1 });
+  await alarmMock.api.create(ALARM_NAME, { when: Date.now() + DEFAULT_POLL_INTERVAL_SECONDS * 1000 });
   await alarmMock.api.trigger();
   assert(pollRuns === 1, 'alarm 监听器可被触发');
 

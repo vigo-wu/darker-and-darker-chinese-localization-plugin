@@ -1,12 +1,15 @@
 <script setup>
 import { computed, reactive, ref, watch } from 'vue';
-import { MailOutlined, SendOutlined } from '@ant-design/icons-vue';
+import { MailOutlined, SendOutlined, BellOutlined } from '@ant-design/icons-vue';
 import { useMarketI18n } from '@/composables/useMarketI18n';
 import {
   validateEmailSettings,
   getEmailSettingsSummary,
   isEmailDeliveryConfigured,
   isValidEmail,
+  splitPollIntervalSeconds,
+  toPollIntervalSeconds,
+  getPollIntervalLimits,
 } from '@shared/market-subscription.js';
 import { hasResendApiKey } from '@shared/resend-config.js';
 
@@ -18,14 +21,16 @@ const props = defineProps({
   },
   saving: Boolean,
   testing: Boolean,
+  testingNotification: Boolean,
 });
 
-const emit = defineEmits(['update:open', 'save', 'test']);
+const emit = defineEmits(['update:open', 'save', 'test', 'test-notification']);
 
 const { t } = useMarketI18n();
 
 const form = reactive({
-  pollIntervalMinutes: 5,
+  pollIntervalValue: 5,
+  pollIntervalUnit: 'minutes',
   lastUsedEmail: '',
   enableEmail: true,
   enableNotifications: true,
@@ -42,7 +47,22 @@ const emailConfigured = computed(() => isEmailDeliveryConfigured(
   resendReady.value,
 ));
 
-  watch(
+const pollIntervalLimits = computed(() => getPollIntervalLimits(form.pollIntervalUnit));
+
+const pollIntervalSeconds = computed(() => toPollIntervalSeconds(
+  form.pollIntervalValue,
+  form.pollIntervalUnit,
+));
+
+const statusIntervalText = computed(() => {
+  const seconds = pollIntervalSeconds.value;
+  if (seconds % 60 === 0) {
+    return t('subscription.statusIntervalMinutes', { minutes: seconds / 60 });
+  }
+  return t('subscription.statusIntervalSeconds', { seconds });
+});
+
+watch(
   () => props.open,
   (visible) => {
     if (!visible) return;
@@ -53,7 +73,9 @@ const emailConfigured = computed(() => isEmailDeliveryConfigured(
 
 function resetForm() {
   const settings = props.emailSettings || {};
-  form.pollIntervalMinutes = settings.pollIntervalMinutes || 5;
+  const split = splitPollIntervalSeconds(settings.pollIntervalSeconds);
+  form.pollIntervalValue = split.value;
+  form.pollIntervalUnit = split.unit;
   form.lastUsedEmail = settings.lastUsedEmail || '';
   form.enableEmail = settings.enableEmail !== false;
   form.enableNotifications = settings.enableNotifications !== false;
@@ -74,7 +96,7 @@ function validateForm() {
 
 function buildPayload() {
   return {
-    pollIntervalMinutes: Number(form.pollIntervalMinutes) || 5,
+    pollIntervalSeconds: toPollIntervalSeconds(form.pollIntervalValue, form.pollIntervalUnit),
     lastUsedEmail: form.lastUsedEmail.trim(),
     enableEmail: form.enableEmail,
     enableNotifications: form.enableNotifications,
@@ -110,6 +132,14 @@ function handleTestEmail() {
   });
 }
 
+function handleTestNotification() {
+  if (!form.enableNotifications) {
+    formErrors.value = { ...formErrors.value, notifications: 'NOTIFICATIONS_DISABLED' };
+    return;
+  }
+  emit('test-notification', { payload: buildPayload() });
+}
+
 function errorText(key) {
   const code = formErrors.value[key];
   if (!code) return '';
@@ -138,7 +168,7 @@ function errorText(key) {
         {{ form.enableNotifications ? t('subscription.notificationOn') : t('subscription.notificationOff') }}
       </a-tag>
       <span class="status-interval">
-        {{ t('subscription.statusInterval', { minutes: form.pollIntervalMinutes }) }}
+        {{ statusIntervalText }}
       </span>
     </div>
 
@@ -152,6 +182,19 @@ function errorText(key) {
         <a-col :span="12">
           <a-form-item :label="t('subscription.enableNotifications')">
             <a-switch v-model:checked="form.enableNotifications" />
+            <a-form-item-rest>
+              <a-button
+                class="notify-test-btn"
+                block
+                type="default"
+                :loading="testingNotification"
+                :disabled="!form.enableNotifications"
+                @click="handleTestNotification"
+              >
+                <template #icon><BellOutlined /></template>
+                {{ t('subscription.sendTestNotification') }}
+              </a-button>
+            </a-form-item-rest>
           </a-form-item>
         </a-col>
       </a-row>
@@ -182,16 +225,20 @@ function errorText(key) {
 
       <a-form-item
         :label="t('subscription.pollInterval')"
-        :validate-status="formErrors.pollIntervalMinutes ? 'error' : ''"
-        :help="errorText('pollIntervalMinutes')"
+        :validate-status="formErrors.pollInterval ? 'error' : ''"
+        :help="errorText('pollInterval')"
       >
-        <a-input-number
-          v-model:value="form.pollIntervalMinutes"
-          :min="1"
-          :max="60"
-          style="width: 120px"
-        />
-        <span class="field-suffix">{{ t('subscription.minutes') }}</span>
+        <div class="poll-interval-field">
+          <a-input-number
+            v-model:value="form.pollIntervalValue"
+            :min="pollIntervalLimits.min"
+            :max="pollIntervalLimits.max"
+          />
+          <a-select v-model:value="form.pollIntervalUnit" class="poll-interval-unit">
+            <a-select-option value="seconds">{{ t('subscription.seconds') }}</a-select-option>
+            <a-select-option value="minutes">{{ t('subscription.minutes') }}</a-select-option>
+          </a-select>
+        </div>
       </a-form-item>
 
       <a-alert
@@ -243,6 +290,16 @@ function errorText(key) {
   margin-top: 8px;
 }
 
+.notify-test-btn {
+  margin-top: 8px;
+}
+
+.poll-interval-field {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
 .settings-form :deep(.ant-input-number) {
   background: #141414;
   border-color: #434343;
@@ -253,9 +310,8 @@ function errorText(key) {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.field-suffix {
-  color: rgba(255, 255, 255, 0.45);
-  margin-left: 8px;
+.poll-interval-unit {
+  width: 88px;
 }
 
 .settings-hint {

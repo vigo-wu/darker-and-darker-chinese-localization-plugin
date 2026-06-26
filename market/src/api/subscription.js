@@ -8,10 +8,10 @@ import {
   isValidEmail,
   buildTestEmailContent,
   buildEmailHtml,
-  buildNotificationBody,
-  buildListingId,
   isEmailDeliveryConfigured,
   resolveCanonicalItemName,
+  showMarketNotification,
+  sendTestBrowserNotification,
 } from '@shared/market-subscription.js';
 import { getResendConfig, hasResendApiKey } from '@shared/resend-config.js';
 import { initItemNames } from '@shared/item-name.js';
@@ -240,17 +240,15 @@ async function fetchMarketListings(itemName, subscription = {}) {
 }
 
 function showChromeNotification(subscription, listing, emailSettings) {
-  if (!isExtensionContext() || !chrome.notifications?.create) return;
-  if (emailSettings?.enableNotifications === false) return;
-
-  const listingId = buildListingId(listing);
-  chrome.notifications.create(`market-sub-${listingId}`, {
-    type: 'basic',
-    iconUrl: chrome.runtime.getURL('icons/icon128.png'),
-    title: `新挂单：${subscription.itemName}`,
-    message: buildNotificationBody(listing),
-    priority: 2,
+  showMarketNotification(subscription, listing, emailSettings).catch((err) => {
+    console.error('[market-subscription] 浏览器通知异常:', err);
   });
+}
+
+export async function testBrowserNotificationSettings(formSettings) {
+  const stored = await loadRawEmailSettings();
+  const merged = mergeEmailSettings(stored, formSettings);
+  return sendTestBrowserNotification(merged);
 }
 
 async function notifyNewListing(subscription, listing, emailSettings) {

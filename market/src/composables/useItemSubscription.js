@@ -5,6 +5,7 @@ import {
   loadEmailSettings,
   saveEmailSettings,
   testEmailSettings,
+  testBrowserNotificationSettings,
   addSubscription,
   removeSubscription,
   toggleSubscription,
@@ -23,6 +24,7 @@ export function useItemSubscription() {
   const loading = ref(false);
   const savingSettings = ref(false);
   const testingEmail = ref(false);
+  const testingNotification = ref(false);
   const checking = ref(false);
   const settingsOpen = ref(false);
   const subscribeOpen = ref(false);
@@ -142,6 +144,18 @@ export function useItemSubscription() {
     }
   }
 
+  async function sendTestNotification({ payload }) {
+    testingNotification.value = true;
+    try {
+      await testBrowserNotificationSettings(payload);
+      message.success(t('subscription.testNotificationSuccess'));
+    } catch (err) {
+      message.error(mapSettingsError(err?.message));
+    } finally {
+      testingNotification.value = false;
+    }
+  }
+
   function showCheckResult(result) {
     const matched = result.matched || 0;
     const notified = result.notified || 0;
@@ -199,6 +213,7 @@ export function useItemSubscription() {
     loading,
     savingSettings,
     testingEmail,
+    testingNotification,
     checking,
     settingsOpen,
     subscribeOpen,
@@ -214,6 +229,7 @@ export function useItemSubscription() {
     setSubscriptionEnabled,
     updateEmailSettings,
     sendTestEmail,
+    sendTestNotification,
     checkNow,
     hasSubscriptionFor,
     isEmailConfigured,
